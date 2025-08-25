@@ -49,6 +49,19 @@
       color: var(--brand)
     }
 
+    /* Центрирование контейнера внутри hero */
+    .hero .overlay {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: inherit;
+      padding: 0; /* или небольшой padding, если нужен */
+    }
+    .hero .overlay .container {
+      z-index: 3;
+    }
+
+
     .navbar {
       backdrop-filter: saturate(140%) blur(8px)
     }
