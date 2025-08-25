@@ -322,6 +322,15 @@ html, body { overflow-x: hidden; }
   .icon-badge { font-size: .9rem; }
 }
 
+
+/* --- Courses layout polish --- */
+.course-card{display:flex;flex-direction:column}
+.course-card .course-body{flex:1 1 auto}
+.course-card .course-actions{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-top:auto}
+.course-card .price-badge{display:inline-block;padding:.25rem .5rem;border-radius:.5rem;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.35)}
+.course-card .price{font-weight:700;font-size:1.05rem;letter-spacing:.2px}
+:root.light .course-card .price-badge{background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.3)}
+
 </style>
 
   <script type="application/ld+json">
@@ -457,44 +466,73 @@ html, body { overflow-x: hidden; }
       <div class="row g-4">
         <div class="col-md-6 col-lg-4" data-aos="zoom-in">
           <div class="course-card p-4 h-100">
-            <div class="d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars"></i><h5 class="mb-0">Базовый курс</h5></div>
-            <p class="muted">Основы управления мотоциклом: без страха и лишних эмоций.</p>
-            <ul class="list-unstyled list-check">
-              <li><i class="bi bi-check2-circle"></i>Посадка, баланс, взгляд</li>
-              <li><i class="bi bi-check2-circle"></i>Торможение и манёвры</li>
-              <li><i class="bi bi-check2-circle"></i>Контроль газа и сцепления</li>
-              <li><i class="bi bi-check2-circle"></i>Работа с положением тела</li>
-            </ul>
-            <a href="#signup" class="btn btn-outline-brand w-100">Записаться</a>
+            <div class="course-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-stars"></i><h5 class="mb-0">Базовый курс</h5>
+              </div>
+              <p class="muted">Основы управления мотоциклом — без страха и лишних эмоций.</p>
+              <ul class="list-unstyled list-check">
+                <li><i class="bi bi-check2-circle"></i>Посадка, баланс, работа взглядом</li>
+                <li><i class="bi bi-check2-circle"></i>Контроль газа, сцепления и торможения</li>
+                <li><i class="bi bi-check2-circle"></i>Манёвры на малых скоростях</li>
+                <li><i class="bi bi-check2-circle"></i>Формирование безопасных рефлексов</li>
+              </ul>
+            </div>
+            <div class="course-actions">
+              <span class="price-badge">
+                <span class="price" data-course="basic" data-price="4500" data-currency="RUB">4 500 ₽</span>
+              </span>
+              <a href="#signup" class="btn btn-outline-brand">Записаться</a>
+            </div>
           </div>
         </div>
+
         <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
           <div class="course-card p-4 h-100">
-            <div class="d-flex align-items-center gap-2 mb-2"><i class="bi bi-speedometer2"></i><h5 class="mb-0">Продвинутый</h5></div>
-            <p class="muted">Углубляем технику и скорость реакции.</p>
-            <ul class="list-unstyled list-check">
-              <li><i class="bi bi-check2-circle"></i>Экстренное торможение</li>
-              <li><i class="bi bi-check2-circle"></i>Сложные манёвры и слалом</li>
-              <li><i class="bi bi-check2-circle"></i>Работа с покрытием</li>
-              <li><i class="bi bi-check2-circle"></i>Траектории и тактика</li>
-            </ul>
-            <a href="#signup" class="btn btn-outline-brand w-100">Хочу апгрейд</a>
+            <div class="course-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-lightning"></i><h5 class="mb-0">Трюковый курс</h5>
+              </div>
+              <p class="muted">Безопасные основы стантрайдинга в контролируемых условиях.</p>
+              <ul class="list-unstyled list-check">
+                <li><i class="bi bi-check2-circle"></i>Вилли и стоппи (база)</li>
+                <li><i class="bi bi-check2-circle"></i>Бернаут и дрифт</li>
+                <li><i class="bi bi-check2-circle"></i>Простейшие акробатические элементы</li>
+                <li><i class="bi bi-check2-circle"></i>Протоколы безопасности и страхование упражнений</li>
+              </ul>
+            </div>
+            <div class="course-actions">
+              <span class="price-badge">
+                <span class="price" data-course="stunt" data-price="6000" data-currency="RUB">6 000 ₽</span>
+              </span>
+              <a href="#signup" class="btn btn-outline-brand">К трюкам</a>
+            </div>
           </div>
         </div>
+
         <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
           <div class="course-card p-4 h-100">
-            <div class="d-flex align-items-center gap-2 mb-2"><i class="bi bi-lightning"></i><h5 class="mb-0">Стант: основы</h5></div>
-            <p class="muted">Для тех, кто мечтает о трюковой карьере — только в контролируемых условиях.</p>
-            <ul class="list-unstyled list-check">
-              <li><i class="bi bi-check2-circle"></i>Вилли / стоппи (база)</li>
-              <li><i class="bi bi-check2-circle"></i>Бернаут и дрифт</li>
-              <li><i class="bi bi-check2-circle"></i>Простейшие акробатические элементы</li>
-              <li><i class="bi bi-check2-circle"></i>Протоколы безопасности</li>
-            </ul>
-            <a href="#signup" class="btn btn-outline-brand w-100">К трюкам</a>
+            <div class="course-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-shield-exclamation"></i><h5 class="mb-0">Антиаварийная езда</h5>
+              </div>
+              <p class="muted">Профилактика ДТП: предиктивное вождение и экстренные действия.</p>
+              <ul class="list-unstyled list-check">
+                <li><i class="bi bi-check2-circle"></i>Экстренное торможение и объезд препятствий</li>
+                <li><i class="bi bi-check2-circle"></i>Контрруление и работа взглядом</li>
+                <li><i class="bi bi-check2-circle"></i>Траектории, покрытие и сцепление</li>
+                <li><i class="bi bi-check2-circle"></i>Оценка рисков и сценарии «что если»</li>
+              </ul>
+            </div>
+            <div class="course-actions">
+              <span class="price-badge">
+                <span class="price" data-course="safety" data-price="5200" data-currency="RUB">5 200 ₽</span>
+              </span>
+              <a href="#signup" class="btn btn-outline-brand">Улучшить безопасность</a>
+            </div>
           </div>
         </div>
-      </div>
+</div>
       <div class="row mt-4">
         <div class="col-12">
           <div class="glass p-4" data-aos="fade-up">
@@ -809,6 +847,18 @@ toggleBtn.addEventListener('click', () => {
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
   toggleBtn.innerHTML = isLight ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
 });
+
+
+      // Format prices from data attributes
+      document.querySelectorAll('.price[data-price]').forEach(el => {
+        const value = Number(el.getAttribute('data-price'));
+        const cur = el.getAttribute('data-currency') || 'RUB';
+        try {
+          el.textContent = new Intl.NumberFormat('ru-RU', { style: 'currency', currency: cur }).format(value);
+        } catch(e){
+          el.textContent = value.toLocaleString('ru-RU') + ' ₽';
+        }
+      });
 
     });
   </script>
