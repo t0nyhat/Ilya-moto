@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 
 <html lang="ru">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Мотошкола Ильи Гриднева — обучение безопасной езде и стантрайдингу</title>
-<meta content="Авторская мотошкола Ильи Гриднева: базовый курс безопасного управления мотоциклом, продвинутые тренировки, основы стантрайдинга, выступления и сообщество. 20+ лет опыта." name="description"/>
-<meta content="#0f172a" name="theme-color"/>
-<meta content="website" property="og:type"/>
-<meta content="Мотошкола Ильи Гриднева" property="og:title"/>
-<meta content="Безопасно, системно, с результатом. Базовый курс и стант-основы в контролируемых условиях." property="og:description"/>
-<meta content="https://images.unsplash.com/photo-1493236151450-35b7f1e13b56?q=80&amp;w=1920&amp;auto=format&amp;fit=crop" property="og:image"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<!-- Bootstrap 5 & Icons -->
-<link href="./vendor/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="./vendor/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
-<!-- AOS & Swiper -->
-<link href="./vendor/aos/2.3.4/aos.css" rel="stylesheet"/>
-<link href="./vendor/swiper/11.0.7/swiper-bundle.min.css" rel="stylesheet"><style>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Мотошкола Ильи Гриднева — обучение безопасной езде и стантрайдингу</title>
+  <meta
+    content="Авторская мотошкола Ильи Гриднева: базовый курс безопасного управления мотоциклом, продвинутые тренировки, основы стантрайдинга, выступления и сообщество. 20+ лет опыта."
+    name="description" />
+  <meta content="#0f172a" name="theme-color" />
+  <meta content="website" property="og:type" />
+  <meta content="Мотошкола Ильи Гриднева" property="og:title" />
+  <meta content="Безопасно, системно, с результатом. Базовый курс и стант-основы в контролируемых условиях."
+    property="og:description" />
+  <meta
+    content="https://images.unsplash.com/photo-1493236151450-35b7f1e13b56?q=80&amp;w=1920&amp;auto=format&amp;fit=crop"
+    property="og:image" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <!-- Bootstrap 5 & Icons -->
+  <link href="/vendor/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/vendor/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- AOS & Swiper -->
+  <link href="/vendor/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link href="/vendor/swiper/11.0.7/swiper-bundle.min.css" rel="stylesheet" />
+  <style>
     :root {
       --bg: #0b1020;
       --bg-soft: #0f172a;
@@ -765,129 +772,245 @@
         max-height: calc(100vh - 72px)
       }
     }
-  
-/* --- Course syllabus (modules) inside cards --- */
-.course-syllabus .accordion-item { background: transparent; border: 1px solid rgba(255,255,255,.08); border-radius: 10px; overflow: hidden; }
-.course-syllabus .accordion-button { background: rgba(255,255,255,.03); color: inherit; }
-.course-syllabus .accordion-button:focus { box-shadow: none; }
-.course-syllabus .accordion-button.collapsed { background: rgba(255,255,255,.02); }
-.course-syllabus .accordion-body { background: rgba(255,255,255,.02); }
-:root.light .course-syllabus .accordion-item { border-color: rgba(2,6,23,.10); }
-:root.light .course-syllabus .accordion-button { background: rgba(2,6,23,.04); }
-:root.light .course-syllabus .accordion-button.collapsed { background: rgba(2,6,23,.02); }
+
+    /* --- Course syllabus (modules) inside cards --- */
+    .course-syllabus .accordion-item {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .course-syllabus .accordion-button {
+      background: rgba(255, 255, 255, .03);
+      color: inherit;
+    }
+
+    .course-syllabus .accordion-button:focus {
+      box-shadow: none;
+    }
+
+    .course-syllabus .accordion-button.collapsed {
+      background: rgba(255, 255, 255, .02);
+    }
+
+    .course-syllabus .accordion-body {
+      background: rgba(255, 255, 255, .02);
+    }
+
+    :root.light .course-syllabus .accordion-item {
+      border-color: rgba(2, 6, 23, .10);
+    }
+
+    :root.light .course-syllabus .accordion-button {
+      background: rgba(2, 6, 23, .04);
+    }
+
+    :root.light .course-syllabus .accordion-button.collapsed {
+      background: rgba(2, 6, 23, .02);
+    }
 
 
-/* === Course actions spacing & divider === */
-.course-card .course-actions{margin-top:1rem;padding-top:.75rem;border-top:1px solid rgba(255,255,255,.08)}
-:root.light .course-card .course-actions{border-top:1px solid rgba(2,6,23,.10)}
+    /* === Course actions spacing & divider === */
+    .course-card .course-actions {
+      margin-top: 1rem;
+      padding-top: .75rem;
+      border-top: 1px solid rgba(255, 255, 255, .08)
+    }
 
-/* === Light theme readability for accordions inside course cards === */
-:root.light .course-syllabus .accordion-item{background:#fff;border-color:rgba(2,6,23,.12)}
-:root.light .course-syllabus .accordion-button{background:#f7f9fc;color:#0f172a;border-bottom:1px solid rgba(2,6,23,.08)}
-:root.light .course-syllabus .accordion-button.collapsed{background:#fbfdff;color:#0f172a;border-bottom-color:rgba(2,6,23,.06)}
-:root.light .course-syllabus .accordion-body{background:#ffffff;color:#0f172a}
+    :root.light .course-card .course-actions {
+      border-top: 1px solid rgba(2, 6, 23, .10)
+    }
 
-/* Hover/active focus states */
-.course-syllabus .accordion-button:focus{box-shadow:0 0 0 .15rem rgba(14,165,233,.25)}
-:root.light .course-syllabus .accordion-button:not(.collapsed){color:#0b1220}
+    /* === Light theme readability for accordions inside course cards === */
+    :root.light .course-syllabus .accordion-item {
+      background: #fff;
+      border-color: rgba(2, 6, 23, .12)
+    }
 
+    :root.light .course-syllabus .accordion-button {
+      background: #f7f9fc;
+      color: #0f172a;
+      border-bottom: 1px solid rgba(2, 6, 23, .08)
+    }
 
-/* === Dark theme readability for accordions inside course cards === */
-:root:not(.light) .course-syllabus .accordion-item{border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.03)}
-:root:not(.light) .course-syllabus .accordion-button{background:rgba(255,255,255,.06);color:#f1f5f9;border-bottom:1px solid rgba(255,255,255,.1)}
-:root:not(.light) .course-syllabus .accordion-button.collapsed{background:rgba(255,255,255,.04);color:#f8fafc;border-bottom-color:rgba(255,255,255,.06)}
-:root:not(.light) .course-syllabus .accordion-body{background:rgba(255,255,255,.02);color:#e2e8f0}
+    :root.light .course-syllabus .accordion-button.collapsed {
+      background: #fbfdff;
+      color: #0f172a;
+      border-bottom-color: rgba(2, 6, 23, .06)
+    }
 
+    :root.light .course-syllabus .accordion-body {
+      background: #ffffff;
+      color: #0f172a
+    }
 
-/* === Gallery navigation arrows — mobile-visible & emphasized === */
-.gallery-swiper .swiper-button-next, 
-.gallery-swiper .swiper-button-prev {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 999px;
-  background: rgba(0,0,0,.35);
-  border: 1px solid rgba(255,255,255,.35);
-  box-shadow: 0 6px 18px rgba(0,0,0,.35);
-  backdrop-filter: blur(4px);
-  z-index: 5;
-  top: 45%;
-}
-.gallery-swiper .swiper-button-next::after, 
-.gallery-swiper .swiper-button-prev::after {
-  font-size: 18px;
-  color: #fff;
-}
-:root.light .gallery-swiper .swiper-button-next, 
-:root.light .gallery-swiper .swiper-button-prev {
-  background: rgba(255,255,255,.85);
-  border-color: rgba(2,6,23,.15);
-  box-shadow: 0 6px 18px rgba(2,6,23,.15);
-}
-:root.light .gallery-swiper .swiper-button-next::after, 
-:root.light .gallery-swiper .swiper-button-prev::after {
-  color: #0f172a;
-}
+    /* Hover/active focus states */
+    .course-syllabus .accordion-button:focus {
+      box-shadow: 0 0 0 .15rem rgba(14, 165, 233, .25)
+    }
 
-/* smaller screens: bring arrows inwards and ensure visible */
-@media (max-width: 576px){
-  .gallery-swiper .swiper-button-prev { left: 6px; }
-  .gallery-swiper .swiper-button-next { right: 6px; }
-  .gallery-swiper .swiper-button-next, 
-  .gallery-swiper .swiper-button-prev { display:flex; }
-}
-
-/* Avoid arrows fully disappearing on disabled state */
-.gallery-swiper .swiper-button-disabled { opacity: .35 !important; pointer-events: none; }
+    :root.light .course-syllabus .accordion-button:not(.collapsed) {
+      color: #0b1220
+    }
 
 
-/* === GLightbox controls — force show on small screens & make them stand out === */
-.glightbox-clean .gbtn {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  background: rgba(0,0,0,.45);
-  border: 1px solid rgba(255,255,255,.35);
-  box-shadow: 0 6px 18px rgba(0,0,0,.35);
-  backdrop-filter: blur(4px);
-  z-index: 9999;
-}
-.glightbox-clean .gbtn svg {
-  width: 18px;
-  height: 18px;
-  fill: #fff;
-}
-:root.light .glightbox-clean .gbtn {
-  background: rgba(255,255,255,.9);
-  border-color: rgba(2,6,23,.15);
-  box-shadow: 0 6px 18px rgba(2,6,23,.15);
-}
-:root.light .glightbox-clean .gbtn svg {
-  fill: #0f172a;
-}
-/* Position tweaks for mobile */
-@media (max-width: 576px){
-  .glightbox-clean .gnext { right: 10px !important; }
-  .glightbox-clean .gprev { left: 10px !important; }
-  .glightbox-clean .gbtn { width: 42px; height: 42px; }
-}
+    /* === Dark theme readability for accordions inside course cards === */
+    :root:not(.light) .course-syllabus .accordion-item {
+      border-color: rgba(255, 255, 255, .15);
+      background: rgba(255, 255, 255, .03)
+    }
+
+    :root:not(.light) .course-syllabus .accordion-button {
+      background: rgba(255, 255, 255, .06);
+      color: #f1f5f9;
+      border-bottom: 1px solid rgba(255, 255, 255, .1)
+    }
+
+    :root:not(.light) .course-syllabus .accordion-button.collapsed {
+      background: rgba(255, 255, 255, .04);
+      color: #f8fafc;
+      border-bottom-color: rgba(255, 255, 255, .06)
+    }
+
+    :root:not(.light) .course-syllabus .accordion-body {
+      background: rgba(255, 255, 255, .02);
+      color: #e2e8f0
+    }
 
 
-/* === GLightbox controls visibility on tap (mobile) === */
-.glightbox-container .gcontrols { transition: opacity .2s ease; }
-.glightbox-container .gcontrols.force-visible { opacity: 1 !important; visibility: visible !important; }
-.glightbox-clean .gprev, .glightbox-clean .gnext { display:flex !important; opacity:1 !important; visibility:visible !important; }
-@media (max-width: 576px){
-  .glightbox-clean .gprev, .glightbox-clean .gnext { display:flex !important; }
-}
+    /* === Gallery navigation arrows — mobile-visible & emphasized === */
+    .gallery-swiper .swiper-button-next,
+    .gallery-swiper .swiper-button-prev {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, .35);
+      border: 1px solid rgba(255, 255, 255, .35);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .35);
+      backdrop-filter: blur(4px);
+      z-index: 5;
+      top: 45%;
+    }
 
-</style>
-<script type="application/ld+json">
+    .gallery-swiper .swiper-button-next::after,
+    .gallery-swiper .swiper-button-prev::after {
+      font-size: 18px;
+      color: #fff;
+    }
+
+    :root.light .gallery-swiper .swiper-button-next,
+    :root.light .gallery-swiper .swiper-button-prev {
+      background: rgba(255, 255, 255, .85);
+      border-color: rgba(2, 6, 23, .15);
+      box-shadow: 0 6px 18px rgba(2, 6, 23, .15);
+    }
+
+    :root.light .gallery-swiper .swiper-button-next::after,
+    :root.light .gallery-swiper .swiper-button-prev::after {
+      color: #0f172a;
+    }
+
+    /* smaller screens: bring arrows inwards and ensure visible */
+    @media (max-width: 576px) {
+      .gallery-swiper .swiper-button-prev {
+        left: 6px;
+      }
+
+      .gallery-swiper .swiper-button-next {
+        right: 6px;
+      }
+
+      .gallery-swiper .swiper-button-next,
+      .gallery-swiper .swiper-button-prev {
+        display: flex;
+      }
+    }
+
+    /* Avoid arrows fully disappearing on disabled state */
+    .gallery-swiper .swiper-button-disabled {
+      opacity: .35 !important;
+      pointer-events: none;
+    }
+
+
+    /* === GLightbox controls — force show on small screens & make them stand out === */
+    .glightbox-clean .gbtn {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, .45);
+      border: 1px solid rgba(255, 255, 255, .35);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .35);
+      backdrop-filter: blur(4px);
+      z-index: 9999;
+    }
+
+    .glightbox-clean .gbtn svg {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+
+    :root.light .glightbox-clean .gbtn {
+      background: rgba(255, 255, 255, .9);
+      border-color: rgba(2, 6, 23, .15);
+      box-shadow: 0 6px 18px rgba(2, 6, 23, .15);
+    }
+
+    :root.light .glightbox-clean .gbtn svg {
+      fill: #0f172a;
+    }
+
+    /* Position tweaks for mobile */
+    @media (max-width: 576px) {
+      .glightbox-clean .gnext {
+        right: 10px !important;
+      }
+
+      .glightbox-clean .gprev {
+        left: 10px !important;
+      }
+
+      .glightbox-clean .gbtn {
+        width: 42px;
+        height: 42px;
+      }
+    }
+
+
+    /* === GLightbox controls visibility on tap (mobile) === */
+    .glightbox-container .gcontrols {
+      transition: opacity .2s ease;
+    }
+
+    .glightbox-container .gcontrols.force-visible {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .glightbox-clean .gprev,
+    .glightbox-clean .gnext {
+      display: flex !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    @media (max-width: 576px) {
+
+      .glightbox-clean .gprev,
+      .glightbox-clean .gnext {
+        display: flex !important;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SportsActivityLocation",
@@ -897,641 +1020,779 @@
     "founder": {"@type":"Person","name":"Илья Гриднев"}
   }
   </script>
-<link href="./vendor/glightbox/3.3.0/css/glightbox.min.css" rel="stylesheet"/>
-</link></head>
+  <link href="/vendor/glightbox/3.3.0/css/glightbox.min.css" rel="stylesheet">
+  </link>
+</head>
+
 <body>
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background:rgba(11,16,32,.7)">
-<div class="container">
-<a class="navbar-brand fw-bold" href="#home"><i class="bi bi-speedometer2 me-2"></i>Гриднев MotoSchool</a>
-<button aria-controls="nav" aria-expanded="false" aria-label="Навигация" class="navbar-toggler" data-bs-target="#nav" data-bs-toggle="collapse" type="button">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="nav">
-<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-<li class="nav-item"><a class="nav-link" href="#about">О школе</a></li>
-<li class="nav-item"><a class="nav-link" href="#mission">Подход</a></li>
-<li class="nav-item"><a class="nav-link" href="#courses">Курсы</a></li>
-<li class="nav-item"><a class="nav-link" href="#stunt">Стант</a></li>
-<li class="nav-item"><a class="nav-link" href="#bikes">Мотоциклы</a></li>
-<li class="nav-item"><a class="nav-link" href="#events">Выступления</a></li>
-<li class="nav-item"><a class="nav-link" href="#community">Сообщество</a></li>
-<li class="nav-item d-flex align-items-center ms-lg-2">
-<button aria-label="Сменить тему" class="btn btn-sm btn-outline-light" id="themeToggle" type="button">
-<i class="bi bi-moon"></i>
-</button>
-</li>
-</ul>
-<ul class="navbar-nav ms-2">
-<li class="nav-item d-flex align-items-center"></li>
-</ul>
-</div>
-</div>
-</nav>
-<!-- HERO -->
-<header class="hero" id="home">
-<img alt="" class="hero-bg" decoding="async" loading="eager" src="./images/i.jpeg"/>
-<div class="overlay w-100 h-100 py-5">
-<div class="container">
-<div class="row align-items-center justify-content-center text-center">
-<div class="col-lg-9">
-<span class="icon-badge mb-3" data-aos="fade-down"><i class="bi bi-shield-check me-2"></i>Безопасность •
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background:rgba(11,16,32,.7)">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home"><i class="bi bi-speedometer2 me-2"></i>Гриднев MotoSchool</a>
+      <button aria-controls="nav" aria-expanded="false" aria-label="Навигация" class="navbar-toggler"
+        data-bs-target="#nav" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#about">О школе</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mission">Подход</a></li>
+          <li class="nav-item"><a class="nav-link" href="#courses">Курсы</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stunt">Стант</a></li>
+          <li class="nav-item"><a class="nav-link" href="#bikes">Мотоциклы</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Выступления</a></li>
+          <li class="nav-item"><a class="nav-link" href="#community">Сообщество</a></li>
+          <li class="nav-item d-flex align-items-center ms-lg-2">
+            <button aria-label="Сменить тему" class="btn btn-sm btn-outline-light" id="themeToggle" type="button">
+              <i class="bi bi-moon"></i>
+            </button>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-2">
+          <li class="nav-item d-flex align-items-center"></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <img alt="" class="hero-bg" decoding="async" loading="eager" src="./images/i.jpeg" />
+    <div class="overlay w-100 h-100 py-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-lg-9">
+            <span class="icon-badge mb-3" data-aos="fade-down"><i class="bi bi-shield-check me-2"></i>Безопасность •
               Методика • Результат</span>
-<h1 class="display-4 fw-bold mb-3" data-aos="fade-up">Мотошкола <span class="brand-gradient">Ильи
+            <h1 class="display-4 fw-bold mb-3" data-aos="fade-up">Мотошкола <span class="brand-gradient">Ильи
                 Гриднева</span></h1>
-<p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">«Моя основная задача — дать новоиспечённому
+            <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">«Моя основная задача — дать новоиспечённому
               мотоциклисту базовые навыки, позволяющие адекватно и без страха управлять мотоциклом и применять знания на
               уровне инстинктов».</p>
-<div class="d-flex gap-2 justify-content-center" data-aos="fade-up" data-aos-delay="150">
-<a class="btn btn-brand btn-lg" href="#signup"><i class="bi bi-lightning-charge me-2"></i>Начать
+            <div class="d-flex gap-2 justify-content-center" data-aos="fade-up" data-aos-delay="150">
+              <a class="btn btn-brand btn-lg" href="#signup"><i class="bi bi-lightning-charge me-2"></i>Начать
                 обучение</a>
-<a class="btn btn-outline-brand btn-lg" href="#about"><i class="bi bi-play-circle me-2"></i>Подробнее</a>
-</div>
-<div class="mt-4 d-flex flex-wrap gap-3 justify-content-center muted">
-<span class="badge badge-soft"><i class="bi bi-award me-1"></i>Дипломированный инструктор</span>
-<span class="badge badge-soft"><i class="bi bi-people me-1"></i>5+ лет обучения</span>
-<span class="badge badge-soft"><i class="bi bi-fire me-1"></i>15 лет в трюках</span>
-<span class="badge badge-soft"><i class="bi bi-speedometer2 me-1"></i>20+ лет за рулём</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</header>
-<!-- ABOUT -->
-<section class="section" id="about">
-<div class="container">
-<div class="row g-4 align-items-start">
-<div class="col-lg-6" data-aos="fade-right">
-<div class="glass p-4 h-100">
-<h2 class="h1 fw-bold mb-3">Илья Гриднев</h2>
-<p>Друзья, всем привет! Меня зовут Илья Гриднев, я профессиональный мотоциклист. Свой путь любителя
+              <a class="btn btn-outline-brand btn-lg" href="#about"><i class="bi bi-play-circle me-2"></i>Подробнее</a>
+            </div>
+            <div class="mt-4 d-flex flex-wrap gap-3 justify-content-center muted">
+              <span class="badge badge-soft"><i class="bi bi-award me-1"></i>Дипломированный инструктор</span>
+              <span class="badge badge-soft"><i class="bi bi-people me-1"></i>5+ лет обучения</span>
+              <span class="badge badge-soft"><i class="bi bi-fire me-1"></i>15 лет в трюках</span>
+              <span class="badge badge-soft"><i class="bi bi-speedometer2 me-1"></i>20+ лет за рулём</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="glass p-4 h-100">
+            <h2 class="h1 fw-bold mb-3">Илья Гриднев</h2>
+            <p>Друзья, всем привет! Меня зовут Илья Гриднев, я профессиональный мотоциклист. Свой путь любителя
               двухколёсной техники начал более 20 лет назад и прошёл путь от дворового скутериста до участника и
               организатора соревнований по стантрайдингу (фристайл на мотоциклах).</p>
-<p>На протяжении 15 лет профессионально выполняю трюки на разных видах мототехники. Более 5 лет обучаю людей
+            <p>На протяжении 15 лет профессионально выполняю трюки на разных видах мототехники. Более 5 лет обучаю людей
               грамотному и безопасному управлению мотоциклом, являюсь тренером по дисциплине «стантрайдинг» и
               дипломированным мотоинструктором.</p>
-<div class="timeline mt-3">
-<div class="item"><strong>22 года</strong> — начал тренировать первых учеников, передавая опыт скутеристам
+            <div class="timeline mt-3">
+              <div class="item"><strong>22 года</strong> — начал тренировать первых учеников, передавая опыт скутеристам
                 с большим потенциалом.</div>
-<div class="item"><strong>Дальше</strong> — с теми же учениками освоили большие мотоциклы, выступали и
+              <div class="item"><strong>Дальше</strong> — с теми же учениками освоили большие мотоциклы, выступали и
                 развивали дальневосточный стантрайдинг.</div>
-<div class="item"><strong>Сегодня</strong> — авторский курс, позволяющий без мото‑бэкграунда погрузиться в
+              <div class="item"><strong>Сегодня</strong> — авторский курс, позволяющий без мото‑бэкграунда погрузиться в
                 мир двух колёс.</div>
-</div>
-</div>
-</div>
-<div class="col-lg-6" data-aos="fade-left">
-<div class="row g-3">
-<div class="col-6">
-<div class="feature h-100"><i class="bi bi-shield-lock"></i>
-<h5 class="mt-2">Безопасно</h5>
-<p class="muted mb-0">Отведённые места, подготовленные мотоциклы и полная защитная экипировка.</p>
-</div>
-</div>
-<div class="col-6">
-<div class="feature h-100"><i class="bi bi-mortarboard"></i>
-<h5 class="mt-2">Поэтапно</h5>
-<p class="muted mb-0">От посадки и работы телом — к манёврам и инстинктам управления.</p>
-</div>
-</div>
-<div class="col-6">
-<div class="feature h-100"><i class="bi bi-graph-up-arrow"></i>
-<h5 class="mt-2">С результатом</h5>
-<p class="muted mb-0">Ученики задают планку и формируют здоровую конкуренцию навыков.</p>
-</div>
-</div>
-<div class="col-6">
-<div class="feature h-100"><i class="bi bi-people"></i>
-<h5 class="mt-2">Вместе</h5>
-<p class="muted mb-0">Покатушки, выезды и встречи — мото как культура и сообщество.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- MISSION / PHILOSOPHY -->
-<section class="section pt-0" id="mission">
-<div class="container">
-<div class="row g-4">
-<div class="col-lg-6" data-aos="fade-up">
-<h2 class="h1 fw-bold">Подход к обучению</h2>
-<p>С каждым годом мотоциклов на дорогах больше. Но не каждый райдер — подготовленный участник движения. Моя
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="feature h-100"><i class="bi bi-shield-lock"></i>
+                <h5 class="mt-2">Безопасно</h5>
+                <p class="muted mb-0">Отведённые места, подготовленные мотоциклы и полная защитная экипировка.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="feature h-100"><i class="bi bi-mortarboard"></i>
+                <h5 class="mt-2">Поэтапно</h5>
+                <p class="muted mb-0">От посадки и работы телом — к манёврам и инстинктам управления.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="feature h-100"><i class="bi bi-graph-up-arrow"></i>
+                <h5 class="mt-2">С результатом</h5>
+                <p class="muted mb-0">Ученики задают планку и формируют здоровую конкуренцию навыков.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="feature h-100"><i class="bi bi-people"></i>
+                <h5 class="mt-2">Вместе</h5>
+                <p class="muted mb-0">Покатушки, выезды и встречи — мото как культура и сообщество.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- Safety Section -->
+  <section id="safety" class="py-6 py-lg-7">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <h2 class="mb-3 d-flex align-items-center gap-2">
+            <i class="bi bi-shield-check"></i> Безопасная езда — наша главная цель
+          </h2>
+          <p class="lead">Основная задача школы — научить управлять мотоциклом <strong>безопасно</strong>: уверенно, предсказуемо и без лишнего риска. Мы формируем правильные рефлексы и учим заранее распознавать опасные сценарии.</p>
+          <ul class="list-unstyled list-check">
+            <li><i class="bi bi-check2-circle"></i>Предиктивное вождение: чтение дорожной обстановки и «язык ошибок» других участников</li>
+            <li><i class="bi bi-check2-circle"></i>Экстренное торможение и объезд препятствий на разном покрытии</li>
+            <li><i class="bi bi-check2-circle"></i>Контрруление, траектории, работа взглядом и положением тела</li>
+            <li><i class="bi bi-check2-circle"></i>Психология риска: как сохранять холодную голову и не поддаваться эмоциям</li>
+            <li><i class="bi bi-check2-circle"></i>Экипировка и техника: как выбирать, проверять и обслуживать</li>
+          </ul>
+          <div class="mt-4 d-flex gap-3">
+            <a href="#signup" class="btn btn-brand">Записаться на безопасный курс</a>
+            <a href="#courses" class="btn btn-outline-brand">Смотреть программы</a>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="p-4 h-100 rounded-4 border card-glow">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-eye"></i><h6 class="mb-0">Видимость</h6>
+                </div>
+                <p class="mb-0 muted">Учимся быть заметными: траектория в потоке, свет, «правильные» позиции на полосе.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-4 h-100 rounded-4 border card-glow">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-activity"></i><h6 class="mb-0">Предикция</h6>
+                </div>
+                <p class="mb-0 muted">Читаем намерения водителей и прогнозируем «что‑если», снижаем внезапности.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-4 h-100 rounded-4 border card-glow">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-sign-turn-right"></i><h6 class="mb-0">Манёвры</h6>
+                </div>
+                <p class="mb-0 muted">Объезд, перестроение, безопасные траектории на разных скоростях и покрытиях.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-4 h-100 rounded-4 border card-glow">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-brakes"></i><h6 class="mb-0">Торможение</h6>
+                </div>
+                <p class="mb-0 muted">Экстренное торможение: дозировка, работа ABS, перенос веса, остановка по прямой и с уклонением.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 small muted">
+            Все упражнения проводятся в безопасных условиях, на подготовленной площадке и с обязательной защитной экипировкой.
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5 g-4" data-aos="zoom-in">
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 border h-100 text-center">
+            <div class="fs-1 mb-2">90%+</div>
+            <p class="mb-0 muted">учеников отмечают рост уверенности и снижение «стресса дороги» после 2–3 занятий</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 border h-100 text-center">
+            <div class="fs-1 mb-2"><i class="bi bi-geo-alt"></i></div>
+            <p class="mb-0 muted">отрабатываем сценарии: «резкая подрезка», «мокрая разметка», «ямы/гравий», «неожиданный пешеход»</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 border h-100 text-center">
+            <div class="fs-1 mb-2"><i class="bi bi-gear"></i></div>
+            <p class="mb-0 muted">даём чек‑лист ТО мотоцикла перед сезоном и перед каждой поездкой</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- MISSION / PHILOSOPHY -->
+  <section class="section" id="mission">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6" data-aos="fade-up">
+          <h2 class="h1 fw-bold">Подход к обучению</h2>
+          <p>С каждым годом мотоциклов на дорогах больше. Но не каждый райдер — подготовленный участник движения. Моя
             задача как учителя — выпускать адекватных и готовых мотоциклистов.</p>
-<p>Переучиваться сложнее, чем учиться с нуля. Будьте умнее и учитесь на чужих ошибках: доверяйте обучение
+          <p>Переучиваться сложнее, чем учиться с нуля. Будьте умнее и учитесь на чужих ошибках: доверяйте обучение
             профессионалам и постоянно осваивайте новые навыки — у совершенства нет границ.</p>
-</div>
-<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-<div class="glass p-4">
-<h5 class="mb-2">Что формирует прогресс</h5>
-<ul class="list-unstyled list-check mb-0">
-<li><i class="bi bi-check2-circle"></i>Правильная посадка и работа телом</li>
-<li><i class="bi bi-check2-circle"></i>Контроль органов управления</li>
-<li><i class="bi bi-check2-circle"></i>Безопасные алгоритмы и рефлексы</li>
-<li><i class="bi bi-check2-circle"></i>Понимание техники и её обслуживания</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-<div class="divider"></div>
-<!-- COURSES -->
-<section class="section" id="courses">
-<div class="container">
-<div class="row mb-4">
-<div class="col-lg-8" data-aos="fade-up">
-<h2 class="h1 fw-bold">Курсы и форматы</h2>
-<p class="muted">Подходит новичкам и райдерам с опытом. Типовые ошибки — у многих, исправим их системно.</p>
-</div>
-</div>
-<div class="row g-4">
-<div class="col-md-6 col-lg-4" data-aos="zoom-in">
-<div class="course-card p-4 h-100">
-<div class="course-body">
-<div class="d-flex align-items-center gap-2 mb-2">
-<i class="bi bi-stars"></i>
-<h5 class="mb-0">Базовый курс</h5>
-</div>
-<p class="muted">Основы управления мотоциклом — без страха и лишних эмоций.</p>
-<ul class="list-unstyled list-check">
-<li><i class="bi bi-check2-circle"></i>Посадка, баланс, работа взглядом</li>
-<li><i class="bi bi-check2-circle"></i>Контроль газа, сцепления и торможения</li>
-<li><i class="bi bi-check2-circle"></i>Манёвры на малых скоростях</li>
-<li><i class="bi bi-check2-circle"></i>Формирование безопасных рефлексов</li>
-</ul>
-<div class="course-syllabus mt-2">
-<div class="accordion" id="acc-basic">
-<div class="accordion-item mb-2">
-<h2 class="accordion-header" id="bmod1">
-<button aria-controls="bc1" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#bc1" data-bs-toggle="collapse" type="button">
-                      Модуль 1 — База управления
-                    </button>
-</h2>
-<div aria-labelledby="bmod1" class="accordion-collapse collapse" data-bs-parent="#acc-basic" id="bc1">
-<div class="accordion-body">
-                      Посадка, работа взглядом и телом, базовый баланс. Газ/сцепление/торможение, трогание и остановка, корректные привычки.
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass p-4">
+            <h5 class="mb-2">Что формирует прогресс</h5>
+            <ul class="list-unstyled list-check mb-0">
+              <li><i class="bi bi-check2-circle"></i>Правильная посадка и работа телом</li>
+              <li><i class="bi bi-check2-circle"></i>Контроль органов управления</li>
+              <li><i class="bi bi-check2-circle"></i>Безопасные алгоритмы и рефлексы</li>
+              <li><i class="bi bi-check2-circle"></i>Понимание техники и её обслуживания</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+  <!-- COURSES -->
+  <section class="section" id="courses">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-8" data-aos="fade-up">
+          <h2 class="h1 fw-bold">Курсы и форматы</h2>
+          <p class="muted">Подходит новичкам и райдерам с опытом. Типовые ошибки — у многих, исправим их системно.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+          <div class="course-card p-4 h-100">
+            <div class="course-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-stars"></i>
+                <h5 class="mb-0">Базовый курс</h5>
+              </div>
+              <p class="muted">Основы управления мотоциклом — без страха и лишних эмоций.</p>
+              <ul class="list-unstyled list-check">
+                <li><i class="bi bi-check2-circle"></i>Посадка, баланс, работа взглядом</li>
+                <li><i class="bi bi-check2-circle"></i>Контроль газа, сцепления и торможения</li>
+                <li><i class="bi bi-check2-circle"></i>Манёвры на малых скоростях</li>
+                <li><i class="bi bi-check2-circle"></i>Формирование безопасных рефлексов</li>
+              </ul>
+              <div class="course-syllabus mt-2">
+                <div class="accordion" id="acc-basic">
+                  <div class="accordion-item mb-2">
+                    <h2 class="accordion-header" id="bmod1">
+                      <button aria-controls="bc1" aria-expanded="false" class="accordion-button collapsed"
+                        data-bs-target="#bc1" data-bs-toggle="collapse" type="button">
+                        Модуль 1 — База управления
+                      </button>
+                    </h2>
+                    <div aria-labelledby="bmod1" class="accordion-collapse collapse" data-bs-parent="#acc-basic"
+                      id="bc1">
+                      <div class="accordion-body">
+                        Посадка, работа взглядом и телом, базовый баланс. Газ/сцепление/торможение, трогание и
+                        остановка, корректные привычки.
+                      </div>
                     </div>
-</div>
-</div>
-<div class="accordion-item mb-2">
-<h2 class="accordion-header" id="bmod2">
-<button aria-controls="bc2" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#bc2" data-bs-toggle="collapse" type="button">
-                      Модуль 2 — Манёвры на малой скорости
-                    </button>
-</h2>
-<div aria-labelledby="bmod2" class="accordion-collapse collapse" data-bs-parent="#acc-basic" id="bc2">
-<div class="accordion-body">
-                      Змейка, развороты в ограниченном пространстве, контрруление, работа со сцеплением и задним тормозом.
+                  </div>
+                  <div class="accordion-item mb-2">
+                    <h2 class="accordion-header" id="bmod2">
+                      <button aria-controls="bc2" aria-expanded="false" class="accordion-button collapsed"
+                        data-bs-target="#bc2" data-bs-toggle="collapse" type="button">
+                        Модуль 2 — Манёвры на малой скорости
+                      </button>
+                    </h2>
+                    <div aria-labelledby="bmod2" class="accordion-collapse collapse" data-bs-parent="#acc-basic"
+                      id="bc2">
+                      <div class="accordion-body">
+                        Змейка, развороты в ограниченном пространстве, контрруление, работа со сцеплением и задним
+                        тормозом.
+                      </div>
                     </div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="bmod3">
-<button aria-controls="bc3" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#bc3" data-bs-toggle="collapse" type="button">
-                      Модуль 3 — Рефлексы и безопасность
-                    </button>
-</h2>
-<div aria-labelledby="bmod3" class="accordion-collapse collapse" data-bs-parent="#acc-basic" id="bc3">
-<div class="accordion-body">
-                      Экстренное торможение, объезд препятствий, базовые сценарии «что‑если», подготовка к дорожным условиям.
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="bmod3">
+                      <button aria-controls="bc3" aria-expanded="false" class="accordion-button collapsed"
+                        data-bs-target="#bc3" data-bs-toggle="collapse" type="button">
+                        Модуль 3 — Рефлексы и безопасность
+                      </button>
+                    </h2>
+                    <div aria-labelledby="bmod3" class="accordion-collapse collapse" data-bs-parent="#acc-basic"
+                      id="bc3">
+                      <div class="accordion-body">
+                        Экстренное торможение, объезд препятствий, базовые сценарии «что‑если», подготовка к дорожным
+                        условиям.
+                      </div>
                     </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="course-actions">
-<span class="price-badge">
-<span class="price" data-course="basic" data-currency="RUB" data-price="4500">4 500 ₽</span>
-</span>
-<a class="btn btn-outline-brand" href="#signup">Записаться</a>
-</div>
-</div>
-</div>
-<div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-<div class="course-card p-4 h-100">
-<div class="course-body">
-<div class="d-flex align-items-center gap-2 mb-2">
-<i class="bi bi-lightning"></i>
-<h5 class="mb-0">Трюковый курс</h5>
-</div>
-<p class="muted">Безопасные основы стантрайдинга в контролируемых условиях.</p>
-<ul class="list-unstyled list-check">
-<li><i class="bi bi-check2-circle"></i>Вилли и стоппи (база)</li>
-<li><i class="bi bi-check2-circle"></i>Бернаут и дрифт</li>
-<li><i class="bi bi-check2-circle"></i>Простейшие акробатические элементы</li>
-<li><i class="bi bi-check2-circle"></i>Протоколы безопасности и страхование упражнений</li>
-</ul>
-<div class="course-syllabus mt-2">
-<div class="accordion" id="acc-stunt">
-<div class="accordion-item mb-2">
-<h2 class="accordion-header" id="smod1">
-<button aria-controls="sc1" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#sc1" data-bs-toggle="collapse" type="button">
-                      Модуль 1 — Контроль и безопасность
-                    </button>
-</h2>
-<div aria-labelledby="smod1" class="accordion-collapse collapse" data-bs-parent="#acc-stunt" id="sc1">
-<div class="accordion-body">
-                      Протоколы безопасности, экипировка, подготовка площадки и мотоцикла. Страховка упражнений.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="course-actions">
+              <span class="price-badge">
+                <span class="price" data-course="basic" data-currency="RUB" data-price="4500">4 500 ₽</span>
+              </span>
+              <a class="btn btn-outline-brand" href="#signup">Записаться</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="course-card p-4 h-100">
+            <div class="course-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-lightning"></i>
+                <h5 class="mb-0">Трюковый курс</h5>
+              </div>
+              <p class="muted">Безопасные основы стантрайдинга в контролируемых условиях.</p>
+              <ul class="list-unstyled list-check">
+                <li><i class="bi bi-check2-circle"></i>Вилли и стоппи (база)</li>
+                <li><i class="bi bi-check2-circle"></i>Бернаут и дрифт</li>
+                <li><i class="bi bi-check2-circle"></i>Простейшие акробатические элементы</li>
+                <li><i class="bi bi-check2-circle"></i>Протоколы безопасности и страхование упражнений</li>
+              </ul>
+              <div class="course-syllabus mt-2">
+                <div class="accordion" id="acc-stunt">
+                  <div class="accordion-item mb-2">
+                    <h2 class="accordion-header" id="smod1">
+                      <button aria-controls="sc1" aria-expanded="false" class="accordion-button collapsed"
+                        data-bs-target="#sc1" data-bs-toggle="collapse" type="button">
+                        Модуль 1 — Контроль и безопасность
+                      </button>
+                    </h2>
+                    <div aria-labelledby="smod1" class="accordion-collapse collapse" data-bs-parent="#acc-stunt"
+                      id="sc1">
+                      <div class="accordion-body">
+                        Протоколы безопасности, экипировка, подготовка площадки и мотоцикла. Страховка упражнений.
+                      </div>
                     </div>
-</div>
-</div>
-<div class="accordion-item mb-2">
-<h2 class="accordion-header" id="smod2">
-<button aria-controls="sc2" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#sc2" data-bs-toggle="collapse" type="button">
-                      Модуль 2 — Базовые трюки
-                    </button>
-</h2>
-<div aria-labelledby="smod2" class="accordion-collapse collapse" data-bs-parent="#acc-stunt" id="sc2">
-<div class="accordion-body">
-                      Первые подходы к вилли и стоппи, бернаут, контролируемый дрифт. Пошаговые методики и работа газом/тормозом.
+                  </div>
+                  <div class="accordion-item mb-2">
+                    <h2 class="accordion-header" id="smod2">
+                      <button aria-controls="sc2" aria-expanded="false" class="accordion-button collapsed"
+                        data-bs-target="#sc2" data-bs-toggle="collapse" type="button">
+                        Модуль 2 — Базовые трюки
+                      </button>
+                    </h2>
+                    <div aria-labelledby="smod2" class="accordion-collapse collapse" data-bs-parent="#acc-stunt"
+                      id="sc2">
+                      <div class="accordion-body">
+                        Первые подходы к вилли и стоппи, бернаут, контролируемый дрифт. Пошаговые методики и работа
+                        газом/тормозом.
+                      </div>
                     </div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="smod3">
-<button aria-controls="sc3" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#sc3" data-bs-toggle="collapse" type="button">
-                      Модуль 3 — Акробатика и техника
-                    </button>
-</h2>
-<div aria-labelledby="smod3" class="accordion-collapse collapse" data-bs-parent="#acc-stunt" id="sc3">
-<div class="accordion-body">
-                      Простейшие акробатические элементы, распределение веса, устойчивость и баланс, индивидуальные корректировки техники.
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="smod3">
+                      <button aria-controls="sc3" aria-expanded="false" class="accordion-button collapsed"
+                        data-bs-target="#sc3" data-bs-toggle="collapse" type="button">
+                        Модуль 3 — Акробатика и техника
+                      </button>
+                    </h2>
+                    <div aria-labelledby="smod3" class="accordion-collapse collapse" data-bs-parent="#acc-stunt"
+                      id="sc3">
+                      <div class="accordion-body">
+                        Простейшие акробатические элементы, распределение веса, устойчивость и баланс, индивидуальные
+                        корректировки техники.
+                      </div>
                     </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="course-actions">
-<span class="price-badge">
-<span class="price" data-course="stunt" data-currency="RUB" data-price="6000">6 000 ₽</span>
-</span>
-<a class="btn btn-outline-brand" href="#signup">К трюкам</a>
-</div>
-</div>
-</div>
-<div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-<div class="course-card p-4 h-100">
-<div class="course-body">
-<div class="d-flex align-items-center gap-2 mb-2">
-<i class="bi bi-shield-exclamation"></i>
-<h5 class="mb-0">Антиаварийная езда</h5>
-</div>
-<p class="muted">Профилактика ДТП: предиктивное вождение и экстренные действия.</p>
-<ul class="list-unstyled list-check">
-<li><i class="bi bi-check2-circle"></i>Экстренное торможение и объезд препятствий</li>
-<li><i class="bi bi-check2-circle"></i>Контрруление и работа взглядом</li>
-<li><i class="bi bi-check2-circle"></i>Траектории, покрытие и сцепление</li>
-<li><i class="bi bi-check2-circle"></i>Оценка рисков и сценарии «что если»</li>
-</ul>
-<div class="course-syllabus mt-2">
-<div class="accordion" id="acc-safety">
-<div class="accordion-item mb-2">
-<h2 class="accordion-header" id="amod1">
-<button aria-controls="ac1" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#ac1" data-bs-toggle="collapse" type="button">
-                      Модуль 1 — Предиктивное вождение
-                    </button>
-</h2>
-<div aria-labelledby="amod1" class="accordion-collapse collapse" data-bs-parent="#acc-safety" id="ac1">
-<div class="accordion-body">
-                      Чтение дорожной обстановки, слепые зоны, работа взглядом, анализ рисков и маршрутов, типичные ошибки.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="course-actions">
+              <span class="price-badge">
+                <span class="price" data-course="stunt" data-currency="RUB" data-price="6000">6 000 ₽</span>
+              </span>
+              <a class="btn btn-outline-brand" href="#signup">К трюкам</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="course-card p-4 h-100">
+            <div class="course-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-shield-exclamation"></i>
+                <h5 class="mb-0">Антиаварийная езда</h5>
+              </div>
+              <p class="muted">Профилактика ДТП: предиктивное вождение и экстренные действия.</p>
+              <ul class="list-unstyled list-check">
+                <li><i class="bi bi-check2-circle"></i>Экстренное торможение и объезд препятствий</li>
+                <li><i class="bi bi-check2-circle"></i>Контрруление и работа взглядом</li>
+                <li><i class="bi bi-check2-circle"></i>Траектории, покрытие и сцепление</li>
+                <li><i class="bi bi-check2-circle"></i>Оценка рисков и сценарии «что если»</li>
+              </ul>
+              <div class="course-syllabus mt-2">
+                <div class="accordion" id="acc-safety">
+                  <div class="accordion-item mb-2">
+                    <h2 class="accordion-header" id="amod1">
+                      <button aria-controls="ac1" aria-expanded="false" class="accordion-button collapsed"
+                        data-bs-target="#ac1" data-bs-toggle="collapse" type="button">
+                        Модуль 1 — Предиктивное вождение
+                      </button>
+                    </h2>
+                    <div aria-labelledby="amod1" class="accordion-collapse collapse" data-bs-parent="#acc-safety"
+                      id="ac1">
+                      <div class="accordion-body">
+                        Чтение дорожной обстановки, слепые зоны, работа взглядом, анализ рисков и маршрутов, типичные
+                        ошибки.
+                      </div>
                     </div>
-</div>
-</div>
-<div class="accordion-item mb-2">
-<h2 class="accordion-header" id="amod2">
-<button aria-controls="ac2" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#ac2" data-bs-toggle="collapse" type="button">
-                      Модуль 2 — Экстренные действия
-                    </button>
-</h2>
-<div aria-labelledby="amod2" class="accordion-collapse collapse" data-bs-parent="#acc-safety" id="ac2">
-<div class="accordion-body">
-                      Экстренное торможение на разном покрытии, объезд препятствий, антизанос, контрруление и траектории.
+                  </div>
+                  <div class="accordion-item mb-2">
+                    <h2 class="accordion-header" id="amod2">
+                      <button aria-controls="ac2" aria-expanded="false" class="accordion-button collapsed"
+                        data-bs-target="#ac2" data-bs-toggle="collapse" type="button">
+                        Модуль 2 — Экстренные действия
+                      </button>
+                    </h2>
+                    <div aria-labelledby="amod2" class="accordion-collapse collapse" data-bs-parent="#acc-safety"
+                      id="ac2">
+                      <div class="accordion-body">
+                        Экстренное торможение на разном покрытии, объезд препятствий, антизанос, контрруление и
+                        траектории.
+                      </div>
                     </div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="amod3">
-<button aria-controls="ac3" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#ac3" data-bs-toggle="collapse" type="button">
-                      Модуль 3 — Практика сценариев
-                    </button>
-</h2>
-<div aria-labelledby="amod3" class="accordion-collapse collapse" data-bs-parent="#acc-safety" id="ac3">
-<div class="accordion-body">
-                      Серии упражнений «что‑если»: внезапная преграда, автомобиль перестраивается, мокрое покрытие, экстренный разворот и др.
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="amod3">
+                      <button aria-controls="ac3" aria-expanded="false" class="accordion-button collapsed"
+                        data-bs-target="#ac3" data-bs-toggle="collapse" type="button">
+                        Модуль 3 — Практика сценариев
+                      </button>
+                    </h2>
+                    <div aria-labelledby="amod3" class="accordion-collapse collapse" data-bs-parent="#acc-safety"
+                      id="ac3">
+                      <div class="accordion-body">
+                        Серии упражнений «что‑если»: внезапная преграда, автомобиль перестраивается, мокрое покрытие,
+                        экстренный разворот и др.
+                      </div>
                     </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="course-actions">
-<span class="price-badge">
-<span class="price" data-course="safety" data-currency="RUB" data-price="5200">5 200 ₽</span>
-</span>
-<a class="btn btn-outline-brand" href="#signup">Улучшить безопасность</a>
-</div>
-</div>
-</div>
-</div>
-<div class="row mt-4">
-<div class="col-12">
-<div class="glass p-4" data-aos="fade-up">
-<strong>Важно:</strong> на мотошколы возложена ответственность — выпускать достойно подготовленных
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="course-actions">
+              <span class="price-badge">
+                <span class="price" data-course="safety" data-currency="RUB" data-price="5200">5 200 ₽</span>
+              </span>
+              <a class="btn btn-outline-brand" href="#signup">Улучшить безопасность</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12">
+          <div class="glass p-4" data-aos="fade-up">
+            <strong>Важно:</strong> на мотошколы возложена ответственность — выпускать достойно подготовленных
             курсантов. По опыту, многим выпускникам нужна доработка навыков — мы закрываем этот пробел дополнительным
             обучением.
           </div>
-</div>
-</div>
-</div>
-</section>
-<!-- STUNT DETAILS -->
-<section class="section" id="stunt">
-<div class="container">
-<div class="row g-4 align-items-center">
-<div class="col-lg-6" data-aos="fade-right">
-<h2 class="h1 fw-bold">Стантрайдинг безопасно</h2>
-<p class="muted">Элементы стантрайдинга доступны тем, кто готов идти дальше: езда на заднем и переднем колесе,
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- STUNT DETAILS -->
+  <section class="section" id="stunt">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <h2 class="h1 fw-bold">Стантрайдинг безопасно</h2>
+          <p class="muted">Элементы стантрайдинга доступны тем, кто готов идти дальше: езда на заднем и переднем колесе,
             бернаут, дрифт, базовая акробатика. Всё — на закрытой площадке, на специально подготовленных мотоциклах, в
             полном комплекте защиты.</p>
-<ul class="list-unstyled list-check">
-<li><i class="bi bi-check2-circle"></i>Пошаговые упражнения</li>
-<li><i class="bi bi-check2-circle"></i>Контроль рисков и экипировка</li>
-<li><i class="bi bi-check2-circle"></i>Индивидуальные корректировки техники</li>
-</ul>
-<a class="btn btn-brand" href="#signup"><i class="bi bi-rocket-takeoff me-2"></i>Записаться на
+          <ul class="list-unstyled list-check">
+            <li><i class="bi bi-check2-circle"></i>Пошаговые упражнения</li>
+            <li><i class="bi bi-check2-circle"></i>Контроль рисков и экипировка</li>
+            <li><i class="bi bi-check2-circle"></i>Индивидуальные корректировки техники</li>
+          </ul>
+          <a class="btn btn-brand" href="#signup"><i class="bi bi-rocket-takeoff me-2"></i>Записаться на
             стант-основы</a>
-</div>
-<div class="col-lg-6" data-aos="fade-left">
-<div class="row g-3 gallery">
-<div class="col-6"><img alt="Вилли на площадке" class="img-fluid" loading="lazy" src="./images/galery/show/Wheelie5.jpg"/>
-</div>
-<div class="col-6"><img alt="Стоппи" class="img-fluid" loading="lazy" src="./images/galery/show/Stoppie1.jpg"/></div>
-<div class="col-12"><img alt="Дрифт и бернаут" class="img-fluid" loading="lazy" src="./images/galery/show/Burnout.jpg"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<div class="divider"></div>
-<!-- BIKES -->
-<section class="section" id="bikes">
-<div class="container">
-<div class="row g-4 align-items-center">
-<div class="col-lg-6 order-lg-2" data-aos="fade-left">
-<h2 class="h1 fw-bold">Подбор и продажа мотоциклов</h2>
-<p class="muted">У нас всегда есть топовые модели разных классов. Отбираем достойные экземпляры в приличном
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="row g-3 gallery">
+            <div class="col-6"><img alt="Вилли на площадке" class="img-fluid" loading="lazy"
+                src="./images/galery/show/Wheelie5.jpg" />
+            </div>
+            <div class="col-6"><img alt="Стоппи" class="img-fluid" loading="lazy"
+                src="./images/galery/show/Stoppie1.jpg" /></div>
+            <div class="col-12"><img alt="Дрифт и бернаут" class="img-fluid" loading="lazy"
+                src="./images/galery/show/Burnout.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+  <!-- BIKES -->
+  <section class="section" id="bikes">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+          <h2 class="h1 fw-bold">Подбор и продажа мотоциклов</h2>
+          <p class="muted">У нас всегда есть топовые модели разных классов. Отбираем достойные экземпляры в приличном
             техническом и косметическом состоянии. Репутация — то, над чем мы работали годы. Честная сделка и
             достоверный пробег.</p>
-<a class="btn btn-outline-brand" href="#contact"><i class="bi bi-shop me-2"></i>Уточнить наличие</a>
-</div>
-<div class="col-lg-6 order-lg-1" data-aos="fade-right">
-<div class="row g-3 gallery">
-<div class="col-6"><img alt="Нэйкед класс" class="img-fluid" loading="lazy" src="./images/moto1.jpg"/></div>
-<div class="col-6"><img alt="Спортбайк" class="img-fluid" loading="lazy" src="./images/moto2.jpg"/></div>
-<div class="col-12"><img alt="Туринг" class="img-fluid" loading="lazy" src="./images/moto3.jpg"/></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- EVENTS / PERFORMANCES -->
-<section class="section" id="events">
-<div class="container">
-<div class="row g-4 align-items-center">
-<div class="col-lg-6" data-aos="fade-right">
-<h2 class="h1 fw-bold">Выступления и шоу</h2>
-<p class="muted">Выступления — неотъемлемая часть жизни стантрайдеров. Сложнейшие трюки, запах отожжённой
+          <a class="btn btn-outline-brand" href="#contact"><i class="bi bi-shop me-2"></i>Уточнить наличие</a>
+        </div>
+        <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+          <div class="row g-3 gallery">
+            <div class="col-6"><img alt="Нэйкед класс" class="img-fluid" loading="lazy" src="./images/moto1.jpg" />
+            </div>
+            <div class="col-6"><img alt="Спортбайк" class="img-fluid" loading="lazy" src="./images/moto2.jpg" /></div>
+            <div class="col-12"><img alt="Туринг" class="img-fluid" loading="lazy" src="./images/moto3.jpg" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- EVENTS / PERFORMANCES -->
+  <section class="section" id="events">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <h2 class="h1 fw-bold">Выступления и шоу</h2>
+          <p class="muted">Выступления — неотъемлемая часть жизни стантрайдеров. Сложнейшие трюки, запах отожжённой
             резины и нереальный звук выхлопа будоражат людей по всему миру, и наш регион — не исключение. Следите за
             нашими выступлениями, ваша поддержка — то, ради чего мы этим занимаемся.</p>
-<a class="btn btn-brand" href="#contact"><i class="bi bi-calendar2-event me-2"></i>Пригласить на ивент</a>
-</div>
-<div class="col-lg-6" data-aos="fade-left">
-<img alt="Стант шоу" class="img-fluid rounded-4 border border-light border-opacity-10" loading="lazy" src="./images/galery/show/Tank1.jpg"/>
-</div>
-</div>
-</div>
-</section>
-<!-- COMMUNITY -->
-<section class="section pt-0" id="community">
-<div class="container">
-<div class="glass p-4" data-aos="fade-up">
-<h2 class="h1 fw-bold mb-3">Сообщество учеников</h2>
-<p>Мои ученики — моя гордость. Нет большего счастья, чем видеть, как твои старания влияют на чью‑то жизнь. У нас
+          <a class="btn btn-brand" href="#contact"><i class="bi bi-calendar2-event me-2"></i>Пригласить на ивент</a>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <img alt="Стант шоу" class="img-fluid rounded-4 border border-light border-opacity-10" loading="lazy"
+            src="./images/galery/show/Tank1.jpg" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- COMMUNITY -->
+  <section class="section pt-0" id="community">
+    <div class="container">
+      <div class="glass p-4" data-aos="fade-up">
+        <h2 class="h1 fw-bold mb-3">Сообщество учеников</h2>
+        <p>Мои ученики — моя гордость. Нет большего счастья, чем видеть, как твои старания влияют на чью‑то жизнь. У нас
           не просто кружок по интересам — обучение продолжается за пределами спота: совместные выезды за город, встречи
           и общение даже зимой.</p>
-<p class="mb-0">Мотоцикл — не просто средство передвижения, а целая вселенная возможностей. Ученики своим
+        <p class="mb-0">Мотоцикл — не просто средство передвижения, а целая вселенная возможностей. Ученики своим
           примером формируют здоровую спортивную конкуренцию, развивают волевые качества и преодолевают страхи — так
           растём как личности.</p>
-</div>
-</div>
-</section>
-<div class="divider"></div>
-<!-- GALLERY WIDE -->
-<section class="section" id="gallery">
-<div class="container">
-<div aria-label="Фильтр галереи" class="d-flex flex-wrap gap-2 mb-3" id="galleryFilters" role="tablist">
-<button aria-pressed="true" class="btn btn-sm btn-outline-brand active" data-filter="all">Все</button>
-<button class="btn btn-sm btn-outline-brand" data-filter="training">Тренировки</button>
-<button class="btn btn-sm btn-outline-brand" data-filter="show">Шоу</button>
-<button class="btn btn-sm btn-outline-brand" data-filter="life">Жизнь</button>
-</div>
-<div class="row mb-4">
-<div class="col-lg-8" data-aos="fade-up">
-<h2 class="h1 fw-bold">Галерея</h2>
-<p class="muted">Тренировки, трюки и атмосфера нашего сообщества.</p>
-</div>
-</div>
-<div class="swiper gallery-swiper" id="gallerySwiper">
-<div class="swiper-wrapper"></div>
-<div class="swiper-pagination"></div>
-<div class="swiper-button-prev"></div>
-<div class="swiper-button-next"></div>
-</div>
-</div>
-
-</section>
-<!-- TESTIMONIALS / SLIDER -->
-<section class="section pt-0">
-<div class="container">
-<div class="glass p-4">
-<div class="row align-items-center g-4">
-<div class="col-lg-4">
-<h3 class="fw-bold mb-2">Отзывы учеников</h3>
-<p class="muted mb-0">Результат говорит сам за себя.</p>
-</div>
-<div class="col-lg-8">
-<div class="swiper" id="reviews">
-<div class="swiper-wrapper">
-<div class="swiper-slide">
-<p class="mb-1">«С нуля перестал бояться мотоцикла. Всё по шагам и с акцентом на безопасность.»</p>
-<span class="muted">Алексей, базовый курс</span>
-</div>
-<div class="swiper-slide">
-<p class="mb-1">«Продвинутый курс раскрыл ошибки, о которых не догадывался. Управление стало
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+  <!-- GALLERY WIDE -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div aria-label="Фильтр галереи" class="d-flex flex-wrap gap-2 mb-3" id="galleryFilters" role="tablist">
+        <button aria-pressed="true" class="btn btn-sm btn-outline-brand active" data-filter="all">Все</button>
+        <button class="btn btn-sm btn-outline-brand" data-filter="training">Тренировки</button>
+        <button class="btn btn-sm btn-outline-brand" data-filter="show">Шоу</button>
+        <button class="btn btn-sm btn-outline-brand" data-filter="life">Жизнь</button>
+      </div>
+      <div class="row mb-4">
+        <div class="col-lg-8" data-aos="fade-up">
+          <h2 class="h1 fw-bold">Галерея</h2>
+          <p class="muted">Тренировки, трюки и атмосфера нашего сообщества.</p>
+        </div>
+      </div>
+      <div class="swiper gallery-swiper" id="gallerySwiper">
+        <div class="swiper-wrapper"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+  <!-- TESTIMONIALS / SLIDER -->
+  <section class="section pt-0">
+    <div class="container">
+      <div class="glass p-4">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-4">
+            <h3 class="fw-bold mb-2">Отзывы учеников</h3>
+            <p class="muted mb-0">Результат говорит сам за себя.</p>
+          </div>
+          <div class="col-lg-8">
+            <div class="swiper" id="reviews">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <p class="mb-1">«С нуля перестал бояться мотоцикла. Всё по шагам и с акцентом на безопасность.»</p>
+                  <span class="muted">Алексей, базовый курс</span>
+                </div>
+                <div class="swiper-slide">
+                  <p class="mb-1">«Продвинутый курс раскрыл ошибки, о которых не догадывался. Управление стало
                     осознанным.»</p>
-<span class="muted">Мария, продвинутый</span>
-</div>
-<div class="swiper-slide">
-<p class="mb-1">«Первый контролируемый вилли под присмотром — эмоции зашкаливают!»</p>
-<span class="muted">Иван, стант‑основы</span>
-</div>
-</div>
-<div class="swiper-pagination"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- FAQ -->
-<section class="section" id="faq">
-<div class="container">
-<div class="row mb-4">
-<div class="col-lg-8">
-<h2 class="h1 fw-bold">Частые вопросы</h2>
-</div>
-</div>
-<div class="accordion faq" id="faqAccordion">
-<div class="accordion-item mb-3">
-<h2 class="accordion-header" id="q1"><button aria-controls="a1" aria-expanded="true" class="accordion-button" data-bs-target="#a1" data-bs-toggle="collapse" type="button">Нужны ли свой мотоцикл и экипировка?</button>
-</h2>
-<div aria-labelledby="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="a1">
-<div class="accordion-body">Для первых занятий предоставляем подготовленные мотоциклы и полный комплект
+                  <span class="muted">Мария, продвинутый</span>
+                </div>
+                <div class="swiper-slide">
+                  <p class="mb-1">«Первый контролируемый вилли под присмотром — эмоции зашкаливают!»</p>
+                  <span class="muted">Иван, стант‑основы</span>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-8">
+          <h2 class="h1 fw-bold">Частые вопросы</h2>
+        </div>
+      </div>
+      <div class="accordion faq" id="faqAccordion">
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="q1"><button aria-controls="a1" aria-expanded="true" class="accordion-button"
+              data-bs-target="#a1" data-bs-toggle="collapse" type="button">Нужны ли свой мотоцикл и экипировка?</button>
+          </h2>
+          <div aria-labelledby="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="a1">
+            <div class="accordion-body">Для первых занятий предоставляем подготовленные мотоциклы и полный комплект
               защиты. Своя экипировка приветствуется.</div>
-</div>
-</div>
-<div class="accordion-item mb-3">
-<h2 class="accordion-header" id="q2"><button aria-controls="a2" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#a2" data-bs-toggle="collapse" type="button">Где проходят
+          </div>
+        </div>
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="q2"><button aria-controls="a2" aria-expanded="false"
+              class="accordion-button collapsed" data-bs-target="#a2" data-bs-toggle="collapse" type="button">Где
+              проходят
               тренировки?</button></h2>
-<div aria-labelledby="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="a2">
-<div class="accordion-body">В специально отведённых местах на закрытой площадке с соблюдением всех норм
+          <div aria-labelledby="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="a2">
+            <div class="accordion-body">В специально отведённых местах на закрытой площадке с соблюдением всех норм
               безопасности. Локацию уточняем при записи.</div>
-</div>
-</div>
-<div class="accordion-item mb-3">
-<h2 class="accordion-header" id="q3"><button aria-controls="a3" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#a3" data-bs-toggle="collapse" type="button">Сколько занятий в
+          </div>
+        </div>
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="q3"><button aria-controls="a3" aria-expanded="false"
+              class="accordion-button collapsed" data-bs-target="#a3" data-bs-toggle="collapse" type="button">Сколько
+              занятий в
               базовом курсе?</button></h2>
-<div aria-labelledby="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="a3">
-<div class="accordion-body">Рекомендуем 6–8 занятий для формирования устойчивых навыков. Далее —
+          <div aria-labelledby="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="a3">
+            <div class="accordion-body">Рекомендуем 6–8 занятий для формирования устойчивых навыков. Далее —
               индивидуальный план под цели.</div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="q4"><button aria-controls="a4" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#a4" data-bs-toggle="collapse" type="button">Можно ли
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q4"><button aria-controls="a4" aria-expanded="false"
+              class="accordion-button collapsed" data-bs-target="#a4" data-bs-toggle="collapse" type="button">Можно ли
               подарочный сертификат?</button></h2>
-<div aria-labelledby="q4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="a4">
-<div class="accordion-body">Да, оформим электронный или печатный сертификат на курс или индивидуальные
+          <div aria-labelledby="q4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="a4">
+            <div class="accordion-body">Да, оформим электронный или печатный сертификат на курс или индивидуальные
               тренировки.</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- SIGN UP / CONTACT -->
-<section class="section" id="signup">
-<div class="container">
-<div class="row g-4 align-items-center">
-<div class="col-lg-5" data-aos="fade-right">
-<h2 class="h1 fw-bold">Запись на тренировку</h2>
-<p class="muted">Оставьте контакты — свяжусь для согласования времени и формата. В приоритете безопасность и
-            комфорт.</p>
-<ul class="list-unstyled list-check">
-<li><i class="bi bi-check2-circle"></i>Индивидуально и в мини‑группах</li>
-<li><i class="bi bi-check2-circle"></i>Экипировка на старте</li>
-<li><i class="bi bi-check2-circle"></i>Подготовленные байки</li>
-</ul>
-</div>
-<div class="col-lg-7" data-aos="fade-left">
-<form class="glass p-4 needs-validation" id="contactForm" novalidate="">
-<div class="row g-3">
-<div class="col-md-6">
-<label class="form-label" for="name">Имя</label>
-<input class="form-control" id="name" name="name" placeholder="Ваше имя" required="" type="text"/>
-<div class="invalid-feedback">Введите имя.</div>
-</div>
-<div class="col-md-6">
-<label class="form-label" for="phone">Телефон</label>
-<input class="form-control" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required="" type="tel"/>
-<div class="invalid-feedback">Укажите телефон.</div>
-</div>
-<div class="col-12">
-<label class="form-label" for="level">Уровень</label>
-<select class="form-select" id="level" name="level" required="">
-<option disabled="" selected="" value="">Выберите уровень</option>
-<option>Новичок</option>
-<option>Есть опыт</option>
-<option>Хочу в стант</option>
-</select>
-<div class="invalid-feedback">Выберите уровень.</div>
-</div>
-<div class="col-12">
-<label class="form-label" for="message">Комментарий</label>
-<textarea class="form-control" id="message" name="message" placeholder="Цели, мотоцикл, удобное время…" rows="4"></textarea>
-</div>
-<div class="col-12 d-flex align-items-center justify-content-between">
-<div class="form-check">
-<input class="form-check-input" id="policy" required="" type="checkbox" value="1"/>
-<label class="form-check-label" for="policy">Согласен на обработку персональных данных</label>
-<div class="invalid-feedback">Необходимо согласие.</div>
-</div>
-<button class="btn btn-brand btn-lg" type="submit">Отправить</button>
-</div>
-<p class="muted mb-0"><small><i class="bi bi-lock me-1"></i>Данные не передаются третьим лицам.</small>
-</p>
-</div>
-</form>
-</div>
-</div>
-</div>
-</section>
-<footer class="py-5">
-<div class="container">
-<div class="row g-4">
-<div class="col-lg-6">
-<h5 class="fw-bold">Гриднев MotoSchool</h5>
-<p class="muted">Мир двух колёс без страха и стереотипов. Учимся у профессионала — растём как райдеры и
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- SIGN UP / CONTACT -->
+  <section id="signup" class="py-6 py-lg-7">
+    <div class="container">
+      <div class="row justify-content-between g-5">
+        <div class="col-lg-5" data-aos="fade-right">
+          <h2 class="mb-3 d-flex align-items-center gap-2"><i class="bi bi-envelope-check"></i> Запись на курс</h2>
+          <p class="muted">Выберите курс и оставьте контакты — свяжемся, подберём удобное время и площадку. Занятия проходят в безопасных условиях, со всей необходимой экипировкой.</p>
+          <ul class="list-unstyled list-check">
+            <li><i class="bi bi-check2-circle"></i>Базовый — основы управления, рефлексы, манёвры</li>
+            <li><i class="bi bi-check2-circle"></i>Трюковый — безопасные основы стантрайдинга</li>
+            <li><i class="bi bi-check2-circle"></i>Антиаварийная езда — предиктивное вождение и экстренные действия</li>
+          </ul>
+          <div class="mt-3 p-3 rounded-4 border small">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-cash-coin"></i> <span>Стоимость выбранного курса:</span>
+              <strong class="ms-auto" id="signupPrice">—</strong>
+            </div>
+            <div class="mt-2 muted">Цены ориентировочные и зависят от формата/длительности. Точную стоимость подтвердим при звонке.</div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <form id="signupForm" class="p-4 rounded-4 border">
+            <div class="row g-3">
+              <div class="col-12">
+                <label for="course" class="form-label">Курс</label>
+                <select id="course" name="course" class="form-select" required>
+                  <option value="" selected disabled>Выберите курс…</option>
+                  <option value="basic" data-price="4500" data-title="Базовый курс">Базовый курс</option>
+                  <option value="stunt" data-price="6000" data-title="Трюковый курс">Трюковый курс</option>
+                  <option value="safety" data-price="5200" data-title="Антиаварийная езда">Антиаварийная езда</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="name" class="form-label">Имя</label>
+                <input id="name" name="name" class="form-control" type="text" placeholder="Как к вам обращаться" required>
+              </div>
+              <div class="col-md-6">
+                <label for="phone" class="form-label">Телефон</label>
+                <input id="phone" name="phone" class="form-control" type="tel" inputmode="tel" placeholder="+7 (___) ___‑__‑__" required>
+              </div>
+              <div class="col-md-6">
+                <label for="date" class="form-label">Предпочтительная дата</label>
+                <input id="date" name="date" class="form-control" type="date">
+              </div>
+              <div class="col-md-6">
+                <label for="time" class="form-label">Время</label>
+                <input id="time" name="time" class="form-control" type="time">
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Комментарий</label>
+                <textarea id="message" name="message" class="form-control" rows="3" placeholder="Уровень, опыт, пожелания…"></textarea>
+              </div>
+              <div class="col-12 d-flex align-items-start gap-2">
+                <input class="form-check-input mt-1" type="checkbox" id="agree" required>
+                <label class="form-check-label" for="agree">Согласен(а) на обработку персональных данных и обратную связь по заявке</label>
+              </div>
+              <div class="col-12 d-flex gap-3">
+                <button type="submit" class="btn btn-brand" id="submitBtn">Отправить</button>
+                <button type="reset" class="btn btn-outline-brand">Очистить</button>
+              </div>
+              <div class="col-12">
+                <div id="formStatus" class="small muted"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h5 class="fw-bold">Гриднев MotoSchool</h5>
+          <p class="muted">Мир двух колёс без страха и стереотипов. Учимся у профессионала — растём как райдеры и
             личности.</p>
-<div class="d-flex gap-3">
-<a aria-label="Telegram" class="text-decoration-none text-light" href="#"><i class="bi bi-telegram"></i></a>
-<a aria-label="Instagram" class="text-decoration-none text-light" href="#"><i class="bi bi-instagram"></i></a>
-<a aria-label="YouTube" class="text-decoration-none text-light" href="#"><i class="bi bi-youtube"></i></a>
-</div>
-</div>
-<div class="col-lg-3">
-<h6 class="fw-semibold">Навигация</h6>
-<ul class="list-unstyled">
-<li><a class="text-decoration-none text-light" href="#about">О школе</a></li>
-<li><a class="text-decoration-none text-light" href="#courses">Курсы</a></li>
-<li><a class="text-decoration-none text-light" href="#stunt">Стантрайдинг</a></li>
-<li><a class="text-decoration-none text-light" href="#signup">Запись</a></li>
-</ul>
-</div>
-<div class="col-lg-3">
-<h6 class="fw-semibold">Контакты</h6>
-<ul class="list-unstyled">
-<li><i class="bi bi-phone me-2"></i><a class="text-decoration-none text-light" href="tel:+7xxxxxxxxxx">+7
+          <div class="d-flex gap-3">
+            <a aria-label="Telegram" class="text-decoration-none text-light" href="#"><i class="bi bi-telegram"></i></a>
+            <a aria-label="Instagram" class="text-decoration-none text-light" href="#"><i
+                class="bi bi-instagram"></i></a>
+            <a aria-label="YouTube" class="text-decoration-none text-light" href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="fw-semibold">Навигация</h6>
+          <ul class="list-unstyled">
+            <li><a class="text-decoration-none text-light" href="#about">О школе</a></li>
+            <li><a class="text-decoration-none text-light" href="#courses">Курсы</a></li>
+            <li><a class="text-decoration-none text-light" href="#stunt">Стантрайдинг</a></li>
+            <li><a class="text-decoration-none text-light" href="#signup">Запись</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="fw-semibold">Контакты</h6>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-phone me-2"></i><a class="text-decoration-none text-light" href="tel:+7xxxxxxxxxx">+7
                 (___) ___-__-__</a></li>
-<li><i class="bi bi-envelope me-2"></i><a class="text-decoration-none text-light" href="mailto:info@example.com">info@example.com</a></li>
-<li><i class="bi bi-geo-alt me-2"></i>Дальний Восток, РФ</li>
-</ul>
-</div>
-</div>
-<div class="text-center mt-4 muted"><small>© <span id="year"></span> Мотошкола Ильи Гриднева. Все права
+            <li><i class="bi bi-envelope me-2"></i><a class="text-decoration-none text-light"
+                href="mailto:info@example.com">info@example.com</a></li>
+            <li><i class="bi bi-geo-alt me-2"></i>Дальний Восток, РФ</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-4 muted"><small>© <span id="year"></span> Мотошкола Ильи Гриднева. Все права
           защищены.</small></div>
-</div>
-</footer>
-<button aria-label="Наверх" class="btn btn-brand back-to-top" id="toTop"><i class="bi bi-arrow-up"></i></button>
-<!-- JS: Bootstrap, AOS, Swiper -->
-<script defer="True" src="./vendor/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-<script defer="True" src="./vendor/aos/2.3.4/aos.js"></script>
-<script defer="True" src="./vendor/swiper/11.0.7/swiper-bundle.min.js"></script>
-<script>
+    </div>
+  </footer>
+  <button aria-label="Наверх" class="btn btn-brand back-to-top" id="toTop"><i class="bi bi-arrow-up"></i></button>
+  <!-- JS: Bootstrap, AOS, Swiper -->
+  <script defer="True" src="/vendor/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script defer="True" src="/vendor/aos/2.3.4/aos.js"></script>
+  <script defer="True" src="/vendor/swiper/11.0.7/swiper-bundle.min.js"></script>
+  <script>
     document.addEventListener('DOMContentLoaded', function () {
       // Year
       document.getElementById('year').textContent = new Date().getFullYear();
@@ -1548,7 +1809,7 @@
       btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
       // Bootstrap validation
-      const form = document.getElementById('contactForm');
+      const form = document.getElementById('signupForm');
       form.addEventListener('submit', function (event) {
         if (!form.checkValidity()) {
           event.preventDefault();
@@ -1696,19 +1957,19 @@
 
 
       // === Ensure GLightbox arrows appear on tap in mobile ===
-      (function ensureLighboxArrowsOnTap(){
-        function showLbControls(){
+      (function ensureLighboxArrowsOnTap() {
+        function showLbControls() {
           const lb = document.querySelector('.glightbox-container');
-          if(!lb) return;
+          if (!lb) return;
           const ctrls = lb.querySelector('.gcontrols');
-          if(!ctrls) return;
+          if (!ctrls) return;
           ctrls.classList.add('force-visible');
           clearTimeout(window.__glbHideT);
           window.__glbHideT = setTimeout(() => ctrls.classList.remove('force-visible'), 2000);
         }
-        ['click','touchstart','mousemove','touchmove'].forEach(ev => {
+        ['click', 'touchstart', 'mousemove', 'touchmove'].forEach(ev => {
           document.addEventListener(ev, (e) => {
-            if(e.target && e.target.closest && e.target.closest('.glightbox-container')){
+            if (e.target && e.target.closest && e.target.closest('.glightbox-container')) {
               showLbControls();
             }
           }, { passive: true });
@@ -1717,6 +1978,7 @@
 
     });
   </script>
-<script defer="True" src="./vendor/glightbox/3.3.0/glightbox.min.js"></script>
+  <script defer="True" src="/vendor/glightbox/3.3.0/glightbox.min.js"></script>
 </body>
+
 </html>
