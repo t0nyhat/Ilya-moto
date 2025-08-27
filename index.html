@@ -195,7 +195,7 @@
     .back-to-top {
       position: fixed;
       right: 16px;
-      bottom: 16px;
+      bottom: 140px;
       z-index: 50;
       display: none
     }
@@ -394,7 +394,7 @@
       display: none;
       position: fixed;
       right: 16px;
-      bottom: 16px;
+      bottom: 140px;
       z-index: 50;
       box-shadow: 0 12px 24px rgba(0, 0, 0, .25);
       contain: layout paint;
@@ -503,6 +503,15 @@
       border: 1px solid #cbd5e1;
       color: #0f172a;
     }
+        /* Спидометр внутри combo-hud (вместо текста COMBO) */
+    .combo-hud .label{
+      display:flex; align-items:center; justify-content:center;
+    }
+    .combo-hud .moto-speedo{
+      position:static !important; left:auto; bottom:auto;
+      width:40px; height:40px; display:block; opacity:1; filter:none; pointer-events:none;
+    }
+
 
     :root.light .form-select:focus {
       border-color: var(--brand);
@@ -2007,7 +2016,7 @@
   <style>
     .contact-float {
       position: fixed;
-      bottom: 80px;
+      bottom: 200px;
       right: 16px;
       display: flex;
       flex-direction: column;
@@ -2044,8 +2053,392 @@
       box-shadow: 0 6px 16px rgba(0,0,0,0.3);
       color: #fff;
     }
-  </style>
+  </style><style id="moto-standriding-css">
+/* === Standriding enhancements (v5) === */
 
+/* --- Preloader: speedometer --- */
+#preloader-speedo{ position:fixed; inset:0; display:grid; place-items:center;
+  background:radial-gradient(1200px 800px at 50% 60%, rgba(0,0,0,.84), rgba(0,0,0,.96));
+  z-index:1000; transition:opacity .45s ease, visibility .45s ease; }
+:root.light #preloader-speedo{ background:radial-gradient(1200px 800px at 50% 60%, rgba(241,245,249,.98), rgba(226,232,240,1)); }
+#preloader-speedo.hidden{ opacity:0; visibility:hidden; }
+.speedo-wrap{ width:clamp(220px, 44vw, 420px); aspect-ratio:1; filter:drop-shadow(0 18px 40px rgba(0,0,0,.45)); }
+#speedo svg{ width:100%; height:100%; }
+#speedo .ring{ stroke: rgba(255,255,255,.15); } :root.light #speedo .ring{ stroke: rgba(2,6,23,.15); }
+#speedo .ticks{ stroke: currentColor; stroke-opacity:.55; }
+#speedo .needle{ stroke:#ef4444; stroke-width:4; stroke-linecap:round; }
+#speedo .cap{ fill:#ef4444; }
+#speedo .readout{ font: 800 26px/1 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; fill: currentColor; }
+#speedo .unit{ font: 700 12px/1 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; fill: currentColor; opacity:.8; }
+#speedo .brand{ font: 900 12px/1 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; letter-spacing:.12em; fill: currentColor; opacity:.7; }
+
+
+
+:root.stunt{ --neon: 0 0 16px rgba(34,211,238,.8), 0 0 36px rgba(34,211,238,.55), 0 0 72px rgba(6,182,212,.5); }
+:root.stunt h1, :root.stunt h2, :root.stunt .brand{ text-shadow: var(--neon); }
+:root.stunt .btn-primary{ box-shadow: var(--neon); transform: translateY(-1px); }
+
+/* --- Toggle (moved left) --- */
+.stunt-toggle{ position:fixed; right:16px; bottom:80px; z-index:70; display:inline-flex; align-items:center; gap:8px; padding:10px 12px; border-radius:12px;
+  font-weight:700; text-transform:uppercase; letter-spacing:.06em; border:1px solid rgba(255,255,255,.2); background:rgba(255,255,255,.06); cursor:pointer; user-select:none; }
+:root.light .stunt-toggle{ background:rgba(2,6,23,.06); border-color:rgba(2,6,23,.18); }
+:root.stunt .stunt-toggle{ background:linear-gradient(180deg, rgba(34,211,238,.95), rgba(6,182,212,.95)); color:#081226; }
+@media (max-width:520px){ .stunt-toggle{ right:16px; bottom:80px; } }
+
+/* --- Full-width COMBO HUD --- */
+.combo-hud{ position:fixed; left:0; right:0; bottom:12px; z-index:69; display:none; padding:0 12px; }
+:root.stunt .combo-hud{ display:block; }
+.combo-hud .inner{ max-width:1280px; margin:0 auto; background:rgba(2,6,23,.86); color:#fff; border:1px solid rgba(255,255,255,.18); border-radius:14px; padding:10px 12px;
+  display:grid; grid-template-columns: 90px 1fr 160px; gap:12px; align-items:center; }
+:root.light .combo-hud .inner{ background:rgba(241,245,249,.94); color:#0f172a; border-color:rgba(2,6,23,.12); }
+.combo-hud .label{ font-weight:800; font-size:12px; letter-spacing:.06em; text-transform:uppercase; opacity:.85; }
+.combo-hud .bar{ height:14px; border-radius:99px; overflow:hidden; background:rgba(255,255,255,.2); }
+.combo-hud .bar>i{ display:block; height:100%; width:0%; background:linear-gradient(90deg,#22d3ee,#3b82f6,#ef4444); transition:width .25s cubic-bezier(.22,1,.36,1); }
+.combo-hud .trick{ font-weight:800; text-align:right; opacity:.95; }
+
+/* --- Tire smoke (intensity-based; starts at 0) --- */
+.tire-smoke{ position:fixed; left:0; right:0; bottom:-20px; height:150px; pointer-events:none; z-index:50; display:none; }
+:root.stunt .tire-smoke{ display:block; }
+.tire-smoke::before, .tire-smoke::after{ content:""; position:absolute; left:50%; width:220vw; height:100%; transform:translateX(-50%);
+  --i: var(--smoke-intensity, 0);
+  background: radial-gradient(70px 36px at 50% 100%, rgba(255,255,255,.38), transparent 60%),
+              radial-gradient(120px 54px at 40% 100%, rgba(255,255,255,.28), transparent 60%),
+              radial-gradient(90px 45px at 60% 100%, rgba(255,255,255,.28), transparent 60%);
+  filter: blur(calc(6px * var(--i)));
+  opacity: calc(.0 + .55 * var(--i));
+  animation: smoke linear infinite;
+  animation-duration: calc(8s / max(1,var(--i)));
+}
+.tire-smoke::after{ opacity: calc(.0 + .75 * var(--i)); animation-duration: calc(10s / max(1,var(--i))); }
+
+@keyframes smoke{ 0%{ transform:translate(-50%,12px) scale(1);} 50%{ transform:translate(-50%,-16px) scale(1.06);} 100%{ transform:translate(-50%,12px) scale(1);} }
+
+/* --- Exhaust puffs --- */
+.exhaust-puff{ position:fixed; bottom:30px; right:60px; width:18px; height:18px; pointer-events:none; z-index:56; border-radius:50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.9), rgba(200,200,200,.35) 60%, rgba(180,180,180,.15) 100%); filter: blur(2px); opacity:.9; }
+
+/* --- Rubber sparks --- */
+.rubber-spark{ position:fixed; bottom:6px; left:50%; width:6px; height:6px; border-radius:999px; pointer-events:none; z-index:55;
+  background: radial-gradient(circle at 30% 30%, #fff, #ffd17a 60%, #ff7a18 100%); filter: blur(.2px) drop-shadow(0 0 10px rgba(255,154,16,.6)); opacity:.95; }
+
+/* --- Footer padding when HUD active --- */
+:root.stunt footer{ padding-bottom: 96px; }
+
+
+
+
+/* --- Scroll HUD speedometer avoid overlap with COMBO --- */
+:root.stunt .moto-speedo{ bottom: 80px; }
+@media (max-width:576px){ :root.stunt .moto-speedo{ bottom: 80px; } }
+
+/* Mobile layout adjustments */
+@media (max-width:520px){ .combo-hud .inner{ grid-template-columns: 70px 1fr 120px; } }
+</style>
+
+<script id="moto-standriding-js">
+(function(){
+  const clamp=(v,min,max)=>Math.min(max,Math.max(min,v));
+  const root=document.documentElement;
+  const preferReduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // --- Remove any legacy paddock ---
+  document.querySelectorAll('.paddock').forEach(n=>n.remove());
+
+  // --- Preloader speedometer (center-fixed needle) ---
+  const pre=document.createElement('div'); pre.id='preloader-speedo';
+  pre.innerHTML=`<div class="speedo-wrap"><div id="speedo">
+    <svg viewBox="0 0 400 400" role="img" aria-label="Speedometer loading">
+      <circle cx="200" cy="200" r="170" class="ring" fill="none" stroke-width="3"/>
+      <g class="ticks">
+        ${Array.from({length:17}).map((_,i)=>{
+          const angle=(-130 + i*16.25)*Math.PI/180;
+          const x1=200+Math.cos(angle)*150, y1=200+Math.sin(angle)*150;
+          const len=(i%2===0)?24:14;
+          const x2=200+Math.cos(angle)*(150+len), y2=200+Math.sin(angle)*(150+len);
+          return `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`
+        }).join('')}
+      </g>
+      <g id="labels">
+        ${Array.from({length:9}).map((_,i)=>{
+          const val=i*40, ang=(-130 + i*32.5)*Math.PI/180;
+          const x=200+Math.cos(ang)*120, y=205+Math.sin(ang)*120;
+          return `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="middle" class="unit" font-size="14">${val}</text>`;
+        }).join('')}
+      </g>
+      <text x="200" y="230" text-anchor="middle" class="readout">000</text>
+      <text x="240" y="230" class="unit">km/h</text>
+      <text x="200" y="260" text-anchor="middle" class="brand">STANDRIDING</text>
+      <line x1="200" y1="200" x2="200" y2="60" class="needle" />
+      <circle cx="200" cy="200" r="8" class="cap"/>
+    </svg></div></div>`;
+  document.body.appendChild(pre);
+  const needle=pre.querySelector('.needle'), readout=pre.querySelector('.readout');
+
+  function animateSpeedo(){
+    if(preferReduced){ pre.classList.add('hidden'); return; }
+    const start=performance.now(), dur=1400, a0=-60, a1=220; // clamp to 120deg
+    const maxSpeed=320;
+    const easeOutCubic=(x)=>1-Math.pow(1-x,3);
+    const tick=(now)=>{
+      const p=Math.min(1,(now-start)/dur), t=easeOutCubic(p);
+      const angle=a0+(a1-a0)*t;
+      const speed=Math.round(maxSpeed*t);
+      needle.setAttribute('transform',`rotate(${angle} 200 200)`);
+      readout.textContent=String(speed).padStart(3,'0');
+      if(p<1) requestAnimationFrame(tick);
+      else{
+        const end=angle; // small in-place settle, no overshoot
+        needle.animate([{transform:`rotate(${end} 200 200)`},{transform:`rotate(${end-2} 200 200)`},{transform:`rotate(${end} 200 200)`}],{duration:360,easing:'cubic-bezier(.22,1,.36,1)'});
+        setTimeout(()=> pre.classList.add('hidden'), 320);
+      }
+    };
+    requestAnimationFrame(tick);
+  }
+  window.addEventListener('load', animateSpeedo);
+
+  // --- Stunt Mode toggle + Banner ---
+  const stuntKey='mode:stunt';
+  try{ if(localStorage.getItem(stuntKey)==='1') root.classList.add('stunt'); }catch(e){}
+  const banner=document.createElement('div'); banner.className='stunt-banner';
+
+  document.body.appendChild(banner);
+  const toggle=document.createElement('button'); toggle.className='stunt-toggle';
+  toggle.innerHTML='<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17h10l1-5-3-6H9L6 12l1 5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> STUNT';
+  document.body.appendChild(toggle);
+  const setStunt=(on)=>{ root.classList.toggle('stunt', on); banner.classList.toggle('show', on); try{ localStorage.setItem(stuntKey, on?"1":"0"); }catch(e){} };
+  toggle.addEventListener('click',()=> setStunt(!root.classList.contains('stunt')));
+  if(root.classList.contains('stunt')) banner.classList.add('show');
+
+  // --- HUD COMBO (full-width) + dynamic trick feed ---
+  const combo = document.createElement('div'); combo.className = 'combo-hud';
+  combo.innerHTML = `
+    <div class="inner">
+      <div class="label" id="combo-speedo" aria-label="Combo">
+        <span class="visually-hidden">Combo</span>
+      </div>
+      <div class="bar"><i></i></div>
+      <div class="trick">—</div>
+    </div>`;
+  document.body.appendChild(combo);
+
+  // ВСТАВЛЯЕМ СКРОЛЛ-СПИДОМЕТР ВМЕСТО "COMBO"
+  (function mountSpeedoIntoCombo(){
+    const slot = combo.querySelector('#combo-speedo');
+
+    // если спидометр уже создан ранее — просто перенесём его
+    let speedo = document.querySelector('.moto-speedo');
+    if (speedo) {
+      speedo.classList.add('in-hud');
+      slot.textContent = '';
+      slot.appendChild(speedo);
+      return;
+    }
+
+    // иначе создаём компактную версию и вешаем на неё тот же scroll-драйв
+    speedo = document.createElementNS('http://www.w3.org/2000/svg','svg');
+    speedo.setAttribute('viewBox','0 0 120 120');
+    speedo.classList.add('moto-speedo','in-hud');
+    speedo.setAttribute('aria-hidden','true');
+    speedo.innerHTML = `
+      <circle cx="60" cy="60" r="52" fill="none" class="ring" stroke-width="2"/>
+      ${Array.from({length:10}).map((_,i)=>{ const a=(-120+i*24)*Math.PI/180; const x1=60+Math.cos(a)*44, y1=60+Math.sin(a)*44; const x2=60+Math.cos(a)*52, y2=60+Math.sin(a)*52; return `<line x1="${x1.toFixed(2)}" y1="${y1.toFixed(2)}" x2="${x2.toFixed(2)}" y2="${y2.toFixed(2)}" class="tick" stroke-width="2"/>`; }).join('')}
+      <path d="" stroke-width="6" class="arc" fill="none" stroke-linecap="round"/>
+      <line x1="60" y1="60" x2="60" y2="14" class="needle" stroke-width="3" stroke-linecap="round" transform="rotate(-120 60 60)"/>`;
+    slot.textContent = '';
+    slot.appendChild(speedo);
+
+    // драйв по скроллу
+    const arc = speedo.querySelector('.arc');
+    const needle = speedo.querySelector('.needle');
+    const arcPath = (t)=>{ const start=-120, end=start+t*240, r=46;
+      const sx=60+r*Math.cos(start*Math.PI/180), sy=60+r*Math.sin(start*Math.PI/180);
+      const ex=60+r*Math.cos(end*Math.PI/180),   ey=60+r*Math.sin(end*Math.PI/180);
+      const large=(end-start)>180?1:0;
+      return `M ${sx.toFixed(2)} ${sy.toFixed(2)} A ${r} ${r} 0 ${large} 1 ${ex.toFixed(2)} ${ey.toFixed(2)}`;
+    };
+    const throttle=(fn,limit=16)=>{ let last=0,id; return (...a)=>{ const now=Date.now();
+      if(now-last<limit){ clearTimeout(id); id=setTimeout(()=>{ last=now; fn(...a); }, limit);}
+      else{ last=now; fn(...a); } }; };
+    const onScroll = throttle(()=>{ const doc=document.documentElement;
+      const max=(doc.scrollHeight-doc.clientHeight)||1;
+      const t=Math.min(1,Math.max(0,(doc.scrollTop||window.scrollY)/max));
+      arc.setAttribute('d', arcPath(t));
+      const angle=-120+t*240; needle.setAttribute('transform',`rotate(${angle} 60 60)`);
+    },16);
+    window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  })();
+
+  const bar = combo.querySelector('.bar>i');
+  const trickLabel = combo.querySelector('.trick');
+  const marquee = document.getElementById('trick-marquee');
+
+  const TRICKS=["Wheelie","Stoppie","Drift","Highchair","Circle","Burnout"];
+  let comboVal=0, lastY=window.scrollY;
+  let smokeIntensity=0; // 0..4
+
+  const setSmokeIntensity=(i)=>{
+    smokeIntensity = Math.max(0, Math.min(4, i));
+    document.documentElement.style.setProperty('--smoke-intensity', String(smokeIntensity));
+  };
+  // decay smoke over time
+  setInterval(()=>{ if(!root.classList.contains('stunt')) return; if(smokeIntensity>0){ setSmokeIntensity(smokeIntensity - 0.06); } }, 100);
+
+  function appendMarquee(name){ if(!marquee) return; marquee.textContent += name + " • "; }
+
+  function spawnSparks(n=8){
+    if(preferReduced || !root.classList.contains('stunt')) return;
+    const baseX = window.innerWidth/2, baseY = window.innerHeight - 20;
+    for(let i=0;i<n;i++){
+      const s=document.createElement('span'); s.className='rubber-spark';
+      const jitter = (Math.random()-0.5)*120;
+      s.style.left = (baseX + jitter) + 'px';
+      document.body.appendChild(s);
+      const dx=(Math.random()-0.5)*160;
+      const dy=- (40 + Math.random()*80);
+      const dur=600 + Math.random()*500;
+      s.animate(
+        [{ transform:`translate(-50%,0) scale(1)`, opacity:.95 },
+         { transform:`translate(${dx}px, ${dy}px) scale(.7)`, opacity:0 }],
+        { duration: dur, easing:'cubic-bezier(.22,1,.36,1)', fill:'forwards' }
+      );
+      setTimeout(()=> s.remove(), dur+40);
+    }
+  }
+
+  function exhaustPuff(){
+    if(preferReduced || !root.classList.contains('stunt')) return;
+    const p=document.createElement('span'); p.className='exhaust-puff';
+    document.body.appendChild(p);
+    const dx= - (40 + Math.random()*60);
+    const dy= - (60 + Math.random()*90);
+    const dur=700 + Math.random()*400;
+    p.animate([{ transform:'translate(0,0)', opacity:.9 }, { transform:`translate(${dx}px, ${dy}px)`, opacity:0 }], { duration:dur, easing:'cubic-bezier(.22,1,.36,1)', fill:'forwards' });
+    setTimeout(()=> p.remove(), dur+40);
+  }
+
+  const bump=(amount=1)=>{
+    if(!root.classList.contains('stunt')) return; // only in stunt mode
+    comboVal=Math.min(100, Math.max(0, comboVal+amount));
+    bar.style.width=comboVal+'%';
+    const idx=Math.min(TRICKS.length-1, Math.floor(comboVal/(100/TRICKS.length)));
+    const name=TRICKS[idx]; trickLabel.textContent=name; appendMarquee(name);
+    spawnSparks(4 + Math.floor(amount*1.5));
+    exhaustPuff();
+    setSmokeIntensity(Math.min(2.5, smokeIntensity + amount/12));
+    if(comboVal>=100){
+      combo.querySelector('.inner').animate([{transform:'scale(1)'},{transform:'scale(1.03)'},{transform:'scale(1)'}],{duration:420});
+      comboVal=0; setTimeout(()=> bar.style.width='0%', 200);
+      // big burst
+      setSmokeIntensity(4);
+      spawnSparks(28); exhaustPuff(); exhaustPuff();
+    }
+  };
+
+  window.addEventListener('scroll',()=>{
+    const y=window.scrollY, dy=Math.abs(y-lastY); lastY=y;
+    if(dy>50) bump(4); else if(dy>10) bump(2);
+  },{passive:true});
+  window.addEventListener('keydown',(e)=>{
+    if(['INPUT','TEXTAREA','SELECT'].includes(e.target?.tagName)) return;
+    if(['ArrowDown','ArrowUp','PageDown','PageUp',' '].includes(e.key)) bump(3);
+    if(e.key==='r'||e.key==='R'){ const old=document.getElementById('preloader-speedo'); old?.classList.remove('hidden'); animateSpeedo(); }
+  });
+
+  // Tire smoke DOM (intensity-driven)
+  const smoke=document.createElement('div'); smoke.className='tire-smoke'; document.body.appendChild(smoke);
+  setSmokeIntensity(0);
+
+  // Observe [data-trick] to bump
+  const obs=new IntersectionObserver((ents)=>{
+    ents.forEach(en=>{ if(en.isIntersecting){ bump(6); en.target.classList.add('in-view'); } });
+  },{threshold:.2});
+  document.querySelectorAll('[data-trick]').forEach(el=>obs.observe(el));
+})();
+</script>
+
+<style id="moto-enhancements-css">
+:root { --brand:#22d3ee; --brand-2:#3b82f6; --text:#e5e7eb; }
+:root.light { --text:#0f172a; }
+.moto-speedo{ position:fixed; left:16px; bottom:16px; z-index:60; width:120px; height:120px; pointer-events:none; opacity:.95; filter:drop-shadow(0 8px 24px rgba(0,0,0,.35)); display:none; }
+:root.stunt .moto-speedo{ display:block; bottom:80px; }
+@media (max-width:576px){ .moto-speedo{ transform:scale(.8); left:8px; bottom:8px; } :root.stunt .moto-speedo{ bottom:80px; } }
+:root:not(.light) .moto-speedo .ring{ stroke:rgba(255,255,255,.18); }
+:root:not(.light) .moto-speedo .arc{ stroke:var(--brand); }
+:root:not(.light) .moto-speedo .tick{ stroke:rgba(255,255,255,.35); }
+:root:not(.light) .moto-speedo .needle{ stroke:#f59e0b; }
+:root.light .moto-speedo .ring{ stroke:rgba(2,6,23,.18); }
+:root.light .moto-speedo .arc{ stroke:var(--brand-2); }
+:root.light .moto-speedo .tick{ stroke:rgba(2,6,23,.45); }
+:root.light .moto-speedo .needle{ stroke:#d97706; }
+.moto-speedo text{ font:600 10px/1 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; fill:currentColor; }
+</style>
+
+<style id="moto-fix-v51-css">
+/* v5.1 fixes */
+
+/* Restore 3D tilt */
+.tiltable{ transform-style:preserve-3d; transition:transform .18s ease, box-shadow .18s ease; will-change:transform; }
+.tiltable .tilt-shadow{ position:absolute; inset:0; border-radius:inherit; background:radial-gradient(120px 60px at var(--mx,50%) var(--my,50%), rgba(34,211,238,.12), transparent 60%); pointer-events:none; mix-blend-mode:screen; opacity:0; transition:opacity .2s ease; }
+.tiltable:hover{ box-shadow:0 20px 40px rgba(0,0,0,.35)!important; }
+.tiltable:hover .tilt-shadow{ opacity:1; }
+
+/* Slow down marquee */
+.stunt-banner .marquee span{ animation-duration: 28s !important; }
+@media (max-width: 600px){
+  .stunt-banner .marquee span{ animation-duration: 36s !important; }
+}
+
+/* Prevent footer overlap: reserve space when HUD visible */
+:root.stunt body{ padding-bottom: 140px; }
+:root.stunt footer{ padding-top: 12px; }
+
+/* Ensure scroll speedometer stays above HUD but not overlapping footer */
+:root.stunt .moto-speedo{ bottom: 80px; z-index: 68; }
+@media (max-width:576px){ :root.stunt .moto-speedo{ bottom: 80px; } }
+</style>
+
+<script id="moto-fix-v51-js">
+(function(){
+  // 3D tilt binder (idempotent)
+  const sels = '.feature, .course-card, .card-glow, .glass';
+  document.querySelectorAll(sels).forEach(el => {
+    if (el.classList.contains('tiltable')) return;
+    el.classList.add('tiltable');
+    el.style.position = el.style.position || 'relative';
+    const shadow = document.createElement('span');
+    shadow.className = 'tilt-shadow';
+    el.appendChild(shadow);
+    el.addEventListener('mousemove', (e) => {
+      const r = el.getBoundingClientRect();
+      const mx = ((e.clientX - r.left) / r.width) * 100;
+      const my = ((e.clientY - r.top) / r.height) * 100;
+      el.style.setProperty('--mx', mx + '%');
+      el.style.setProperty('--my', my + '%');
+      const rx = (my - 50) / 10;
+      const ry = (mx - 50) / -10;
+      el.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+    });
+    el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+  });
+
+  // Recreate scroll HUD speedometer if missing
+  if (!document.querySelector('.moto-speedo')) {
+    const speedo=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    speedo.setAttribute('viewBox','0 0 120 120'); speedo.classList.add('moto-speedo'); speedo.setAttribute('aria-hidden','true');
+    speedo.innerHTML=`
+      <circle cx="60" cy="60" r="52" fill="none" class="ring" stroke-width="2"/>
+      ${Array.from({length:10}).map((_,i)=>{ const a=(-120+i*24)*Math.PI/180; const x1=60+Math.cos(a)*44, y1=60+Math.sin(a)*44; const x2=60+Math.cos(a)*52, y2=60+Math.sin(a)*52; return `<line x1="${x1.toFixed(2)}" y1="${y1.toFixed(2)}" x2="${x2.toFixed(2)}" y2="${y2.toFixed(2)}" class="tick" stroke-width="2"/>`; }).join('')}
+      <path d="" stroke-width="6" class="arc" fill="none" stroke-linecap="round"/>
+      <line x1="60" y1="60" x2="60" y2="14" class="needle" stroke-width="3" stroke-linecap="round" transform="rotate(-120 60 60)"/>`;
+    document.body.appendChild(speedo);
+    const arc=speedo.querySelector('.arc'), needle=speedo.querySelector('.needle');
+    const arcPath=(t)=>{ const start=-120, end=start+t*240, r=46; const sx=60+r*Math.cos(start*Math.PI/180), sy=60+r*Math.sin(start*Math.PI/180); const ex=60+r*Math.cos(end*Math.PI/180), ey=60+r*Math.sin(end*Math.PI/180); const large=(end-start)>180?1:0; return `M ${sx.toFixed(2)} ${sy.toFixed(2)} A ${r} ${r} 0 ${large} 1 ${ex.toFixed(2)} ${ey.toFixed(2)}`; };
+    const throttle=(fn,limit=16)=>{ let last=0,id; return (...a)=>{ const now=Date.now(); if(now-last<limit){ clearTimeout(id); id=setTimeout(()=>{ last=now; fn(...a); }, limit);} else{ last=now; fn(...a);} } };
+    const onScroll=throttle(()=>{ const doc=document.documentElement; const max=(doc.scrollHeight-doc.clientHeight)||1; const t=Math.min(1,Math.max(0,(doc.scrollTop||window.scrollY)/max)); arc.setAttribute('d',arcPath(t)); const angle=-120+t*240; needle.setAttribute('transform',`rotate(${angle} 60 60)`); },16);
+    window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  }
+})();
+</script>
 </body>
 
 </html>
