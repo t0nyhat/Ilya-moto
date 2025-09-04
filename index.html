@@ -94,12 +94,7 @@
       padding: 80px 0
     }
 
-    .hero {
-      min-height: 92vh;
-      display: grid;
-      place-items: center;
-      background: radial-gradient(1200px 500px at 20% 10%, rgba(34, 211, 238, .08), transparent 60%), radial-gradient(1000px 600px at 90% 20%, rgba(245, 158, 11, .06), transparent 60%), url('https://images.unsplash.com/photo-1493236151450-35b7f1e13b56?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat fixed
-    }
+    
 
     .hero .overlay {
       background: linear-gradient(180deg, rgba(11, 16, 32, .72), rgba(11, 16, 32, .88));
@@ -167,10 +162,24 @@
       border: 1px solid rgba(255, 255, 255, .1)
     }
 
+    /* Slightly larger default badge padding */
+    .badge {
+      padding: .45rem .7rem;
+    }
+
     .badge-soft {
       background: rgba(148, 163, 184, .15);
       color: #cbd5e1;
       border: 1px solid rgba(148, 163, 184, .25)
+    }
+
+    .badge-pro {
+      background: rgba(245, 158, 11, .15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, .35);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      font-weight: 700;
     }
 
     .faq .accordion-button {
@@ -231,141 +240,6 @@
       margin-bottom: 1rem
     }
 
-    :root.light {
-      --bg: #f9fafb;
-      --bg-soft: #f3f4f6;
-      --text: #111827;
-      --muted: #4b5563;
-      --brand: #0ea5e9;
-      --brand-2: #0284c7;
-      --accent: #d97706;
-    }
-
-    :root.light body {
-      background: linear-gradient(180deg, var(--bg), #e5e7eb) fixed;
-      color: var(--text);
-    }
-
-    :root.light .navbar-dark {
-      --bs-navbar-color: var(--text);
-      --bs-navbar-hover-color: var(--brand);
-      --bs-navbar-brand-color: var(--text);
-    }
-
-    :root.light .glass {
-      background: linear-gradient(180deg, rgba(0, 0, 0, .03), rgba(0, 0, 0, .01));
-      border: 1px solid rgba(0, 0, 0, .08);
-    }
-
-    :root.light .feature,
-    :root.light .course-card {
-      background: rgba(0, 0, 0, .02);
-      border: 1px solid rgba(0, 0, 0, .08);
-    }
-
-    :root.light .faq .accordion-button {
-      background: var(--bg-soft);
-      color: var(--text);
-    }
-
-    :root.light footer {
-      background: var(--bg-soft);
-    }
-
-    :root.light a {
-      color: var(--brand-2);
-    }
-
-
-    /* === Light theme — refined === */
-    :root.light {
-      --bg: #ffffff;
-      --bg-soft: #f7f8fa;
-      --text: #0f172a;
-      --muted: #48566a;
-      --brand: #0ea5e9;
-      --brand-2: #0284c7;
-      --accent: #d97706;
-    }
-
-    :root.light body {
-      background: linear-gradient(180deg, var(--bg), #eef2f7) fixed;
-      color: var(--text);
-    }
-
-    :root.light .navbar {
-      background: rgba(255, 255, 255, .85) !important;
-      box-shadow: 0 2px 12px rgba(15, 23, 42, .06);
-    }
-
-    :root.light .navbar-dark {
-      --bs-navbar-color: #1f2937;
-      --bs-navbar-hover-color: var(--brand);
-      --bs-navbar-brand-color: #111827;
-    }
-
-    :root.light .navbar .nav-link {
-      color: #1f2937;
-    }
-
-    :root.light .navbar .nav-link:hover {
-      color: var(--brand);
-    }
-
-    :root.light .navbar .btn-outline-light {
-      color: #1f2937;
-      border-color: #cbd5e1;
-    }
-
-    :root.light .navbar .btn-outline-light:hover {
-      color: #fff;
-      background: #1f2937;
-      border-color: #1f2937;
-    }
-
-    :root.light .hero .overlay {
-      background: linear-gradient(180deg, rgba(255, 255, 255, .75), rgba(255, 255, 255, .92));
-    }
-
-    :root.light .glass {
-      background: linear-gradient(180deg, rgba(0, 0, 0, .02), rgba(0, 0, 0, .01));
-      border: 1px solid rgba(2, 6, 23, .08);
-    }
-
-    :root.light .feature,
-    :root.light .course-card {
-      background: rgba(2, 6, 23, .03);
-      border: 1px solid rgba(2, 6, 23, .08);
-    }
-
-    :root.light .faq .accordion-button {
-      background: var(--bg-soft);
-      color: var(--text);
-    }
-
-    :root.light .badge-soft {
-      background: rgba(2, 6, 23, .06);
-      color: #1f2937;
-      border: 1px solid rgba(2, 6, 23, .12);
-    }
-
-    :root.light footer {
-      background: #ffffff;
-      border-top: 1px solid rgba(2, 6, 23, .08);
-      color: #1f2937;
-    }
-
-    :root.light a {
-      color: var(--brand-2);
-    }
-
-    :root.light .brand-gradient {
-      background: linear-gradient(90deg, #0284c7, #0ea5e9, #38bdf8);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
     /* === Layout polish & overflow fixes === */
     html,
     body {
@@ -377,15 +251,7 @@
       padding-right: 1rem;
     }
 
-    .hero {
-      background-attachment: fixed;
-    }
-
-    @media (max-width: 576px) {
-      .hero {
-        background-attachment: initial;
-      }
-    }
+    
 
     .back-to-top {
       width: 44px;
@@ -406,103 +272,17 @@
     }
 
 
-    /* Fix: Restore hero background image */
-    .hero {
-      background: url('https://picsum.photos/1920/1080?blur=3') center/cover no-repeat;
-      position: relative;
-      z-index: 1;
-    }
+    
 
-    .hero .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-    }
-
-    /* Light theme navbar visibility fix */
-    :root.light .navbar {
-      background: rgba(255, 255, 255, .9) !important;
-    }
-
-    :root.light .navbar .nav-link,
-    :root.light .navbar-brand {
-      color: #1e293b !important;
-    }
-
-    :root.light .navbar .nav-link:hover {
-      color: var(--brand) !important;
-    }
-
-    /* Light theme form inputs */
-    :root.light input.form-control,
-    :root.light textarea.form-control {
-      background-color: #fff;
-      border: 1px solid #cbd5e1;
-      color: #0f172a;
-    }
-
-    :root.light input.form-control:focus,
-    :root.light textarea.form-control:focus {
-      background-color: #fff;
-      border-color: var(--brand);
-      box-shadow: 0 0 0 0.25rem rgba(14, 165, 233, 0.25);
-      color: #0f172a;
-    }
-
-
-    /* Navbar nav alignments and theme toggle alignment */
+    /* Navbar nav alignments */
     .navbar .navbar-nav {
       align-items: center;
       gap: .25rem;
     }
 
-    #themeToggle {
-      margin-left: .25rem;
-    }
+    
 
-    /* Responsive hero height & background */
-    .hero {
-      min-height: clamp(64vh, 80vh, 92vh);
-      background-position: center center;
-      background-size: cover;
-    }
 
-    @media (max-width: 576px) {
-      .hero {
-        min-height: 72vh;
-      }
-    }
-
-    /* Light theme: stronger readable colors */
-    :root.light a {
-      color: #0e7490;
-    }
-
-    :root.light .muted {
-      color: #475569;
-    }
-
-    :root.light .btn-outline-brand {
-      --bs-btn-color: #0e7490;
-      --bs-btn-border-color: #0e7490;
-    }
-
-    :root.light .btn-outline-brand:hover {
-      --bs-btn-color: #fff;
-      --bs-btn-bg: #0e7490;
-      --bs-btn-border-color: #0e7490;
-    }
-
-    /* Light theme: select + inputs */
-    :root.light .form-control,
-    :root.light .form-select {
-      background-color: #ffffff;
-      border: 1px solid #cbd5e1;
-      color: #0f172a;
-    }
         /* Спидометр внутри combo-hud (вместо текста COMBO) */
     .combo-hud .label{
       display:flex; align-items:center; justify-content:center;
@@ -513,109 +293,13 @@
     }
 
 
-    :root.light .form-select:focus {
-      border-color: var(--brand);
-      box-shadow: 0 0 0 0.25rem rgba(14, 165, 233, 0.25);
-      color: #0f172a;
-    }
 
-    /* Light theme: navbar toggler icon visible */
-    :root.light .navbar .navbar-toggler {
-      border-color: rgba(15, 23, 42, .25);
-    }
-
-    :root.light .navbar .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%230f172a' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    }
-
-    /* Light theme: make brand gradient darker for legibility */
-    :root.light .brand-gradient {
-      background: linear-gradient(90deg, #075985, #0ea5e9, #38bdf8);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    /* Prevent any horizontal overflow on tiny devices */
-    html,
-    body {
-      overflow-x: hidden;
-    }
+    
 
 
-    /* Light theme readable text (no light-on-light) */
-    :root.light body,
-    :root.light p,
-    :root.light li,
-    :root.light .nav-link,
-    :root.light .navbar-brand,
-    :root.light .quote,
-    :root.light .muted {
-      color: #0f172a !important;
-    }
-
-    :root.light .muted {
-      opacity: .85;
-    }
-
-    :root.light h1,
-    :root.light h2,
-    :root.light h3,
-    :root.light h4,
-    :root.light h5,
-    :root.light h6 {
-      color: #0b1220;
-    }
-
-    :root.light .badge-soft {
-      color: #0f172a;
-    }
-
-    :root.light .btn-brand {
-      --bs-btn-color: #ffffff;
-    }
-
-    /* Hero responsive background via ::before */
-    .hero {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1493236151450-35b7f1e13b56?q=80&w=1920&auto=format&fit=crop');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      z-index: 1;
-      transform: translateZ(0);
-    }
-
-    .hero .overlay {
-      position: relative;
-      z-index: 2;
-    }
-
-    @media (max-width: 576px) {
-      .hero {
-        min-height: 68vh;
-      }
-    }
 
 
-    /* Theme toggle visibility in light theme */
-    :root.light #themeToggle {
-      border-color: #94a3b8;
-      color: #0f172a;
-    }
-
-    :root.light #themeToggle:hover {
-      background: #0f172a;
-      color: #fff;
-      border-color: #0f172a;
-    }
+    
 
 
     /* HERO: responsive image with object-fit to avoid empty space */
@@ -703,10 +387,7 @@
       letter-spacing: .2px
     }
 
-    :root.light .course-card .price-badge {
-      background: rgba(245, 158, 11, .12);
-      border-color: rgba(245, 158, 11, .3)
-    }
+    
 
 
     /* ===== Gallery slider & filters (non-intrusive) ===== */
@@ -717,9 +398,7 @@
       border: 1px solid rgba(255, 255, 255, .1)
     }
 
-    :root.light .gallery-swiper .swiper-slide a {
-      border-color: rgba(2, 6, 23, .08)
-    }
+
 
     .gallery-swiper .swiper-slide img {
       width: 100%;
@@ -821,17 +500,25 @@
       background: rgba(255, 255, 255, .02);
     }
 
-    :root.light .course-syllabus .accordion-item {
-      border-color: rgba(2, 6, 23, .10);
+    /* Accordions: use explicit chevron, hide default icon */
+    .course-syllabus .accordion-button::after,
+    .faq .accordion-button::after {
+      display: none !important;
+    }
+    .accordion-button .chevron {
+      margin-left: auto;
+      transition: transform .2s ease, opacity .2s ease;
+      opacity: .9;
+      font-size: 1rem;
+      color: #e5e7eb;
+      pointer-events: none;
+    }
+    .accordion-button:not(.collapsed) .chevron {
+      transform: rotate(180deg);
+      opacity: 1;
     }
 
-    :root.light .course-syllabus .accordion-button {
-      background: rgba(2, 6, 23, .04);
-    }
-
-    :root.light .course-syllabus .accordion-button.collapsed {
-      background: rgba(2, 6, 23, .02);
-    }
+    
 
 
     /* === Course actions spacing & divider === */
@@ -841,41 +528,16 @@
       border-top: 1px solid rgba(255, 255, 255, .08)
     }
 
-    :root.light .course-card .course-actions {
-      border-top: 1px solid rgba(2, 6, 23, .10)
-    }
+    
 
-    /* === Light theme readability for accordions inside course cards === */
-    :root.light .course-syllabus .accordion-item {
-      background: #fff;
-      border-color: rgba(2, 6, 23, .12)
-    }
-
-    :root.light .course-syllabus .accordion-button {
-      background: #f7f9fc;
-      color: #0f172a;
-      border-bottom: 1px solid rgba(2, 6, 23, .08)
-    }
-
-    :root.light .course-syllabus .accordion-button.collapsed {
-      background: #fbfdff;
-      color: #0f172a;
-      border-bottom-color: rgba(2, 6, 23, .06)
-    }
-
-    :root.light .course-syllabus .accordion-body {
-      background: #ffffff;
-      color: #0f172a
-    }
+    
 
     /* Hover/active focus states */
     .course-syllabus .accordion-button:focus {
       box-shadow: 0 0 0 .15rem rgba(14, 165, 233, .25)
     }
 
-    :root.light .course-syllabus .accordion-button:not(.collapsed) {
-      color: #0b1220
-    }
+    
 
 
     /* === Dark theme readability for accordions inside course cards === */
@@ -925,17 +587,7 @@
       color: #fff;
     }
 
-    :root.light .gallery-swiper .swiper-button-next,
-    :root.light .gallery-swiper .swiper-button-prev {
-      background: rgba(255, 255, 255, .85);
-      border-color: rgba(2, 6, 23, .15);
-      box-shadow: 0 6px 18px rgba(2, 6, 23, .15);
-    }
-
-    :root.light .gallery-swiper .swiper-button-next::after,
-    :root.light .gallery-swiper .swiper-button-prev::after {
-      color: #0f172a;
-    }
+    
 
     /* smaller screens: bring arrows inwards and ensure visible */
     @media (max-width: 576px) {
@@ -981,15 +633,7 @@
       fill: #fff;
     }
 
-    :root.light .glightbox-clean .gbtn {
-      background: rgba(255, 255, 255, .9);
-      border-color: rgba(2, 6, 23, .15);
-      box-shadow: 0 6px 18px rgba(2, 6, 23, .15);
-    }
-
-    :root.light .glightbox-clean .gbtn svg {
-      fill: #0f172a;
-    }
+    
 
     /* Position tweaks for mobile */
     @media (max-width: 576px) {
@@ -1051,7 +695,7 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background:rgba(11,16,32,.7)">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#home"><i class="bi bi-speedometer2 me-2"></i>Гриднев MotoSchool</a>
+      <a class="navbar-brand fw-bold" href="#home"><i class="bi bi-speedometer2 me-2"></i>ilayTeam</a>
       <button aria-controls="nav" aria-expanded="false" aria-label="Навигация" class="navbar-toggler"
         data-bs-target="#nav" data-bs-toggle="collapse" type="button">
         <span class="navbar-toggler-icon"></span>
@@ -1059,17 +703,11 @@
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="#about">О школе</a></li>
-          <li class="nav-item"><a class="nav-link" href="#mission">Подход</a></li>
           <li class="nav-item"><a class="nav-link" href="#courses">Курсы</a></li>
           <li class="nav-item"><a class="nav-link" href="#stunt">Стант</a></li>
           <li class="nav-item"><a class="nav-link" href="#bikes">Мотоциклы</a></li>
           <li class="nav-item"><a class="nav-link" href="#events">Выступления</a></li>
-          <li class="nav-item"><a class="nav-link" href="#community">Сообщество</a></li>
-          <li class="nav-item d-flex align-items-center ms-lg-2">
-            <button aria-label="Сменить тему" class="btn btn-sm btn-outline-light" id="themeToggle" type="button">
-              <i class="bi bi-moon"></i>
-            </button>
-          </li>
+          
         </ul>
         <ul class="navbar-nav ms-2">
           <li class="nav-item d-flex align-items-center"></li>
@@ -1079,7 +717,7 @@
   </nav>
   <!-- HERO -->
   <header class="hero" id="home">
-    <img alt="" class="hero-bg" decoding="async" loading="eager" src="./images/i.jpeg" />
+    <img alt="" class="hero-bg" decoding="async" loading="eager" src="./images/galery/show/Tank1.jpg" />
     <div class="overlay w-100 h-100 py-5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
@@ -1088,9 +726,9 @@
               Методика • Результат</span>
             <h1 class="display-4 fw-bold mb-3" data-aos="fade-up">Мотошкола <span class="brand-gradient">Ильи
                 Гриднева</span></h1>
-            <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">«Моя основная задача — дать новоиспечённому
-              мотоциклисту базовые навыки, позволяющие адекватно и без страха управлять мотоциклом и применять знания на
-              уровне инстинктов».</p>
+            <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">«Моя главная цель — снижение аварийности на
+              дорогах: системно обучаю безопасному управлению, формирую устойчивые рефлексы и осознанное поведение за
+              рулём».</p>
             <div class="d-flex gap-2 justify-content-center" data-aos="fade-up" data-aos-delay="150">
               <a class="btn btn-brand btn-lg" href="#signup"><i class="bi bi-lightning-charge me-2"></i>Начать
                 обучение</a>
@@ -1121,12 +759,11 @@
               грамотному и безопасному управлению мотоциклом, являюсь тренером по дисциплине «стантрайдинг» и
               дипломированным мотоинструктором.</p>
             <div class="timeline mt-3">
-              <div class="item"><strong>22 года</strong> — начал тренировать первых учеников, передавая опыт скутеристам
+              <div class="item"><strong>В 22 года</strong> — начал тренировать первых учеников, передавая опыт скутеристам
                 с большим потенциалом.</div>
               <div class="item"><strong>Дальше</strong> — с теми же учениками освоили большие мотоциклы, выступали и
                 развивали дальневосточный стантрайдинг.</div>
-              <div class="item"><strong>Сегодня</strong> — авторский курс, позволяющий без мото‑бэкграунда погрузиться в
-                мир двух колёс.</div>
+              <div class="item"><strong>Сегодня</strong> — преподаю авторский курс, позволяющий уверенно управлять мототранспортными средствами, окунуться в мир трюков и освоить новые умения</div>
             </div>
           </div>
         </div>
@@ -1141,19 +778,19 @@
             <div class="col-6">
               <div class="feature h-100"><i class="bi bi-mortarboard"></i>
                 <h5 class="mt-2">Поэтапно</h5>
-                <p class="muted mb-0">От посадки и работы телом — к манёврам и инстинктам управления.</p>
+                <p class="muted mb-0">Обучение как для новичков так и для оптытных райдеров, индивидуальный подход к каждому курсанту.</p>
               </div>
             </div>
             <div class="col-6">
               <div class="feature h-100"><i class="bi bi-graph-up-arrow"></i>
                 <h5 class="mt-2">С результатом</h5>
-                <p class="muted mb-0">Ученики задают планку и формируют здоровую конкуренцию навыков.</p>
+                <p class="muted mb-0">Растим осознанных райдеров: уверенность, безопасность и культура вождения — вместе. </p>
               </div>
             </div>
             <div class="col-6">
               <div class="feature h-100"><i class="bi bi-people"></i>
-                <h5 class="mt-2">Вместе</h5>
-                <p class="muted mb-0">Покатушки, выезды и встречи — мото как культура и сообщество.</p>
+                <h5 class="mt-2">Комьюнити</h5>
+                <p class="muted mb-0">Мои ученики — моя гордость. Обучение продолжается за пределами спота: совместные выезды за город, встречи и общение даже зимой.</p>
               </div>
             </div>
           </div>
@@ -1179,7 +816,7 @@
           </ul>
           <div class="mt-4 d-flex gap-3">
             <a href="#signup" class="btn btn-brand">Записаться на безопасный курс</a>
-            <a href="#courses" class="btn btn-outline-brand">Смотреть программы</a>
+            <a href="#courses" class="btn btn-outline-brand">К курсам</a>
           </div>
         </div>
         <div class="col-lg-6" data-aos="fade-left">
@@ -1223,48 +860,39 @@
         </div>
       </div>
 
-      <div class="row mt-5 g-4" data-aos="zoom-in">
-        <div class="col-md-4">
-          <div class="p-4 rounded-4 border h-100 text-center">
-            <div class="fs-1 mb-2">90%+</div>
-            <p class="mb-0 muted">учеников отмечают рост уверенности и снижение «стресса дороги» после 2–3 занятий</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="p-4 rounded-4 border h-100 text-center">
-            <div class="fs-1 mb-2"><i class="bi bi-geo-alt"></i></div>
-            <p class="mb-0 muted">отрабатываем сценарии: «резкая подрезка», «мокрая разметка», «ямы/гравий», «неожиданный пешеход»</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="p-4 rounded-4 border h-100 text-center">
-            <div class="fs-1 mb-2"><i class="bi bi-gear"></i></div>
-            <p class="mb-0 muted">даём чек‑лист ТО мотоцикла перед сезоном и перед каждой поездкой</p>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
-  <!-- MISSION / PHILOSOPHY -->
-  <section class="section" id="mission">
+  <!-- STUNT DETAILS -->
+  <section class="section" id="stunt">
     <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-6" data-aos="fade-up">
-          <h2 class="h1 fw-bold">Подход к обучению</h2>
-          <p>С каждым годом мотоциклов на дорогах больше. Но не каждый райдер — подготовленный участник движения. Моя
-            задача как учителя — выпускать адекватных и готовых мотоциклистов.</p>
-          <p>Переучиваться сложнее, чем учиться с нуля. Будьте умнее и учитесь на чужих ошибках: доверяйте обучение
-            профессионалам и постоянно осваивайте новые навыки — у совершенства нет границ.</p>
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <h2 class="h1 fw-bold">Стантрайдинг безопасно</h2>
+          <p class="muted">Элементы стантрайдинга доступны тем, кто готов идти дальше: езда на заднем и переднем колесе,
+            бернаут, дрифт, базовая акробатика. Всё — на закрытой площадке, на специально подготовленных мотоциклах, в
+            полном комплекте защиты.</p>
+          <ul class="list-unstyled list-check">
+            <li><i class="bi bi-check2-circle"></i>Пошаговые упражнения</li>
+            <li><i class="bi bi-check2-circle"></i>Контроль рисков и экипировка</li>
+            <li><i class="bi bi-check2-circle"></i>Большой парк тренировочной техники</li>
+            <li><i class="bi bi-check2-circle"></i>Индивидуальные корректировки техники</li>
+          </ul>
+          <div class="mt-4 d-flex gap-3">
+            <a class="btn btn-brand" href="#signup"><i class="bi bi-rocket-takeoff me-2"></i>Записаться на курс PRO</a>
+            <a href="#courses" class="btn btn-outline-brand">К курсам</a>
+          </div>
+          
         </div>
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="glass p-4">
-            <h5 class="mb-2">Что формирует прогресс</h5>
-            <ul class="list-unstyled list-check mb-0">
-              <li><i class="bi bi-check2-circle"></i>Правильная посадка и работа телом</li>
-              <li><i class="bi bi-check2-circle"></i>Контроль органов управления</li>
-              <li><i class="bi bi-check2-circle"></i>Безопасные алгоритмы и рефлексы</li>
-              <li><i class="bi bi-check2-circle"></i>Понимание техники и её обслуживания</li>
-            </ul>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="row g-3 gallery">
+            <div class="col-6"><img alt="Вилли на площадке" class="img-fluid" loading="lazy"
+                src="./images/galery/show/Wheelie5.jpg" />
+            </div>
+            <div class="col-6"><img alt="Стоппи" class="img-fluid" loading="lazy"
+                src="./images/galery/show/Stoppie1.jpg" /></div>
+            <div class="col-12"><img alt="Дрифт и бернаут" class="img-fluid" loading="lazy"
+                src="./images/galery/show/Burnout.jpg" />
+            </div>
           </div>
         </div>
       </div>
@@ -1347,7 +975,8 @@
             </div>
             <div class="course-actions">
               <span class="price-badge">
-                <span class="price" data-course="basic" data-currency="RUB" data-price="4500">4 500 ₽</span>
+                <span class="price" data-course="basic" data-currency="RUB" data-price="47000">47 000 ₽</span>
+                <small class="d-block muted">10 занятий × 60 мин</small>
               </span>
               <a class="btn btn-outline-brand" href="#signup">Записаться</a>
             </div>
@@ -1359,30 +988,18 @@
               <div class="d-flex align-items-center gap-2 mb-2">
                 <i class="bi bi-lightning"></i>
                 <h5 class="mb-0">Трюковый курс</h5>
+                <span class="badge badge-pro ms-2" aria-label="Продвинутый уровень">PRO</span>
               </div>
               <p class="muted">Безопасные основы стантрайдинга в контролируемых условиях.</p>
               <ul class="list-unstyled list-check">
-                <li><i class="bi bi-check2-circle"></i>Вилли и стоппи (база)</li>
+                <li><i class="bi bi-check2-circle"></i>Вилли</li>
+                <li><i class="bi bi-check2-circle"></i>Стоппи</li>
                 <li><i class="bi bi-check2-circle"></i>Бернаут и дрифт</li>
-                <li><i class="bi bi-check2-circle"></i>Простейшие акробатические элементы</li>
-                <li><i class="bi bi-check2-circle"></i>Протоколы безопасности и страхование упражнений</li>
+                <li><i class="bi bi-check2-circle"></i>Акробатические элементы</li>
               </ul>
               <div class="course-syllabus mt-2">
                 <div class="accordion" id="acc-stunt">
-                  <div class="accordion-item mb-2">
-                    <h2 class="accordion-header" id="smod1">
-                      <button aria-controls="sc1" aria-expanded="false" class="accordion-button collapsed"
-                        data-bs-target="#sc1" data-bs-toggle="collapse" type="button">
-                        Модуль 1 — Контроль и безопасность
-                      </button>
-                    </h2>
-                    <div aria-labelledby="smod1" class="accordion-collapse collapse" data-bs-parent="#acc-stunt"
-                      id="sc1">
-                      <div class="accordion-body">
-                        Протоколы безопасности, экипировка, подготовка площадки и мотоцикла. Страховка упражнений.
-                      </div>
-                    </div>
-                  </div>
+
                   <div class="accordion-item mb-2">
                     <h2 class="accordion-header" id="smod2">
                       <button aria-controls="sc2" aria-expanded="false" class="accordion-button collapsed"
@@ -1418,9 +1035,10 @@
             </div>
             <div class="course-actions">
               <span class="price-badge">
-                <span class="price" data-course="stunt" data-currency="RUB" data-price="6000">6 000 ₽</span>
+                <span class="price" data-course="basic" data-currency="RUB" data-price="62000">62 000 ₽</span>
+                <small class="d-block muted">10 занятий × 60 мин</small>
               </span>
-              <a class="btn btn-outline-brand" href="#signup">К трюкам</a>
+              <a class="btn btn-outline-brand" href="#signup">Записаться</a>
             </div>
           </div>
         </div>
@@ -1429,14 +1047,14 @@
             <div class="course-body">
               <div class="d-flex align-items-center gap-2 mb-2">
                 <i class="bi bi-shield-exclamation"></i>
-                <h5 class="mb-0">Антиаварийная езда</h5>
+                <h5 class="mb-0">Мотосопровождение</h5>
               </div>
-              <p class="muted">Профилактика ДТП: предиктивное вождение и экстренные действия.</p>
+              <p class="muted">Индивидуальное и групповое мотосопровождение в городе.</p>
               <ul class="list-unstyled list-check">
                 <li><i class="bi bi-check2-circle"></i>Экстренное торможение и объезд препятствий</li>
                 <li><i class="bi bi-check2-circle"></i>Контрруление и работа взглядом</li>
                 <li><i class="bi bi-check2-circle"></i>Траектории, покрытие и сцепление</li>
-                <li><i class="bi bi-check2-circle"></i>Оценка рисков и сценарии «что если»</li>
+                <li><i class="bi bi-check2-circle"></i>Оценка рисков</li>
               </ul>
               <div class="course-syllabus mt-2">
                 <div class="accordion" id="acc-safety">
@@ -1490,112 +1108,50 @@
             </div>
             <div class="course-actions">
               <span class="price-badge">
-                <span class="price" data-course="safety" data-currency="RUB" data-price="5200">5 200 ₽</span>
+                <span class="price" data-course="basic" data-currency="RUB" data-price="30000">30 000 ₽</span>
+                <small class="d-block muted">10 занятий × 60 мин</small>
               </span>
-              <a class="btn btn-outline-brand" href="#signup">Улучшить безопасность</a>
+              <a class="btn btn-outline-brand" href="#signup">Записаться</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="row mt-4">
-        <div class="col-12">
-          <div class="glass p-4" data-aos="fade-up">
-            <strong>Важно:</strong> на мотошколы возложена ответственность — выпускать достойно подготовленных
-            курсантов. По опыту, многим выпускникам нужна доработка навыков — мы закрываем этот пробел дополнительным
-            обучением.
-          </div>
-        </div>
-      </div>
+
     </div>
   </section>
-  <!-- STUNT DETAILS -->
-  <section class="section" id="stunt">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-6" data-aos="fade-right">
-          <h2 class="h1 fw-bold">Стантрайдинг безопасно</h2>
-          <p class="muted">Элементы стантрайдинга доступны тем, кто готов идти дальше: езда на заднем и переднем колесе,
-            бернаут, дрифт, базовая акробатика. Всё — на закрытой площадке, на специально подготовленных мотоциклах, в
-            полном комплекте защиты.</p>
-          <ul class="list-unstyled list-check">
-            <li><i class="bi bi-check2-circle"></i>Пошаговые упражнения</li>
-            <li><i class="bi bi-check2-circle"></i>Контроль рисков и экипировка</li>
-            <li><i class="bi bi-check2-circle"></i>Индивидуальные корректировки техники</li>
-          </ul>
-          <a class="btn btn-brand" href="#signup"><i class="bi bi-rocket-takeoff me-2"></i>Записаться на
-            стант-основы</a>
-        </div>
-        <div class="col-lg-6" data-aos="fade-left">
-          <div class="row g-3 gallery">
-            <div class="col-6"><img alt="Вилли на площадке" class="img-fluid" loading="lazy"
-                src="./images/galery/show/Wheelie5.jpg" />
-            </div>
-            <div class="col-6"><img alt="Стоппи" class="img-fluid" loading="lazy"
-                src="./images/galery/show/Stoppie1.jpg" /></div>
-            <div class="col-12"><img alt="Дрифт и бернаут" class="img-fluid" loading="lazy"
-                src="./images/galery/show/Burnout.jpg" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
   <div class="divider"></div>
-  <!-- BIKES -->
+  <!-- BIKES + EVENTS (combined row) -->
   <section class="section" id="bikes">
     <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-6 order-lg-2" data-aos="fade-left">
-          <h2 class="h1 fw-bold">Подбор и продажа мотоциклов</h2>
-          <p class="muted">У нас всегда есть топовые модели разных классов. Отбираем достойные экземпляры в приличном
-            техническом и косметическом состоянии. Репутация — то, над чем мы работали годы. Честная сделка и
-            достоверный пробег.</p>
-          <a class="btn btn-outline-brand" href="#contact"><i class="bi bi-shop me-2"></i>Уточнить наличие</a>
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="glass p-4 h-100">
+            <h2 class="h1 fw-bold mb-2">Подбор и продажа мотоциклов</h2>
+            <p class="lead mb-2">Подберём мотоцикл под ваши задачи и опыт, либо предложим из наличия — всё прозрачно и безопасно.</p>
+            <ul class="list-unstyled list-check mb-3">
+              <li><i class="bi bi-check2-circle"></i>Актуальные модели в наличии с понятной историей</li>
+              <li><i class="bi bi-check2-circle"></i>Подбор «под ключ»: поиск, осмотр, юридическая проверка</li>
+              <li><i class="bi bi-check2-circle"></i>Честная диагностика и рекомендации по обслуживанию</li>
+            </ul>
+          </div>
         </div>
-        <div class="col-lg-6 order-lg-1" data-aos="fade-right">
-          <div class="row g-3 gallery">
-            <div class="col-6"><img alt="Нэйкед класс" class="img-fluid" loading="lazy" src="./images/moto1.jpg" />
-            </div>
-            <div class="col-6"><img alt="Спортбайк" class="img-fluid" loading="lazy" src="./images/moto2.jpg" /></div>
-            <div class="col-12"><img alt="Туринг" class="img-fluid" loading="lazy" src="./images/moto3.jpg" /></div>
+        <div class="col-lg-6" id="events" data-aos="fade-left">
+          <div class="glass p-4 h-100">
+            <h2 class="h1 fw-bold mb-2">Выступления и шоу</h2>
+            <p class="muted mb-3">Выступления — важная часть нашей жизни: сложнейшие трюки, взрывные эмоции и атмосфера праздника. Проводим показательные выступления на площадках и городских мероприятиях, соблюдая безопасность и формат ивента.</p>
+            <ul class="list-unstyled list-check mb-3">
+              <li><i class="bi bi-check2-circle"></i>Индивидуальные и командные шоу‑программы</li>
+              <li><i class="bi bi-check2-circle"></i>Гибкий формат под площадку и сценарий</li>
+              <li><i class="bi bi-check2-circle"></i>Фокус на безопасности и зрелищности</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- EVENTS / PERFORMANCES -->
-  <section class="section" id="events">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-6" data-aos="fade-right">
-          <h2 class="h1 fw-bold">Выступления и шоу</h2>
-          <p class="muted">Выступления — неотъемлемая часть жизни стантрайдеров. Сложнейшие трюки, запах отожжённой
-            резины и нереальный звук выхлопа будоражат людей по всему миру, и наш регион — не исключение. Следите за
-            нашими выступлениями, ваша поддержка — то, ради чего мы этим занимаемся.</p>
-          <a class="btn btn-brand" href="#contact"><i class="bi bi-calendar2-event me-2"></i>Пригласить на ивент</a>
-        </div>
-        <div class="col-lg-6" data-aos="fade-left">
-          <img alt="Стант шоу" class="img-fluid rounded-4 border border-light border-opacity-10" loading="lazy"
-            src="./images/galery/show/Tank1.jpg" />
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- COMMUNITY -->
-  <section class="section pt-0" id="community">
-    <div class="container">
-      <div class="glass p-4" data-aos="fade-up">
-        <h2 class="h1 fw-bold mb-3">Сообщество учеников</h2>
-        <p>Мои ученики — моя гордость. Нет большего счастья, чем видеть, как твои старания влияют на чью‑то жизнь. У нас
-          не просто кружок по интересам — обучение продолжается за пределами спота: совместные выезды за город, встречи
-          и общение даже зимой.</p>
-        <p class="mb-0">Мотоцикл — не просто средство передвижения, а целая вселенная возможностей. Ученики своим
-          примером формируют здоровую спортивную конкуренцию, развивают волевые качества и преодолевают страхи — так
-          растём как личности.</p>
-      </div>
-    </div>
-  </section>
-  <div class="divider"></div>
+  
+
   <!-- GALLERY WIDE -->
   <section class="section" id="gallery">
     <div class="container">
@@ -1619,89 +1175,8 @@
       </div>
     </div>
   </section>
-  <!-- TESTIMONIALS / SLIDER -->
-  <section class="section pt-0">
-    <div class="container">
-      <div class="glass p-4">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-4">
-            <h3 class="fw-bold mb-2">Отзывы учеников</h3>
-            <p class="muted mb-0">Результат говорит сам за себя.</p>
-          </div>
-          <div class="col-lg-8">
-            <div class="swiper" id="reviews">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <p class="mb-1">«С нуля перестал бояться мотоцикла. Всё по шагам и с акцентом на безопасность.»</p>
-                  <span class="muted">Алексей, базовый курс</span>
-                </div>
-                <div class="swiper-slide">
-                  <p class="mb-1">«Продвинутый курс раскрыл ошибки, о которых не догадывался. Управление стало
-                    осознанным.»</p>
-                  <span class="muted">Мария, продвинутый</span>
-                </div>
-                <div class="swiper-slide">
-                  <p class="mb-1">«Первый контролируемый вилли под присмотром — эмоции зашкаливают!»</p>
-                  <span class="muted">Иван, стант‑основы</span>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- FAQ -->
-  <section class="section" id="faq">
-    <div class="container">
-      <div class="row mb-4">
-        <div class="col-lg-8">
-          <h2 class="h1 fw-bold">Частые вопросы</h2>
-        </div>
-      </div>
-      <div class="accordion faq" id="faqAccordion">
-        <div class="accordion-item mb-3">
-          <h2 class="accordion-header" id="q1"><button aria-controls="a1" aria-expanded="true" class="accordion-button"
-              data-bs-target="#a1" data-bs-toggle="collapse" type="button">Нужны ли свой мотоцикл и экипировка?</button>
-          </h2>
-          <div aria-labelledby="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="a1">
-            <div class="accordion-body">Для первых занятий предоставляем подготовленные мотоциклы и полный комплект
-              защиты. Своя экипировка приветствуется.</div>
-          </div>
-        </div>
-        <div class="accordion-item mb-3">
-          <h2 class="accordion-header" id="q2"><button aria-controls="a2" aria-expanded="false"
-              class="accordion-button collapsed" data-bs-target="#a2" data-bs-toggle="collapse" type="button">Где
-              проходят
-              тренировки?</button></h2>
-          <div aria-labelledby="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="a2">
-            <div class="accordion-body">В специально отведённых местах на закрытой площадке с соблюдением всех норм
-              безопасности. Локацию уточняем при записи.</div>
-          </div>
-        </div>
-        <div class="accordion-item mb-3">
-          <h2 class="accordion-header" id="q3"><button aria-controls="a3" aria-expanded="false"
-              class="accordion-button collapsed" data-bs-target="#a3" data-bs-toggle="collapse" type="button">Сколько
-              занятий в
-              базовом курсе?</button></h2>
-          <div aria-labelledby="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="a3">
-            <div class="accordion-body">Рекомендуем 6–8 занятий для формирования устойчивых навыков. Далее —
-              индивидуальный план под цели.</div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="q4"><button aria-controls="a4" aria-expanded="false"
-              class="accordion-button collapsed" data-bs-target="#a4" data-bs-toggle="collapse" type="button">Можно ли
-              подарочный сертификат?</button></h2>
-          <div aria-labelledby="q4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="a4">
-            <div class="accordion-body">Да, оформим электронный или печатный сертификат на курс или индивидуальные
-              тренировки.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
+
   <!-- SIGN UP / CONTACT -->
   <section id="signup" class="py-6 py-lg-7">
     <div class="container">
@@ -1711,25 +1186,18 @@
           <p class="muted">Выберите курс и оставьте контакты — свяжемся, подберём удобное время и площадку. Занятия проходят в безопасных условиях, со всей необходимой экипировкой.</p>
           <ul class="list-unstyled list-check">
             <li><i class="bi bi-check2-circle"></i>Базовый — основы управления, рефлексы, манёвры</li>
-            <li><i class="bi bi-check2-circle"></i>Трюковый — безопасные основы стантрайдинга</li>
-            <li><i class="bi bi-check2-circle"></i>Антиаварийная езда — предиктивное вождение и экстренные действия</li>
+            <li><i class="bi bi-check2-circle"></i>Трюковый PRO — безопасные основы стантрайдинга</li>
+            <li><i class="bi bi-check2-circle"></i>Мотосопровождение — предиктивное вождение и экстренные действия в городе</li>
           </ul>
             <div class="mt-4 d-flex gap-3">
-              <a href="https://t.me/ilay_stunts" target="_blank" class="btn btn-outline-brand d-flex align-items-center gap-2">
+              <a href="https://t.me/79294105478" target="_blank" class="btn btn-outline-brand d-flex align-items-center gap-2">
                 <i class="bi bi-telegram"></i> Telegram
               </a>
-              <a href="https://wa.me/79000000000" target="_blank" class="btn btn-outline-brand d-flex align-items-center gap-2">
+              <a href="https://wa.me/79294105478" target="_blank" class="btn btn-outline-brand d-flex align-items-center gap-2">
                 <i class="bi bi-whatsapp"></i> WhatsApp
               </a>
             </div>
 
-          <div class="mt-3 p-3 rounded-4 border small">
-            <div class="d-flex align-items-center gap-2">
-              <i class="bi bi-cash-coin"></i> <span>Стоимость выбранного курса:</span>
-              <strong class="ms-auto" id="signupPrice">—</strong>
-            </div>
-            <div class="mt-2 muted">Цены ориентировочные и зависят от формата/длительности. Точную стоимость подтвердим при звонке.</div>
-          </div>
         </div>
 
         <div class="col-lg-6" data-aos="fade-left">
@@ -1739,9 +1207,9 @@
                 <label for="course" class="form-label">Курс</label>
                 <select id="course" name="course" class="form-select" required>
                   <option value="" selected disabled>Выберите курс…</option>
-                  <option value="basic" data-price="4500" data-title="Базовый курс">Базовый курс</option>
-                  <option value="stunt" data-price="6000" data-title="Трюковый курс">Трюковый курс</option>
-                  <option value="safety" data-price="5200" data-title="Антиаварийная езда">Антиаварийная езда</option>
+                  <option value="basic" data-price="47000" data-title="Базовый курс">Базовый курс</option>
+                  <option value="stunt" data-price="62000" data-title="Трюковый курс">Трюковый курс</option>
+                  <option value="safety" data-price="5200" data-title="Мотосопровождение">Мотосопровождение</option>
                 </select>
               </div>
               <div class="col-md-6">
@@ -1758,7 +1226,7 @@
               </div>
               <div class="col-12 d-flex align-items-start gap-2">
                 <input class="form-check-input mt-1" type="checkbox" id="agree" required>
-                <label class="form-check-label" for="agree">Согласен(а) на обработку персональных данных и обратную связь по заявке</label>
+                <label class="form-check-label" for="agree">Согласен(а) с <a href="privacy.html" class="link-light">Политикой конфиденциальности</a> и на обратную связь по заявке</label>
               </div>
               <div class="col-12 d-flex gap-3">
                 <button type="submit" class="btn btn-brand" id="submitBtn">Отправить</button>
@@ -1777,14 +1245,16 @@
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-6">
-          <h5 class="fw-bold">Гриднев MotoSchool</h5>
+          <h5 class="fw-bold">ilayTeam</h5>
           <p class="muted">Мир двух колёс без страха и стереотипов. Учимся у профессионала — растём как райдеры и
             личности.</p>
-          <div class="d-flex gap-3">
-            <a aria-label="Telegram" class="text-decoration-none text-light" href="#"><i class="bi bi-telegram"></i></a>
-            <a aria-label="Instagram" class="text-decoration-none text-light" href="#"><i
-                class="bi bi-instagram"></i></a>
-            <a aria-label="YouTube" class="text-decoration-none text-light" href="#"><i class="bi bi-youtube"></i></a>
+          <div class="d-flex gap-3 social-links">
+            <a aria-label="Telegram канал" class="text-decoration-none text-light" href="https://t.me/ILAY_MOTO" target="_blank" rel="noopener">
+              <img src="https://cdn.simpleicons.org/telegram/ffffff" alt="Telegram" width="22" height="22" decoding="async" loading="lazy" />
+            </a>
+            <a aria-label="VK" class="text-decoration-none text-light" href="https://vk.com/wall45244240_2204" target="_blank" rel="noopener" title="VK">
+              <img src="https://cdn.simpleicons.org/vk/ffffff" alt="VK" width="22" height="22" decoding="async" loading="lazy" />
+            </a>
           </div>
         </div>
         <div class="col-lg-3">
@@ -1799,10 +1269,9 @@
         <div class="col-lg-3">
           <h6 class="fw-semibold">Контакты</h6>
           <ul class="list-unstyled">
-            <li><i class="bi bi-phone me-2"></i><a class="text-decoration-none text-light" href="tel:+7xxxxxxxxxx">+7
-                (___) ___-__-__</a></li>
+            <li><i class="bi bi-phone me-2"></i><a class="text-decoration-none text-light" href="tel:+79294105478">+79294105478</a></li>
             <li><i class="bi bi-envelope me-2"></i><a class="text-decoration-none text-light"
-                href="mailto:info@example.com">info@example.com</a></li>
+                href="mailto:info@example.com">stunter27@mail.ru</a></li>
             <li><i class="bi bi-geo-alt me-2"></i>Дальний Восток, РФ</li>
           </ul>
         </div>
@@ -1832,38 +1301,39 @@
       window.addEventListener('scroll', () => { btn.style.display = window.scrollY > 600 ? 'block' : 'none'; });
       btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-      // Bootstrap validation
+      // Contact form: open default mail app with prefilled email
       const form = document.getElementById('signupForm');
+      const status = document.getElementById('formStatus');
       form.addEventListener('submit', function (event) {
+        event.preventDefault();
         if (!form.checkValidity()) {
-          event.preventDefault();
           event.stopPropagation();
-        } else {
-          // 👉 Замените на свой обработчик / Formspree / Telegram Bot API
-          event.preventDefault();
-          const data = Object.fromEntries(new FormData(form).entries());
-          console.log('FORM DATA', data);
-          form.reset();
-          alert('Заявка отправлена! Мы свяжемся с вами.');
+          form.classList.add('was-validated');
+          return;
+        }
+        const fd = new FormData(form);
+        const name = (fd.get('name') || '').toString().trim();
+        const phone = (fd.get('phone') || '').toString().trim();
+        const message = (fd.get('message') || '').toString().trim();
+        const courseSel = document.getElementById('course');
+        const opt = courseSel && courseSel.options[courseSel.selectedIndex];
+        const courseTitle = opt ? (opt.getAttribute('data-title') || opt.text || opt.value) : '';
+        const mail = 'stunter27@mail.ru';
+        const subject = encodeURIComponent(`Заявка на курс — ${courseTitle || 'без выбора'}`);
+        const body = encodeURIComponent(
+          `Имя: ${name}\nТелефон: ${phone}\nКурс: ${courseTitle}` + (message ? `\n\nКомментарий: ${message}` : '')
+        );
+        const href = `mailto:${mail}?subject=${subject}&body=${body}`;
+        // Try to open default mail client
+        try { window.location.href = href; } catch (e) {}
+        // Fallback visible link if the client blocked the picker
+        if (status) {
+          status.innerHTML = `Если письмо не открылось автоматически, нажмите: <a href="${href}">открыть почтовый клиент</a>`;
         }
         form.classList.add('was-validated');
       }, false);
 
-      // Theme toggle
-      const root = document.documentElement;
-      const toggleBtn = document.getElementById('themeToggle');
-      if (localStorage.getItem('theme') === 'light') {
-        root.classList.add('light');
-        toggleBtn.innerHTML = '<i class="bi bi-sun"></i>';
-      }
-      toggleBtn.addEventListener('click', () => {
-        root.classList.toggle('light');
-        const isLight = root.classList.contains('light');
-        localStorage.setItem('theme', isLight ? 'light' : 'dark');
-        toggleBtn.innerHTML = isLight ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
-      });
-
-
+      
       // Format prices from data attributes
       document.querySelectorAll('.price[data-price]').forEach(el => {
         const value = Number(el.getAttribute('data-price'));
@@ -1874,6 +1344,18 @@
           el.textContent = value.toLocaleString('ru-RU') + ' ₽';
         }
       });
+
+      // Ensure chevron icon is present in all accordion buttons (courses + FAQ)
+      (function ensureAccordionsIcons() {
+        document.querySelectorAll('.course-syllabus .accordion-button, .faq .accordion-button').forEach(btn => {
+          if (!btn.querySelector('.chevron')) {
+            const i = document.createElement('i');
+            i.className = 'bi bi-chevron-down ms-auto chevron';
+            i.setAttribute('aria-hidden', 'true');
+            btn.appendChild(i);
+          }
+        });
+      })();
 
 
       // category: 'training' | 'show' | 'life'
@@ -2009,7 +1491,7 @@
     <a href="https://t.me/ilay_stunts" class="contact-btn telegram" target="_blank" aria-label="Telegram">
       <i class="bi bi-telegram"></i>
     </a>
-    <a href="https://wa.me/79000000000" class="contact-btn whatsapp" target="_blank" aria-label="WhatsApp">
+    <a href="https://wa.me/+79294105478" class="contact-btn whatsapp" target="_blank" aria-label="WhatsApp">
       <i class="bi bi-whatsapp"></i>
     </a>
   </div>
@@ -2060,11 +1542,10 @@
 #preloader-speedo{ position:fixed; inset:0; display:grid; place-items:center;
   background:radial-gradient(1200px 800px at 50% 60%, rgba(0,0,0,.84), rgba(0,0,0,.96));
   z-index:1000; transition:opacity .45s ease, visibility .45s ease; }
-:root.light #preloader-speedo{ background:radial-gradient(1200px 800px at 50% 60%, rgba(241,245,249,.98), rgba(226,232,240,1)); }
 #preloader-speedo.hidden{ opacity:0; visibility:hidden; }
 .speedo-wrap{ width:clamp(220px, 44vw, 420px); aspect-ratio:1; filter:drop-shadow(0 18px 40px rgba(0,0,0,.45)); }
 #speedo svg{ width:100%; height:100%; }
-#speedo .ring{ stroke: rgba(255,255,255,.15); } :root.light #speedo .ring{ stroke: rgba(2,6,23,.15); }
+#speedo .ring{ stroke: rgba(255,255,255,.15); }
 #speedo .ticks{ stroke: currentColor; stroke-opacity:.55; }
 #speedo .needle{ stroke:#ef4444; stroke-width:4; stroke-linecap:round; }
 #speedo .cap{ fill:#ef4444; }
@@ -2076,12 +1557,11 @@
 
 :root.stunt{ --neon: 0 0 16px rgba(34,211,238,.8), 0 0 36px rgba(34,211,238,.55), 0 0 72px rgba(6,182,212,.5); }
 :root.stunt h1, :root.stunt h2, :root.stunt .brand{ text-shadow: var(--neon); }
-:root.stunt .btn-primary{ box-shadow: var(--neon); transform: translateY(-1px); }
+
 
 /* --- Toggle (moved left) --- */
 .stunt-toggle{ position:fixed; right:16px; bottom:80px; z-index:70; display:inline-flex; align-items:center; gap:8px; padding:10px 12px; border-radius:12px;
   font-weight:700; text-transform:uppercase; letter-spacing:.06em; border:1px solid rgba(255,255,255,.2); background:rgba(255,255,255,.06); cursor:pointer; user-select:none; }
-:root.light .stunt-toggle{ background:rgba(2,6,23,.06); border-color:rgba(2,6,23,.18); }
 :root.stunt .stunt-toggle{ background:linear-gradient(180deg, rgba(34,211,238,.95), rgba(6,182,212,.95)); color:#081226; }
 @media (max-width:520px){ .stunt-toggle{ right:16px; bottom:80px; } }
 
@@ -2090,7 +1570,7 @@
 :root.stunt .combo-hud{ display:block; }
 .combo-hud .inner{ max-width:1280px; margin:0 auto; background:rgba(2,6,23,.86); color:#fff; border:1px solid rgba(255,255,255,.18); border-radius:14px; padding:10px 12px;
   display:grid; grid-template-columns: 90px 1fr 160px; gap:12px; align-items:center; }
-:root.light .combo-hud .inner{ background:rgba(241,245,249,.94); color:#0f172a; border-color:rgba(2,6,23,.12); }
+ 
 .combo-hud .label{ font-weight:800; font-size:12px; letter-spacing:.06em; text-transform:uppercase; opacity:.85; }
 .combo-hud .bar{ height:14px; border-radius:99px; overflow:hidden; background:rgba(255,255,255,.2); }
 .combo-hud .bar>i{ display:block; height:100%; width:0%; background:linear-gradient(90deg,#22d3ee,#3b82f6,#ef4444); transition:width .25s cubic-bezier(.22,1,.36,1); }
@@ -2358,7 +1838,6 @@
 
 <style id="moto-enhancements-css">
 :root { --brand:#22d3ee; --brand-2:#3b82f6; --text:#e5e7eb; }
-:root.light { --text:#0f172a; }
 .moto-speedo{ position:fixed; left:16px; bottom:16px; z-index:60; width:120px; height:120px; pointer-events:none; opacity:.95; filter:drop-shadow(0 8px 24px rgba(0,0,0,.35)); display:none; }
 :root.stunt .moto-speedo{ display:block; bottom:80px; }
 @media (max-width:576px){ .moto-speedo{ transform:scale(.8); left:8px; bottom:8px; } :root.stunt .moto-speedo{ bottom:80px; } }
@@ -2366,10 +1845,7 @@
 :root:not(.light) .moto-speedo .arc{ stroke:var(--brand); }
 :root:not(.light) .moto-speedo .tick{ stroke:rgba(255,255,255,.35); }
 :root:not(.light) .moto-speedo .needle{ stroke:#f59e0b; }
-:root.light .moto-speedo .ring{ stroke:rgba(2,6,23,.18); }
-:root.light .moto-speedo .arc{ stroke:var(--brand-2); }
-:root.light .moto-speedo .tick{ stroke:rgba(2,6,23,.45); }
-:root.light .moto-speedo .needle{ stroke:#d97706; }
+
 .moto-speedo text{ font:600 10px/1 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; fill:currentColor; }
 </style>
 
@@ -2382,11 +1858,7 @@
 .tiltable:hover{ box-shadow:0 20px 40px rgba(0,0,0,.35)!important; }
 .tiltable:hover .tilt-shadow{ opacity:1; }
 
-/* Slow down marquee */
-.stunt-banner .marquee span{ animation-duration: 28s !important; }
-@media (max-width: 600px){
-  .stunt-banner .marquee span{ animation-duration: 36s !important; }
-}
+ 
 
 /* Prevent footer overlap: reserve space when HUD visible */
 :root.stunt body{ padding-bottom: 140px; }
@@ -2439,6 +1911,62 @@
   }
 })();
 </script>
+
+<!-- Cookie Consent + Analytics -->
+<style id="cookie-consent-css">
+.cookie-banner{ position:fixed; left:16px; right:16px; bottom:16px; z-index:1055; display:none; }
+.cookie-banner .inner{ background: rgba(15,23,42,.95); color:#e5e7eb; border:1px solid rgba(255,255,255,.18); border-radius:12px; padding:12px 14px; box-shadow:0 10px 30px rgba(0,0,0,.35); }
+.cookie-banner .actions{ display:flex; gap:8px; flex-wrap:wrap; }
+.cookie-banner.show{ display:block; }
+</style>
+<div id="cookieBanner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <div class="inner d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+    <div class="small">
+      Мы используем cookies и средства аналитики (Yandex Metrika, Google Analytics) для улучшения работы сайта. Подтвердите согласие на их использование. Подробнее —
+      <a class="link-light" href="privacy.html" target="_blank" rel="noopener">Политика конфиденциальности</a>.
+    </div>
+    <div class="actions">
+      <button id="cookieAccept" class="btn btn-sm btn-brand">Принять</button>
+      <button id="cookieDecline" class="btn btn-sm btn-outline-light">Отклонить</button>
+    </div>
+  </div>
+  </div>
+<script id="analytics-consent-js">
+(function(){
+  const GA_ID = 'G-XXXXXXXXXX'; // TODO: замените на ваш GA4 ID
+  const YM_ID = 0;              // TODO: замените на ваш ID Яндекс.Метрики (число)
+  const KEY = 'consent:analytics';
+  const banner = document.getElementById('cookieBanner');
+  const acceptBtn = document.getElementById('cookieAccept');
+  const declineBtn = document.getElementById('cookieDecline');
+
+  function loadGA(id){
+    if(!id || !/^G-[A-Z0-9]+$/.test(id)) return;
+    var s=document.createElement('script'); s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id='+id; document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[]; function gtag(){dataLayer.push(arguments);} window.gtag=gtag;
+    gtag('js', new Date()); gtag('config', id, { anonymize_ip: true });
+  }
+  function loadYM(id){
+    if(!(id>0)) return;
+    (function(m,e,t,r,i,k,a){ m[i]=m[i]||function(){ (m[i].a=m[i].a||[]).push(arguments) }; m[i].l=1*new Date(); k=e.createElement(t), a=e.getElementsByTagName(t)[0]; k.async=1; k.src=r; a.parentNode.insertBefore(k,a) })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+    ym(id, 'init', { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+  }
+  function initAnalytics(){ loadGA(GA_ID); loadYM(YM_ID); }
+  function show(){ if(banner) banner.classList.add('show'); }
+  function hide(){ if(banner) banner.classList.remove('show'); }
+
+  try{
+    const v = localStorage.getItem(KEY);
+    if(v === 'accepted'){ initAnalytics(); }
+    else if(v === 'rejected'){ /* do nothing */ }
+    else { show(); }
+  }catch(e){ show(); }
+
+  acceptBtn && acceptBtn.addEventListener('click', function(){ try{ localStorage.setItem(KEY,'accepted'); }catch(e){} hide(); initAnalytics(); });
+  declineBtn && declineBtn.addEventListener('click', function(){ try{ localStorage.setItem(KEY,'rejected'); }catch(e){} hide(); });
+})();
+</script>
+
 </body>
 
 </html>
