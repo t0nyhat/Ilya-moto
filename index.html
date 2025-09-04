@@ -231,141 +231,6 @@
       margin-bottom: 1rem
     }
 
-    :root.light {
-      --bg: #f9fafb;
-      --bg-soft: #f3f4f6;
-      --text: #111827;
-      --muted: #4b5563;
-      --brand: #0ea5e9;
-      --brand-2: #0284c7;
-      --accent: #d97706;
-    }
-
-    :root.light body {
-      background: linear-gradient(180deg, var(--bg), #e5e7eb) fixed;
-      color: var(--text);
-    }
-
-    :root.light .navbar-dark {
-      --bs-navbar-color: var(--text);
-      --bs-navbar-hover-color: var(--brand);
-      --bs-navbar-brand-color: var(--text);
-    }
-
-    :root.light .glass {
-      background: linear-gradient(180deg, rgba(0, 0, 0, .03), rgba(0, 0, 0, .01));
-      border: 1px solid rgba(0, 0, 0, .08);
-    }
-
-    :root.light .feature,
-    :root.light .course-card {
-      background: rgba(0, 0, 0, .02);
-      border: 1px solid rgba(0, 0, 0, .08);
-    }
-
-    :root.light .faq .accordion-button {
-      background: var(--bg-soft);
-      color: var(--text);
-    }
-
-    :root.light footer {
-      background: var(--bg-soft);
-    }
-
-    :root.light a {
-      color: var(--brand-2);
-    }
-
-
-    /* === Light theme — refined === */
-    :root.light {
-      --bg: #ffffff;
-      --bg-soft: #f7f8fa;
-      --text: #0f172a;
-      --muted: #48566a;
-      --brand: #0ea5e9;
-      --brand-2: #0284c7;
-      --accent: #d97706;
-    }
-
-    :root.light body {
-      background: linear-gradient(180deg, var(--bg), #eef2f7) fixed;
-      color: var(--text);
-    }
-
-    :root.light .navbar {
-      background: rgba(255, 255, 255, .85) !important;
-      box-shadow: 0 2px 12px rgba(15, 23, 42, .06);
-    }
-
-    :root.light .navbar-dark {
-      --bs-navbar-color: #1f2937;
-      --bs-navbar-hover-color: var(--brand);
-      --bs-navbar-brand-color: #111827;
-    }
-
-    :root.light .navbar .nav-link {
-      color: #1f2937;
-    }
-
-    :root.light .navbar .nav-link:hover {
-      color: var(--brand);
-    }
-
-    :root.light .navbar .btn-outline-light {
-      color: #1f2937;
-      border-color: #cbd5e1;
-    }
-
-    :root.light .navbar .btn-outline-light:hover {
-      color: #fff;
-      background: #1f2937;
-      border-color: #1f2937;
-    }
-
-    :root.light .hero .overlay {
-      background: linear-gradient(180deg, rgba(255, 255, 255, .75), rgba(255, 255, 255, .92));
-    }
-
-    :root.light .glass {
-      background: linear-gradient(180deg, rgba(0, 0, 0, .02), rgba(0, 0, 0, .01));
-      border: 1px solid rgba(2, 6, 23, .08);
-    }
-
-    :root.light .feature,
-    :root.light .course-card {
-      background: rgba(2, 6, 23, .03);
-      border: 1px solid rgba(2, 6, 23, .08);
-    }
-
-    :root.light .faq .accordion-button {
-      background: var(--bg-soft);
-      color: var(--text);
-    }
-
-    :root.light .badge-soft {
-      background: rgba(2, 6, 23, .06);
-      color: #1f2937;
-      border: 1px solid rgba(2, 6, 23, .12);
-    }
-
-    :root.light footer {
-      background: #ffffff;
-      border-top: 1px solid rgba(2, 6, 23, .08);
-      color: #1f2937;
-    }
-
-    :root.light a {
-      color: var(--brand-2);
-    }
-
-    :root.light .brand-gradient {
-      background: linear-gradient(90deg, #0284c7, #0ea5e9, #38bdf8);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
     /* === Layout polish & overflow fixes === */
     html,
     body {
@@ -422,45 +287,10 @@
       z-index: 2;
     }
 
-    /* Light theme navbar visibility fix */
-    :root.light .navbar {
-      background: rgba(255, 255, 255, .9) !important;
-    }
-
-    :root.light .navbar .nav-link,
-    :root.light .navbar-brand {
-      color: #1e293b !important;
-    }
-
-    :root.light .navbar .nav-link:hover {
-      color: var(--brand) !important;
-    }
-
-    /* Light theme form inputs */
-    :root.light input.form-control,
-    :root.light textarea.form-control {
-      background-color: #fff;
-      border: 1px solid #cbd5e1;
-      color: #0f172a;
-    }
-
-    :root.light input.form-control:focus,
-    :root.light textarea.form-control:focus {
-      background-color: #fff;
-      border-color: var(--brand);
-      box-shadow: 0 0 0 0.25rem rgba(14, 165, 233, 0.25);
-      color: #0f172a;
-    }
-
-
-    /* Navbar nav alignments and theme toggle alignment */
+    /* Navbar nav alignments */
     .navbar .navbar-nav {
       align-items: center;
       gap: .25rem;
-    }
-
-    #themeToggle {
-      margin-left: .25rem;
     }
 
     /* Responsive hero height & background */
@@ -476,33 +306,7 @@
       }
     }
 
-    /* Light theme: stronger readable colors */
-    :root.light a {
-      color: #0e7490;
-    }
 
-    :root.light .muted {
-      color: #475569;
-    }
-
-    :root.light .btn-outline-brand {
-      --bs-btn-color: #0e7490;
-      --bs-btn-border-color: #0e7490;
-    }
-
-    :root.light .btn-outline-brand:hover {
-      --bs-btn-color: #fff;
-      --bs-btn-bg: #0e7490;
-      --bs-btn-border-color: #0e7490;
-    }
-
-    /* Light theme: select + inputs */
-    :root.light .form-control,
-    :root.light .form-select {
-      background-color: #ffffff;
-      border: 1px solid #cbd5e1;
-      color: #0f172a;
-    }
         /* Спидометр внутри combo-hud (вместо текста COMBO) */
     .combo-hud .label{
       display:flex; align-items:center; justify-content:center;
@@ -513,28 +317,6 @@
     }
 
 
-    :root.light .form-select:focus {
-      border-color: var(--brand);
-      box-shadow: 0 0 0 0.25rem rgba(14, 165, 233, 0.25);
-      color: #0f172a;
-    }
-
-    /* Light theme: navbar toggler icon visible */
-    :root.light .navbar .navbar-toggler {
-      border-color: rgba(15, 23, 42, .25);
-    }
-
-    :root.light .navbar .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%230f172a' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    }
-
-    /* Light theme: make brand gradient darker for legibility */
-    :root.light .brand-gradient {
-      background: linear-gradient(90deg, #075985, #0ea5e9, #38bdf8);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
 
     /* Prevent any horizontal overflow on tiny devices */
     html,
@@ -543,37 +325,7 @@
     }
 
 
-    /* Light theme readable text (no light-on-light) */
-    :root.light body,
-    :root.light p,
-    :root.light li,
-    :root.light .nav-link,
-    :root.light .navbar-brand,
-    :root.light .quote,
-    :root.light .muted {
-      color: #0f172a !important;
-    }
 
-    :root.light .muted {
-      opacity: .85;
-    }
-
-    :root.light h1,
-    :root.light h2,
-    :root.light h3,
-    :root.light h4,
-    :root.light h5,
-    :root.light h6 {
-      color: #0b1220;
-    }
-
-    :root.light .badge-soft {
-      color: #0f172a;
-    }
-
-    :root.light .btn-brand {
-      --bs-btn-color: #ffffff;
-    }
 
     /* Hero responsive background via ::before */
     .hero {
@@ -602,19 +354,6 @@
       .hero {
         min-height: 68vh;
       }
-    }
-
-
-    /* Theme toggle visibility in light theme */
-    :root.light #themeToggle {
-      border-color: #94a3b8;
-      color: #0f172a;
-    }
-
-    :root.light #themeToggle:hover {
-      background: #0f172a;
-      color: #fff;
-      border-color: #0f172a;
     }
 
 
@@ -703,10 +442,7 @@
       letter-spacing: .2px
     }
 
-    :root.light .course-card .price-badge {
-      background: rgba(245, 158, 11, .12);
-      border-color: rgba(245, 158, 11, .3)
-    }
+    
 
 
     /* ===== Gallery slider & filters (non-intrusive) ===== */
@@ -717,9 +453,7 @@
       border: 1px solid rgba(255, 255, 255, .1)
     }
 
-    :root.light .gallery-swiper .swiper-slide a {
-      border-color: rgba(2, 6, 23, .08)
-    }
+
 
     .gallery-swiper .swiper-slide img {
       width: 100%;
@@ -821,17 +555,7 @@
       background: rgba(255, 255, 255, .02);
     }
 
-    :root.light .course-syllabus .accordion-item {
-      border-color: rgba(2, 6, 23, .10);
-    }
-
-    :root.light .course-syllabus .accordion-button {
-      background: rgba(2, 6, 23, .04);
-    }
-
-    :root.light .course-syllabus .accordion-button.collapsed {
-      background: rgba(2, 6, 23, .02);
-    }
+    
 
 
     /* === Course actions spacing & divider === */
@@ -841,41 +565,16 @@
       border-top: 1px solid rgba(255, 255, 255, .08)
     }
 
-    :root.light .course-card .course-actions {
-      border-top: 1px solid rgba(2, 6, 23, .10)
-    }
+    
 
-    /* === Light theme readability for accordions inside course cards === */
-    :root.light .course-syllabus .accordion-item {
-      background: #fff;
-      border-color: rgba(2, 6, 23, .12)
-    }
-
-    :root.light .course-syllabus .accordion-button {
-      background: #f7f9fc;
-      color: #0f172a;
-      border-bottom: 1px solid rgba(2, 6, 23, .08)
-    }
-
-    :root.light .course-syllabus .accordion-button.collapsed {
-      background: #fbfdff;
-      color: #0f172a;
-      border-bottom-color: rgba(2, 6, 23, .06)
-    }
-
-    :root.light .course-syllabus .accordion-body {
-      background: #ffffff;
-      color: #0f172a
-    }
+    
 
     /* Hover/active focus states */
     .course-syllabus .accordion-button:focus {
       box-shadow: 0 0 0 .15rem rgba(14, 165, 233, .25)
     }
 
-    :root.light .course-syllabus .accordion-button:not(.collapsed) {
-      color: #0b1220
-    }
+    
 
 
     /* === Dark theme readability for accordions inside course cards === */
@@ -925,17 +624,7 @@
       color: #fff;
     }
 
-    :root.light .gallery-swiper .swiper-button-next,
-    :root.light .gallery-swiper .swiper-button-prev {
-      background: rgba(255, 255, 255, .85);
-      border-color: rgba(2, 6, 23, .15);
-      box-shadow: 0 6px 18px rgba(2, 6, 23, .15);
-    }
-
-    :root.light .gallery-swiper .swiper-button-next::after,
-    :root.light .gallery-swiper .swiper-button-prev::after {
-      color: #0f172a;
-    }
+    
 
     /* smaller screens: bring arrows inwards and ensure visible */
     @media (max-width: 576px) {
@@ -981,15 +670,7 @@
       fill: #fff;
     }
 
-    :root.light .glightbox-clean .gbtn {
-      background: rgba(255, 255, 255, .9);
-      border-color: rgba(2, 6, 23, .15);
-      box-shadow: 0 6px 18px rgba(2, 6, 23, .15);
-    }
-
-    :root.light .glightbox-clean .gbtn svg {
-      fill: #0f172a;
-    }
+    
 
     /* Position tweaks for mobile */
     @media (max-width: 576px) {
@@ -1065,11 +746,7 @@
           <li class="nav-item"><a class="nav-link" href="#bikes">Мотоциклы</a></li>
           <li class="nav-item"><a class="nav-link" href="#events">Выступления</a></li>
           <li class="nav-item"><a class="nav-link" href="#community">Сообщество</a></li>
-          <li class="nav-item d-flex align-items-center ms-lg-2">
-            <button aria-label="Сменить тему" class="btn btn-sm btn-outline-light" id="themeToggle" type="button">
-              <i class="bi bi-moon"></i>
-            </button>
-          </li>
+          
         </ul>
         <ul class="navbar-nav ms-2">
           <li class="nav-item d-flex align-items-center"></li>
@@ -1849,21 +1526,7 @@
         form.classList.add('was-validated');
       }, false);
 
-      // Theme toggle
-      const root = document.documentElement;
-      const toggleBtn = document.getElementById('themeToggle');
-      if (localStorage.getItem('theme') === 'light') {
-        root.classList.add('light');
-        toggleBtn.innerHTML = '<i class="bi bi-sun"></i>';
-      }
-      toggleBtn.addEventListener('click', () => {
-        root.classList.toggle('light');
-        const isLight = root.classList.contains('light');
-        localStorage.setItem('theme', isLight ? 'light' : 'dark');
-        toggleBtn.innerHTML = isLight ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
-      });
-
-
+      
       // Format prices from data attributes
       document.querySelectorAll('.price[data-price]').forEach(el => {
         const value = Number(el.getAttribute('data-price'));
@@ -2060,11 +1723,10 @@
 #preloader-speedo{ position:fixed; inset:0; display:grid; place-items:center;
   background:radial-gradient(1200px 800px at 50% 60%, rgba(0,0,0,.84), rgba(0,0,0,.96));
   z-index:1000; transition:opacity .45s ease, visibility .45s ease; }
-:root.light #preloader-speedo{ background:radial-gradient(1200px 800px at 50% 60%, rgba(241,245,249,.98), rgba(226,232,240,1)); }
 #preloader-speedo.hidden{ opacity:0; visibility:hidden; }
 .speedo-wrap{ width:clamp(220px, 44vw, 420px); aspect-ratio:1; filter:drop-shadow(0 18px 40px rgba(0,0,0,.45)); }
 #speedo svg{ width:100%; height:100%; }
-#speedo .ring{ stroke: rgba(255,255,255,.15); } :root.light #speedo .ring{ stroke: rgba(2,6,23,.15); }
+#speedo .ring{ stroke: rgba(255,255,255,.15); }
 #speedo .ticks{ stroke: currentColor; stroke-opacity:.55; }
 #speedo .needle{ stroke:#ef4444; stroke-width:4; stroke-linecap:round; }
 #speedo .cap{ fill:#ef4444; }
@@ -2081,7 +1743,6 @@
 /* --- Toggle (moved left) --- */
 .stunt-toggle{ position:fixed; right:16px; bottom:80px; z-index:70; display:inline-flex; align-items:center; gap:8px; padding:10px 12px; border-radius:12px;
   font-weight:700; text-transform:uppercase; letter-spacing:.06em; border:1px solid rgba(255,255,255,.2); background:rgba(255,255,255,.06); cursor:pointer; user-select:none; }
-:root.light .stunt-toggle{ background:rgba(2,6,23,.06); border-color:rgba(2,6,23,.18); }
 :root.stunt .stunt-toggle{ background:linear-gradient(180deg, rgba(34,211,238,.95), rgba(6,182,212,.95)); color:#081226; }
 @media (max-width:520px){ .stunt-toggle{ right:16px; bottom:80px; } }
 
@@ -2090,7 +1751,7 @@
 :root.stunt .combo-hud{ display:block; }
 .combo-hud .inner{ max-width:1280px; margin:0 auto; background:rgba(2,6,23,.86); color:#fff; border:1px solid rgba(255,255,255,.18); border-radius:14px; padding:10px 12px;
   display:grid; grid-template-columns: 90px 1fr 160px; gap:12px; align-items:center; }
-:root.light .combo-hud .inner{ background:rgba(241,245,249,.94); color:#0f172a; border-color:rgba(2,6,23,.12); }
+ 
 .combo-hud .label{ font-weight:800; font-size:12px; letter-spacing:.06em; text-transform:uppercase; opacity:.85; }
 .combo-hud .bar{ height:14px; border-radius:99px; overflow:hidden; background:rgba(255,255,255,.2); }
 .combo-hud .bar>i{ display:block; height:100%; width:0%; background:linear-gradient(90deg,#22d3ee,#3b82f6,#ef4444); transition:width .25s cubic-bezier(.22,1,.36,1); }
@@ -2358,7 +2019,6 @@
 
 <style id="moto-enhancements-css">
 :root { --brand:#22d3ee; --brand-2:#3b82f6; --text:#e5e7eb; }
-:root.light { --text:#0f172a; }
 .moto-speedo{ position:fixed; left:16px; bottom:16px; z-index:60; width:120px; height:120px; pointer-events:none; opacity:.95; filter:drop-shadow(0 8px 24px rgba(0,0,0,.35)); display:none; }
 :root.stunt .moto-speedo{ display:block; bottom:80px; }
 @media (max-width:576px){ .moto-speedo{ transform:scale(.8); left:8px; bottom:8px; } :root.stunt .moto-speedo{ bottom:80px; } }
@@ -2366,10 +2026,7 @@
 :root:not(.light) .moto-speedo .arc{ stroke:var(--brand); }
 :root:not(.light) .moto-speedo .tick{ stroke:rgba(255,255,255,.35); }
 :root:not(.light) .moto-speedo .needle{ stroke:#f59e0b; }
-:root.light .moto-speedo .ring{ stroke:rgba(2,6,23,.18); }
-:root.light .moto-speedo .arc{ stroke:var(--brand-2); }
-:root.light .moto-speedo .tick{ stroke:rgba(2,6,23,.45); }
-:root.light .moto-speedo .needle{ stroke:#d97706; }
+
 .moto-speedo text{ font:600 10px/1 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; fill:currentColor; }
 </style>
 
