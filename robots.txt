@@ -1,0 +1,5 @@
+# robots.txt for Ilya-moto
+User-agent: *
+Allow: /
+
+Sitemap: https://ilayteamdv.ru/sitemap.xml
