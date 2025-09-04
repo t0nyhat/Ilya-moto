@@ -173,6 +173,15 @@
       border: 1px solid rgba(148, 163, 184, .25)
     }
 
+    .badge-pro {
+      background: rgba(245, 158, 11, .15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, .35);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      font-weight: 700;
+    }
+
     .faq .accordion-button {
       background: #0f172a;
       color: #e5e7eb
@@ -946,30 +955,18 @@
               <div class="d-flex align-items-center gap-2 mb-2">
                 <i class="bi bi-lightning"></i>
                 <h5 class="mb-0">Трюковый курс</h5>
+                <span class="badge badge-pro ms-2" aria-label="Продвинутый уровень">PRO</span>
               </div>
               <p class="muted">Безопасные основы стантрайдинга в контролируемых условиях.</p>
               <ul class="list-unstyled list-check">
-                <li><i class="bi bi-check2-circle"></i>Вилли и стоппи (база)</li>
+                <li><i class="bi bi-check2-circle"></i>Вилли</li>
+                <li><i class="bi bi-check2-circle"></i>Стоппи</li>
                 <li><i class="bi bi-check2-circle"></i>Бернаут и дрифт</li>
-                <li><i class="bi bi-check2-circle"></i>Простейшие акробатические элементы</li>
-                <li><i class="bi bi-check2-circle"></i>Протоколы безопасности и страхование упражнений</li>
+                <li><i class="bi bi-check2-circle"></i>Акробатические элементы</li>
               </ul>
               <div class="course-syllabus mt-2">
                 <div class="accordion" id="acc-stunt">
-                  <div class="accordion-item mb-2">
-                    <h2 class="accordion-header" id="smod1">
-                      <button aria-controls="sc1" aria-expanded="false" class="accordion-button collapsed"
-                        data-bs-target="#sc1" data-bs-toggle="collapse" type="button">
-                        Модуль 1 — Контроль и безопасность
-                      </button>
-                    </h2>
-                    <div aria-labelledby="smod1" class="accordion-collapse collapse" data-bs-parent="#acc-stunt"
-                      id="sc1">
-                      <div class="accordion-body">
-                        Протоколы безопасности, экипировка, подготовка площадки и мотоцикла. Страховка упражнений.
-                      </div>
-                    </div>
-                  </div>
+
                   <div class="accordion-item mb-2">
                     <h2 class="accordion-header" id="smod2">
                       <button aria-controls="sc2" aria-expanded="false" class="accordion-button collapsed"
@@ -1015,60 +1012,52 @@
           <div class="course-card p-4 h-100">
             <div class="course-body">
               <div class="d-flex align-items-center gap-2 mb-2">
-                <i class="bi bi-shield-exclamation"></i>
-                <h5 class="mb-0">Антиаварийная езда</h5>
+                <i class="bi bi-people"></i>
+                <h5 class="mb-0">Мотосопровождение</h5>
               </div>
-              <p class="muted">Профилактика ДТП: предиктивное вождение и экстренные действия.</p>
+              <p class="muted">Индивидуальное и групповое сопровождение в городе.</p>
               <ul class="list-unstyled list-check">
-                <li><i class="bi bi-check2-circle"></i>Экстренное торможение и объезд препятствий</li>
-                <li><i class="bi bi-check2-circle"></i>Контрруление и работа взглядом</li>
-                <li><i class="bi bi-check2-circle"></i>Траектории, покрытие и сцепление</li>
-                <li><i class="bi bi-check2-circle"></i>Оценка рисков и сценарии «что если»</li>
+                <li><i class="bi bi-check2-circle"></i>Безопасные перестроения и манёвры в городском потоке</li>
+                <li><i class="bi bi-check2-circle"></i>Маршрут, точки остановок, работа с разрывами группы</li>
               </ul>
               <div class="course-syllabus mt-2">
                 <div class="accordion" id="acc-safety">
                   <div class="accordion-item mb-2">
                     <h2 class="accordion-header" id="amod1">
-                      <button aria-controls="ac1" aria-expanded="false" class="accordion-button collapsed"
-                        data-bs-target="#ac1" data-bs-toggle="collapse" type="button">
-                        Модуль 1 — Предиктивное вождение
+                      <button aria-controls="ac1" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#ac1" data-bs-toggle="collapse" type="button">
+                        Модуль 1 — Роли и построения
                       </button>
                     </h2>
                     <div aria-labelledby="amod1" class="accordion-collapse collapse" data-bs-parent="#acc-safety"
                       id="ac1">
                       <div class="accordion-body">
-                        Чтение дорожной обстановки, слепые зоны, работа взглядом, анализ рисков и маршрутов, типичные
-                        ошибки.
+                        Роли лидера и замыкающего, обязанности и зоны ответственности. Форматы построения колонны (одинарная/парная/«шахматная»), выбор дистанций и интервалов. Перестроения и порядок движения через узкие участки.
                       </div>
                     </div>
                   </div>
                   <div class="accordion-item mb-2">
                     <h2 class="accordion-header" id="amod2">
-                      <button aria-controls="ac2" aria-expanded="false" class="accordion-button collapsed"
-                        data-bs-target="#ac2" data-bs-toggle="collapse" type="button">
-                        Модуль 2 — Экстренные действия
+                      <button aria-controls="ac2" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#ac2" data-bs-toggle="collapse" type="button">
+                        Модуль 2 — Коммуникация и сигналы
                       </button>
                     </h2>
                     <div aria-labelledby="amod2" class="accordion-collapse collapse" data-bs-parent="#acc-safety"
                       id="ac2">
                       <div class="accordion-body">
-                        Экстренное торможение на разном покрытии, объезд препятствий, антизанос, контрруление и
-                        траектории.
+                        Жестовые сигналы, базовые команды и их распространение по цепочке. Использование радиосвязи и правила радиоэфира. Взаимодействие с автомобилями и другими участниками движения.
                       </div>
                     </div>
                   </div>
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="amod3">
-                      <button aria-controls="ac3" aria-expanded="false" class="accordion-button collapsed"
-                        data-bs-target="#ac3" data-bs-toggle="collapse" type="button">
-                        Модуль 3 — Практика сценариев
+                      <button aria-controls="ac3" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#ac3" data-bs-toggle="collapse" type="button">
+                        Модуль 3 — Маршрут и организация сопровождения
                       </button>
                     </h2>
                     <div aria-labelledby="amod3" class="accordion-collapse collapse" data-bs-parent="#acc-safety"
                       id="ac3">
                       <div class="accordion-body">
-                        Серии упражнений «что‑если»: внезапная преграда, автомобиль перестраивается, мокрое покрытие,
-                        экстренный разворот и др.
+                        Подготовка маршрута: точки сбора, брифинг, роли и ожидания. Организация остановок, контроль «хвоста», работа с разрывами группы. Разбор реальных городских кейсов и адаптация под условия (погода, покрытие, трафик).
                       </div>
                     </div>
                   </div>
@@ -1079,7 +1068,7 @@
               <span class="price-badge">
                 <span class="price" data-course="safety" data-currency="RUB" data-price="5200">5 200 ₽</span>
               </span>
-              <a class="btn btn-outline-brand" href="#signup">Улучшить безопасность</a>
+              <a class="btn btn-outline-brand" href="#signup">К сопровождению</a>
             </div>
           </div>
         </div>
