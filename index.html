@@ -94,12 +94,7 @@
       padding: 80px 0
     }
 
-    .hero {
-      min-height: 92vh;
-      display: grid;
-      place-items: center;
-      background: radial-gradient(1200px 500px at 20% 10%, rgba(34, 211, 238, .08), transparent 60%), radial-gradient(1000px 600px at 90% 20%, rgba(245, 158, 11, .06), transparent 60%), url('https://images.unsplash.com/photo-1493236151450-35b7f1e13b56?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat fixed
-    }
+    
 
     .hero .overlay {
       background: linear-gradient(180deg, rgba(11, 16, 32, .72), rgba(11, 16, 32, .88));
@@ -247,15 +242,7 @@
       padding-right: 1rem;
     }
 
-    .hero {
-      background-attachment: fixed;
-    }
-
-    @media (max-width: 576px) {
-      .hero {
-        background-attachment: initial;
-      }
-    }
+    
 
     .back-to-top {
       width: 44px;
@@ -276,21 +263,7 @@
     }
 
 
-    /* Fix: Restore hero background image */
-    .hero {
-      background: url('https://picsum.photos/1920/1080?blur=3') center/cover no-repeat;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-    }
+    
 
     /* Navbar nav alignments */
     .navbar .navbar-nav {
@@ -298,18 +271,7 @@
       gap: .25rem;
     }
 
-    /* Responsive hero height & background */
-    .hero {
-      min-height: clamp(64vh, 80vh, 92vh);
-      background-position: center center;
-      background-size: cover;
-    }
-
-    @media (max-width: 576px) {
-      .hero {
-        min-height: 72vh;
-      }
-    }
+    
 
 
         /* Спидометр внутри combo-hud (вместо текста COMBO) */
@@ -323,43 +285,12 @@
 
 
 
-    /* Prevent any horizontal overflow on tiny devices */
-    html,
-    body {
-      overflow-x: hidden;
-    }
+    
 
 
 
 
-    /* Hero responsive background via ::before */
-    .hero {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1493236151450-35b7f1e13b56?q=80&w=1920&auto=format&fit=crop');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      z-index: 1;
-      transform: translateZ(0);
-    }
-
-    .hero .overlay {
-      position: relative;
-      z-index: 2;
-    }
-
-    @media (max-width: 576px) {
-      .hero {
-        min-height: 68vh;
-      }
-    }
+    
 
 
     /* HERO: responsive image with object-fit to avoid empty space */
@@ -1699,7 +1630,7 @@
 
 :root.stunt{ --neon: 0 0 16px rgba(34,211,238,.8), 0 0 36px rgba(34,211,238,.55), 0 0 72px rgba(6,182,212,.5); }
 :root.stunt h1, :root.stunt h2, :root.stunt .brand{ text-shadow: var(--neon); }
-:root.stunt .btn-primary{ box-shadow: var(--neon); transform: translateY(-1px); }
+
 
 /* --- Toggle (moved left) --- */
 .stunt-toggle{ position:fixed; right:16px; bottom:80px; z-index:70; display:inline-flex; align-items:center; gap:8px; padding:10px 12px; border-radius:12px;
@@ -2000,11 +1931,7 @@
 .tiltable:hover{ box-shadow:0 20px 40px rgba(0,0,0,.35)!important; }
 .tiltable:hover .tilt-shadow{ opacity:1; }
 
-/* Slow down marquee */
-.stunt-banner .marquee span{ animation-duration: 28s !important; }
-@media (max-width: 600px){
-  .stunt-banner .marquee span{ animation-duration: 36s !important; }
-}
+ 
 
 /* Prevent footer overlap: reserve space when HUD visible */
 :root.stunt body{ padding-bottom: 140px; }
