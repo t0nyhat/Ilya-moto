@@ -1,0 +1,14 @@
+/* TEAM */
+Developer: ilayTeam
+Contact: stunter27@mail.ru
+From: Russia
+
+/* SITE */
+Site: Мотошкола Ильи Гриднева
+URL: https://ilayteamdv.ru/
+Standards: HTML5, CSS3, ES2020
+Components: Bootstrap 5, AOS, Swiper, GLightbox
+Hosting: Static
+
+/* THANKS */
+Thanks: community, students and supporters
