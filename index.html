@@ -107,9 +107,12 @@
       --bs-btn-hover-color: #0b1020
     }
 
-    .section {
-      padding: 80px 0
-    }
+    /* Unified, denser vertical rhythm */
+    .section { padding: 32px 0; }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .18), transparent); margin: 16px 0; }
+    /* Normalize Bootstrap spacing helpers used for sections */
+    .py-6 { padding-top: 32px !important; padding-bottom: 32px !important; }
+    @media (min-width: 992px) { .py-lg-7 { padding-top: 32px !important; padding-bottom: 32px !important; } }
 
     
 
@@ -844,6 +847,7 @@
       </div>
     </div>
   </header>
+  <div class="divider"></div>
   <!-- ABOUT -->
   <section class="section" id="about">
     <div class="container">
@@ -897,6 +901,7 @@
       </div>
     </div>
   </section>
+  <div class="divider"></div>
     <!-- Safety Section -->
   <section id="safety" class="py-6 py-lg-7">
     <div class="container">
@@ -960,6 +965,7 @@
 
     </div>
   </section>
+   <div class="divider"></div>
   <!-- STUNT DETAILS -->
   <section class="section" id="stunt">
     <div class="container">
@@ -1216,7 +1222,6 @@
 
     </div>
   </section>
-
   <div class="divider"></div>
   <!-- BIKES + EVENTS (combined row) -->
   <section class="section" id="bikes">
@@ -1247,7 +1252,7 @@
       </div>
     </div>
   </section>
-  
+   <div class="divider"></div>
 
   <!-- GALLERY WIDE -->
   <section class="section" id="gallery">
@@ -1272,8 +1277,7 @@
       </div>
     </div>
   </section>
-
-
+  <div class="divider"></div>
   <!-- SIGN UP / CONTACT -->
   <section id="signup" class="py-6 py-lg-7">
     <div class="container">
