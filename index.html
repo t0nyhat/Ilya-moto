@@ -491,6 +491,24 @@
       background: rgba(255, 255, 255, .02);
     }
 
+    /* Accordions: use explicit chevron, hide default icon */
+    .course-syllabus .accordion-button::after,
+    .faq .accordion-button::after {
+      display: none !important;
+    }
+    .accordion-button .chevron {
+      margin-left: auto;
+      transition: transform .2s ease, opacity .2s ease;
+      opacity: .9;
+      font-size: 1rem;
+      color: #e5e7eb;
+      pointer-events: none;
+    }
+    .accordion-button:not(.collapsed) .chevron {
+      transform: rotate(180deg);
+      opacity: 1;
+    }
+
     
 
 
@@ -1232,7 +1250,7 @@
       <div class="accordion faq" id="faqAccordion">
         <div class="accordion-item mb-3">
           <h2 class="accordion-header" id="q1"><button aria-controls="a1" aria-expanded="true" class="accordion-button"
-              data-bs-target="#a1" data-bs-toggle="collapse" type="button">Нужны ли свой мотоцикл и экипировка?</button>
+              data-bs-target="#a1" data-bs-toggle="collapse" type="button">Нужны ли свой мотоцикл и экипировка?<i aria-hidden="true" class="bi bi-chevron-down ms-auto chevron"></i></button>
           </h2>
           <div aria-labelledby="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="a1">
             <div class="accordion-body">Для первых занятий предоставляем подготовленные мотоциклы и полный комплект
@@ -1243,7 +1261,7 @@
           <h2 class="accordion-header" id="q2"><button aria-controls="a2" aria-expanded="false"
               class="accordion-button collapsed" data-bs-target="#a2" data-bs-toggle="collapse" type="button">Где
               проходят
-              тренировки?</button></h2>
+              тренировки?<i aria-hidden="true" class="bi bi-chevron-down ms-auto chevron"></i></button></h2>
           <div aria-labelledby="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="a2">
             <div class="accordion-body">В специально отведённых местах на закрытой площадке с соблюдением всех норм
               безопасности. Локацию уточняем при записи.</div>
@@ -1253,7 +1271,7 @@
           <h2 class="accordion-header" id="q3"><button aria-controls="a3" aria-expanded="false"
               class="accordion-button collapsed" data-bs-target="#a3" data-bs-toggle="collapse" type="button">Сколько
               занятий в
-              базовом курсе?</button></h2>
+              базовом курсе?<i aria-hidden="true" class="bi bi-chevron-down ms-auto chevron"></i></button></h2>
           <div aria-labelledby="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="a3">
             <div class="accordion-body">Рекомендуем 6–8 занятий для формирования устойчивых навыков. Далее —
               индивидуальный план под цели.</div>
@@ -1262,7 +1280,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="q4"><button aria-controls="a4" aria-expanded="false"
               class="accordion-button collapsed" data-bs-target="#a4" data-bs-toggle="collapse" type="button">Можно ли
-              подарочный сертификат?</button></h2>
+              подарочный сертификат?<i aria-hidden="true" class="bi bi-chevron-down ms-auto chevron"></i></button></h2>
           <div aria-labelledby="q4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="a4">
             <div class="accordion-body">Да, оформим электронный или печатный сертификат на курс или индивидуальные
               тренировки.</div>
@@ -1429,6 +1447,18 @@
           el.textContent = value.toLocaleString('ru-RU') + ' ₽';
         }
       });
+
+      // Ensure chevron icon is present in all accordion buttons (courses + FAQ)
+      (function ensureAccordionsIcons() {
+        document.querySelectorAll('.course-syllabus .accordion-button, .faq .accordion-button').forEach(btn => {
+          if (!btn.querySelector('.chevron')) {
+            const i = document.createElement('i');
+            i.className = 'bi bi-chevron-down ms-auto chevron';
+            i.setAttribute('aria-hidden', 'true');
+            btn.appendChild(i);
+          }
+        });
+      })();
 
 
       // category: 'training' | 'show' | 'life'
