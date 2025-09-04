@@ -1226,7 +1226,7 @@
               </div>
               <div class="col-12 d-flex align-items-start gap-2">
                 <input class="form-check-input mt-1" type="checkbox" id="agree" required>
-                <label class="form-check-label" for="agree">Согласен(а) на обработку персональных данных и обратную связь по заявке</label>
+                <label class="form-check-label" for="agree">Согласен(а) с <a href="privacy.html" class="link-light">Политикой конфиденциальности</a> и на обратную связь по заявке</label>
               </div>
               <div class="col-12 d-flex gap-3">
                 <button type="submit" class="btn btn-brand" id="submitBtn">Отправить</button>
@@ -1488,10 +1488,10 @@
 
   <!-- Floating Contact Buttons -->
   <div class="contact-float">
-    <a href="https://t.me/ILAY_MOTO" class="contact-btn telegram" target="_blank" aria-label="Telegram">
+    <a href="https://t.me/ilay_stunts" class="contact-btn telegram" target="_blank" aria-label="Telegram">
       <i class="bi bi-telegram"></i>
     </a>
-    <a href="https://wa.me/79294105478" class="contact-btn whatsapp" target="_blank" aria-label="WhatsApp">
+    <a href="https://wa.me/+79294105478" class="contact-btn whatsapp" target="_blank" aria-label="WhatsApp">
       <i class="bi bi-whatsapp"></i>
     </a>
   </div>
@@ -1911,6 +1911,62 @@
   }
 })();
 </script>
+
+<!-- Cookie Consent + Analytics -->
+<style id="cookie-consent-css">
+.cookie-banner{ position:fixed; left:16px; right:16px; bottom:16px; z-index:1055; display:none; }
+.cookie-banner .inner{ background: rgba(15,23,42,.95); color:#e5e7eb; border:1px solid rgba(255,255,255,.18); border-radius:12px; padding:12px 14px; box-shadow:0 10px 30px rgba(0,0,0,.35); }
+.cookie-banner .actions{ display:flex; gap:8px; flex-wrap:wrap; }
+.cookie-banner.show{ display:block; }
+</style>
+<div id="cookieBanner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <div class="inner d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+    <div class="small">
+      Мы используем cookies и средства аналитики (Yandex Metrika, Google Analytics) для улучшения работы сайта. Подтвердите согласие на их использование. Подробнее —
+      <a class="link-light" href="privacy.html" target="_blank" rel="noopener">Политика конфиденциальности</a>.
+    </div>
+    <div class="actions">
+      <button id="cookieAccept" class="btn btn-sm btn-brand">Принять</button>
+      <button id="cookieDecline" class="btn btn-sm btn-outline-light">Отклонить</button>
+    </div>
+  </div>
+  </div>
+<script id="analytics-consent-js">
+(function(){
+  const GA_ID = 'G-XXXXXXXXXX'; // TODO: замените на ваш GA4 ID
+  const YM_ID = 0;              // TODO: замените на ваш ID Яндекс.Метрики (число)
+  const KEY = 'consent:analytics';
+  const banner = document.getElementById('cookieBanner');
+  const acceptBtn = document.getElementById('cookieAccept');
+  const declineBtn = document.getElementById('cookieDecline');
+
+  function loadGA(id){
+    if(!id || !/^G-[A-Z0-9]+$/.test(id)) return;
+    var s=document.createElement('script'); s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id='+id; document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[]; function gtag(){dataLayer.push(arguments);} window.gtag=gtag;
+    gtag('js', new Date()); gtag('config', id, { anonymize_ip: true });
+  }
+  function loadYM(id){
+    if(!(id>0)) return;
+    (function(m,e,t,r,i,k,a){ m[i]=m[i]||function(){ (m[i].a=m[i].a||[]).push(arguments) }; m[i].l=1*new Date(); k=e.createElement(t), a=e.getElementsByTagName(t)[0]; k.async=1; k.src=r; a.parentNode.insertBefore(k,a) })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+    ym(id, 'init', { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+  }
+  function initAnalytics(){ loadGA(GA_ID); loadYM(YM_ID); }
+  function show(){ if(banner) banner.classList.add('show'); }
+  function hide(){ if(banner) banner.classList.remove('show'); }
+
+  try{
+    const v = localStorage.getItem(KEY);
+    if(v === 'accepted'){ initAnalytics(); }
+    else if(v === 'rejected'){ /* do nothing */ }
+    else { show(); }
+  }catch(e){ show(); }
+
+  acceptBtn && acceptBtn.addEventListener('click', function(){ try{ localStorage.setItem(KEY,'accepted'); }catch(e){} hide(); initAnalytics(); });
+  declineBtn && declineBtn.addEventListener('click', function(){ try{ localStorage.setItem(KEY,'rejected'); }catch(e){} hide(); });
+})();
+</script>
+
 </body>
 
 </html>
