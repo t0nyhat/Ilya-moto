@@ -140,6 +140,69 @@
       font-weight: 600
     }
 
+    /* Акцентный слоган в hero — золотой неон */
+    .slogan-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .6rem 1rem;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(253, 224, 71, .10), rgba(245, 158, 11, .10));
+      border: 1px solid rgba(253, 224, 71, .55);
+      color: #fff7bf;
+      font-weight: 800;
+      letter-spacing: .02em;
+      text-shadow:
+        0 0 4px rgba(255, 214, 10, .55),
+        0 0 10px rgba(255, 214, 10, .45),
+        0 0 18px rgba(245, 158, 11, .35);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .10),
+        0 0 14px rgba(255, 214, 10, .20),
+        0 8px 26px rgba(0, 0, 0, .30);
+    }
+
+    /* Универсальный неон-золото текст */
+    .neon-gold {
+      color: #fff7bf;
+      font-weight: 800;
+      letter-spacing: .02em;
+      text-shadow:
+        0 0 4px rgba(255, 214, 10, .55),
+        0 0 10px rgba(255, 214, 10, .45),
+        0 0 18px rgba(245, 158, 11, .35);
+    }
+
+    /* Бегущая строка под hero */
+    .marquee-ribbon {
+      background: linear-gradient(90deg, rgba(255, 214, 10, .06), rgba(245, 158, 11, .08));
+      border-top: 1px solid rgba(253, 224, 71, .18);
+      border-bottom: 1px solid rgba(253, 224, 71, .18);
+      overflow: hidden;
+    }
+    .marquee {
+      display: flex;
+      width: max-content;
+      will-change: transform;
+      animation: marquee-scroll 28s linear infinite;
+    }
+    .marquee-inner {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      padding: 8px 0;
+    }
+    .marquee .segment {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      white-space: nowrap;
+    }
+    @keyframes marquee-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
     .feature {
       background: rgba(255, 255, 255, .03);
       border: 1px solid rgba(255, 255, 255, .08);
@@ -827,6 +890,7 @@
               Методика • Результат</span>
             <h1 class="display-4 fw-bold mb-3" data-aos="fade-up">Мотошкола <span class="brand-gradient">Ильи
                 Гриднева</span></h1>
+            
             <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">«Моя главная цель — снижение аварийности на
               дорогах: системно обучаю безопасному управлению, формирую устойчивые рефлексы и осознанное поведение за
               рулём».</p>
@@ -847,162 +911,31 @@
       </div>
     </div>
   </header>
-  <div class="divider"></div>
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="row g-4 align-items-start">
-        <div class="col-lg-6" data-aos="fade-right">
-          <div class="glass p-4 h-100">
-            <h2 class="h1 fw-bold mb-3">Илья Гриднев</h2>
-            <p>Друзья, всем привет! Меня зовут Илья Гриднев, я профессиональный мотоциклист. Свой путь любителя
-              двухколёсной техники начал более 20 лет назад и прошёл путь от дворового скутериста до участника и
-              организатора соревнований по стантрайдингу (фристайл на мотоциклах).</p>
-            <p>На протяжении 15 лет профессионально выполняю трюки на разных видах мототехники. Более 5 лет обучаю людей
-              грамотному и безопасному управлению мотоциклом, являюсь тренером по дисциплине «стантрайдинг» и
-              дипломированным мотоинструктором.</p>
-            <div class="timeline mt-3">
-              <div class="item"><strong>В 22 года</strong> — начал тренировать первых учеников, передавая опыт скутеристам
-                с большим потенциалом.</div>
-              <div class="item"><strong>Дальше</strong> — с теми же учениками освоили большие мотоциклы, выступали и
-                развивали дальневосточный стантрайдинг.</div>
-              <div class="item"><strong>Сегодня</strong> — преподаю авторский курс, позволяющий уверенно управлять мототранспортными средствами, окунуться в мир трюков и освоить новые умения</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6" data-aos="fade-left">
-          <div class="row g-3">
-            <div class="col-6">
-              <div class="feature h-100"><i class="bi bi-shield-lock"></i>
-                <h5 class="mt-2">Безопасно</h5>
-                <p class="muted mb-0">Отведённые места, подготовленные мотоциклы и полная защитная экипировка.</p>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="feature h-100"><i class="bi bi-mortarboard"></i>
-                <h5 class="mt-2">Поэтапно</h5>
-                <p class="muted mb-0">Обучение как для новичков так и для оптытных райдеров, индивидуальный подход к каждому курсанту.</p>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="feature h-100"><i class="bi bi-graph-up-arrow"></i>
-                <h5 class="mt-2">С результатом</h5>
-                <p class="muted mb-0">Растим осознанных райдеров: уверенность, безопасность и культура вождения — вместе. </p>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="feature h-100"><i class="bi bi-people"></i>
-                <h5 class="mt-2">Комьюнити</h5>
-                <p class="muted mb-0">Мои ученики — моя гордость. Обучение продолжается за пределами спота: совместные выезды за город, встречи и общение даже зимой.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- MARQUEE under hero -->
+  <div class="marquee-ribbon" aria-label="Слоган мотошколы">
+    <div class="marquee">
+      <div class="marquee-inner small">
+        <span class="segment"><i class="bi bi-stars me-2"></i><span class="neon-gold">Первая мотошкола на дальнем востоке, которая учит ездить!</span></span>
+        <span class="segment">•</span>
+        <span class="segment"><i class="bi bi-stars me-2"></i><span class="neon-gold">Первая мотошкола на дальнем востоке, которая учит ездить!</span></span>
+        <span class="segment">•</span>
+        <span class="segment"><i class="bi bi-stars me-2"></i><span class="neon-gold">Первая мотошкола на дальнем востоке, которая учит ездить!</span></span>
+        <span class="segment">•</span>
+        <span class="segment"><i class="bi bi-stars me-2"></i><span class="neon-gold">Первая мотошкола на дальнем востоке, которая учит ездить!</span></span>
+      </div>
+      <div class="marquee-inner small" aria-hidden="true">
+        <span class="segment"><i class="bi bi-stars me-2"></i><span class="neon-gold">Первая мотошкола на дальнем востоке, которая учит ездить!</span></span>
+        <span class="segment">•</span>
+        <span class="segment"><i class="bi bi-stars me-2"></i><span class="neon-gold">Первая мотошкола на дальнем востоке, которая учит ездить!</span></span>
+        <span class="segment">•</span>
+        <span class="segment"><i class="bi bi-stars me-2"></i><span class="neon-gold">Первая мотошкола на дальнем востоке, которая учит ездить!</span></span>
+        <span class="segment">•</span>
+        <span class="segment"><i class="bi bi-stars me-2"></i><span class="neon-gold">Первая мотошкола на дальнем востоке, которая учит ездить!</span></span>
       </div>
     </div>
-  </section>
+  </div>
   <div class="divider"></div>
-    <!-- Safety Section -->
-  <section id="safety" class="py-6 py-lg-7">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6" data-aos="fade-right">
-          <h2 class="mb-3 d-flex align-items-center gap-2">
-            <i class="bi bi-shield-check"></i> Безопасная езда — наша главная цель
-          </h2>
-          <p class="lead">Основная задача школы — научить управлять мотоциклом <strong>безопасно</strong>: уверенно, предсказуемо и без лишнего риска. Мы формируем правильные рефлексы и учим заранее распознавать опасные сценарии.</p>
-          <ul class="list-unstyled list-check">
-            <li><i class="bi bi-check2-circle"></i>Предиктивное вождение: чтение дорожной обстановки и «язык ошибок» других участников</li>
-            <li><i class="bi bi-check2-circle"></i>Экстренное торможение и объезд препятствий на разном покрытии</li>
-            <li><i class="bi bi-check2-circle"></i>Контрруление, траектории, работа взглядом и положением тела</li>
-            <li><i class="bi bi-check2-circle"></i>Психология риска: как сохранять холодную голову и не поддаваться эмоциям</li>
-            <li><i class="bi bi-check2-circle"></i>Экипировка и техника: как выбирать, проверять и обслуживать</li>
-          </ul>
-          <div class="mt-4 d-flex gap-3">
-            <a href="#courses" class="btn btn-outline-brand">Курсы</a>
-          </div>
-        </div>
-        <div class="col-lg-6" data-aos="fade-left">
-          <div class="row g-3">
-            <div class="col-6">
-              <div class="p-4 h-100 rounded-4 border card-glow">
-                <div class="d-flex align-items-center gap-2 mb-2">
-                  <i class="bi bi-eye"></i><h6 class="mb-0">Видимость</h6>
-                </div>
-                <p class="mb-0 muted">Учимся быть заметными: траектория в потоке, свет, «правильные» позиции на полосе.</p>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="p-4 h-100 rounded-4 border card-glow">
-                <div class="d-flex align-items-center gap-2 mb-2">
-                  <i class="bi bi-activity"></i><h6 class="mb-0">Предикция</h6>
-                </div>
-                <p class="mb-0 muted">Читаем намерения водителей и прогнозируем «что‑если», снижаем внезапности.</p>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="p-4 h-100 rounded-4 border card-glow">
-                <div class="d-flex align-items-center gap-2 mb-2">
-                  <i class="bi bi-sign-turn-right"></i><h6 class="mb-0">Манёвры</h6>
-                </div>
-                <p class="mb-0 muted">Объезд, перестроение, безопасные траектории на разных скоростях и покрытиях.</p>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="p-4 h-100 rounded-4 border card-glow">
-                <div class="d-flex align-items-center gap-2 mb-2">
-                  <i class="bi bi-brakes"></i><h6 class="mb-0">Торможение</h6>
-                </div>
-                <p class="mb-0 muted">Экстренное торможение: дозировка, работа ABS, перенос веса, остановка по прямой и с уклонением.</p>
-              </div>
-            </div>
-          </div>
-          <div class="mt-3 small muted">
-            Все упражнения проводятся в безопасных условиях, на подготовленной площадке и с обязательной защитной экипировкой.
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-   <div class="divider"></div>
-  <!-- STUNT DETAILS -->
-  <section class="section" id="stunt">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-6" data-aos="fade-right">
-          <h2 class="h1 fw-bold">Стантрайдинг безопасно</h2>
-          <p class="muted">Элементы стантрайдинга доступны тем, кто готов идти дальше: езда на заднем и переднем колесе,
-            бернаут, дрифт, базовая акробатика. Всё — на закрытой площадке, на специально подготовленных мотоциклах, в
-            полном комплекте защиты.</p>
-          <ul class="list-unstyled list-check">
-            <li><i class="bi bi-check2-circle"></i>Пошаговые упражнения</li>
-            <li><i class="bi bi-check2-circle"></i>Контроль рисков и экипировка</li>
-            <li><i class="bi bi-check2-circle"></i>Большой парк тренировочной техники</li>
-            <li><i class="bi bi-check2-circle"></i>Индивидуальные корректировки техники</li>
-          </ul>
-          <div class="mt-4 d-flex gap-3">
-            <a href="#courses" class="btn btn-outline-brand">Курсы</a>
-          </div>
-          
-        </div>
-        <div class="col-lg-6" data-aos="fade-left">
-          <div class="row g-3 gallery">
-            <div class="col-6"><img alt="Вилли на площадке" class="img-fluid" loading="lazy"
-                src="./images/galery/show/Wheelie5.jpg" />
-            </div>
-            <div class="col-6"><img alt="Стоппи" class="img-fluid" loading="lazy"
-                src="./images/galery/show/Stoppie1.jpg" /></div>
-            <div class="col-12"><img alt="Дрифт и бернаут" class="img-fluid" loading="lazy"
-                src="./images/galery/show/Burnout.jpg" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="divider"></div>
-  <!-- COURSES -->
+    <!-- COURSES -->
   <section class="section" id="courses">
     <div class="container">
       <div class="row mb-4">
@@ -1223,6 +1156,161 @@
     </div>
   </section>
   <div class="divider"></div>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="glass p-4 h-100">
+            <h2 class="h1 fw-bold mb-3">Илья Гриднев</h2>
+            <p>Друзья, всем привет! Меня зовут Илья Гриднев, я профессиональный мотоциклист. Свой путь любителя
+              двухколёсной техники начал более 20 лет назад и прошёл путь от дворового скутериста до участника и
+              организатора соревнований по стантрайдингу (фристайл на мотоциклах).</p>
+            <p>На протяжении 15 лет профессионально выполняю трюки на разных видах мототехники. Более 5 лет обучаю людей
+              грамотному и безопасному управлению мотоциклом, являюсь тренером по дисциплине «стантрайдинг» и
+              дипломированным мотоинструктором.</p>
+            <div class="timeline mt-3">
+              <div class="item"><strong>В 22 года</strong> — начал тренировать первых учеников, передавая опыт скутеристам
+                с большим потенциалом.</div>
+              <div class="item"><strong>Дальше</strong> — с теми же учениками освоили большие мотоциклы, выступали и
+                развивали дальневосточный стантрайдинг.</div>
+              <div class="item"><strong>Сегодня</strong> — преподаю авторский курс, позволяющий уверенно управлять мототранспортными средствами, окунуться в мир трюков и освоить новые умения</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="feature h-100"><i class="bi bi-shield-lock"></i>
+                <h5 class="mt-2">Безопасно</h5>
+                <p class="muted mb-0">Отведённые места, подготовленные мотоциклы и полная защитная экипировка.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="feature h-100"><i class="bi bi-mortarboard"></i>
+                <h5 class="mt-2">Поэтапно</h5>
+                <p class="muted mb-0">Обучение как для новичков так и для оптытных райдеров, индивидуальный подход к каждому курсанту.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="feature h-100"><i class="bi bi-graph-up-arrow"></i>
+                <h5 class="mt-2">С результатом</h5>
+                <p class="muted mb-0">Растим осознанных райдеров: уверенность, безопасность и культура вождения — вместе. </p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="feature h-100"><i class="bi bi-people"></i>
+                <h5 class="mt-2">Комьюнити</h5>
+                <p class="muted mb-0">Мои ученики — моя гордость. Обучение продолжается за пределами спота: совместные выезды за город, встречи и общение даже зимой.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+    <!-- Safety Section -->
+  <section id="safety" class="py-6 py-lg-7">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <h2 class="mb-3 d-flex align-items-center gap-2">
+            <i class="bi bi-shield-check"></i> Безопасная езда — наша главная цель
+          </h2>
+          <p class="lead">Основная задача школы — научить управлять мотоциклом <strong>безопасно</strong>: уверенно, предсказуемо и без лишнего риска. Мы формируем правильные рефлексы и учим заранее распознавать опасные сценарии.</p>
+          <ul class="list-unstyled list-check">
+            <li><i class="bi bi-check2-circle"></i>Предиктивное вождение: чтение дорожной обстановки и «язык ошибок» других участников</li>
+            <li><i class="bi bi-check2-circle"></i>Экстренное торможение и объезд препятствий на разном покрытии</li>
+            <li><i class="bi bi-check2-circle"></i>Контрруление, траектории, работа взглядом и положением тела</li>
+            <li><i class="bi bi-check2-circle"></i>Психология риска: как сохранять холодную голову и не поддаваться эмоциям</li>
+            <li><i class="bi bi-check2-circle"></i>Экипировка и техника: как выбирать, проверять и обслуживать</li>
+          </ul>
+          <div class="mt-4 d-flex gap-3">
+            <a href="#courses" class="btn btn-outline-brand">Курсы</a>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="p-4 h-100 rounded-4 border card-glow">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-eye"></i><h6 class="mb-0">Видимость</h6>
+                </div>
+                <p class="mb-0 muted">Учимся быть заметными: траектория в потоке, свет, «правильные» позиции на полосе.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-4 h-100 rounded-4 border card-glow">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-activity"></i><h6 class="mb-0">Предикция</h6>
+                </div>
+                <p class="mb-0 muted">Читаем намерения водителей и прогнозируем «что‑если», снижаем внезапности.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-4 h-100 rounded-4 border card-glow">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-sign-turn-right"></i><h6 class="mb-0">Манёвры</h6>
+                </div>
+                <p class="mb-0 muted">Объезд, перестроение, безопасные траектории на разных скоростях и покрытиях.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-4 h-100 rounded-4 border card-glow">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-brakes"></i><h6 class="mb-0">Торможение</h6>
+                </div>
+                <p class="mb-0 muted">Экстренное торможение: дозировка, работа ABS, перенос веса, остановка по прямой и с уклонением.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 small muted">
+            Все упражнения проводятся в безопасных условиях, на подготовленной площадке и с обязательной защитной экипировкой.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+   <div class="divider"></div>
+  <!-- STUNT DETAILS -->
+  <section class="section" id="stunt">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <h2 class="h1 fw-bold">Стантрайдинг безопасно</h2>
+          <p class="muted">Элементы стантрайдинга доступны тем, кто готов идти дальше: езда на заднем и переднем колесе,
+            бернаут, дрифт, базовая акробатика. Всё — на закрытой площадке, на специально подготовленных мотоциклах, в
+            полном комплекте защиты.</p>
+          <ul class="list-unstyled list-check">
+            <li><i class="bi bi-check2-circle"></i>Пошаговые упражнения</li>
+            <li><i class="bi bi-check2-circle"></i>Контроль рисков и экипировка</li>
+            <li><i class="bi bi-check2-circle"></i>Большой парк тренировочной техники</li>
+            <li><i class="bi bi-check2-circle"></i>Индивидуальные корректировки техники</li>
+          </ul>
+          <div class="mt-4 d-flex gap-3">
+            <a href="#courses" class="btn btn-outline-brand">Курсы</a>
+          </div>
+          
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="row g-3 gallery">
+            <div class="col-6"><img alt="Вилли на площадке" class="img-fluid" loading="lazy"
+                src="./images/galery/show/Wheelie5.jpg" />
+            </div>
+            <div class="col-6"><img alt="Стоппи" class="img-fluid" loading="lazy"
+                src="./images/galery/show/Stoppie1.jpg" /></div>
+            <div class="col-12"><img alt="Дрифт и бернаут" class="img-fluid" loading="lazy"
+                src="./images/galery/show/Burnout.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
   <!-- BIKES + EVENTS (combined row) -->
   <section class="section" id="bikes">
     <div class="container">
