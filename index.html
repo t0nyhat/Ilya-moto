@@ -759,6 +759,17 @@
         display: flex !important;
       }
     }
+
+    /* === Contact form placeholders: white === */
+    #signupForm input::placeholder,
+    #signupForm textarea::placeholder { color: #fff; opacity: 1; }
+    /* Safari/legacy fallback */
+    #signupForm input::-webkit-input-placeholder,
+    #signupForm textarea::-webkit-input-placeholder { color: #fff; opacity: 1; }
+    #signupForm input::-moz-placeholder,
+    #signupForm textarea::-moz-placeholder { color: #fff; opacity: 1; }
+    #signupForm input:-ms-input-placeholder,
+    #signupForm textarea:-ms-input-placeholder { color: #fff; }
   </style>
   <script type="application/ld+json">
   {
